@@ -1,8 +1,6 @@
 html, body {
     background: #89A9B7;
-    height: 100%;
 }
-
 
 h1 {
     display: inline;
@@ -16,18 +14,61 @@ p {
     color: white;
     margin: 0;
 }
-
-/* for the filters menu */
-.flex-wrapper {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0.1rem;
-    height: 100%;
+.Site{
+    min-height: 100vh; /* 100% of the viewport */
+    display: block;
+    position: relative;
 }
-.filter-menu {
+#Site-content{
+    flex: 1;
+}
+
+.flex-content-center {
+    align-items: center;
+    justify-content: center;
+}
+header{
+    width: 100%;
+    height: 10vh;
     position: sticky;
     top: 0;
+
+    background: #89A9B7;
+    border-bottom: .5rem solid #102C38;
+}
+footer {
+    width: 100%;
+    height: 5vh;
+    position: sticky;
+    bottom: 0;
+
+    background: #89A9B7;
+    border-top: .5rem solid #102C38;
+}
+footer .triangle{
+    margin: 0.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+footer .triangle[direction="left"] {
+    transform: rotate(180deg);
+}
+
+.flex-wrapper-col {
+    display: flex;
+    flex-direction: column;
+    padding: 0.1rem;
+}
+
+.flex-wrapper-row {
+    display: flex;
+    flex-direction: row;
+    padding: 0.1rem;
+}
+/* for the filters menu */
+.filter-menu {
+    position: sticky;
+    top: calc(10vh + 0.5rem);
     height: auto;
     align-self: self-start;
 
@@ -53,7 +94,7 @@ p {
 #show-filters{
     position: sticky;
     align-self: self-start;
-    top: 0;
+    top: calc(10vh + 0.5rem);
     cursor: pointer;
     flex: 0;
 }
@@ -119,12 +160,10 @@ Setari pentru lista accordion
      border: medium solid #102C38;
      border-bottom-style: none;
      border-left: .5rem solid #102C38;
-     font-size: 2.5rem;
 }
 
 .accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
     background: #102C38;
-    font-size: 2.4rem;
 }
 
 .accordion .content {
@@ -161,4 +200,13 @@ custom-scrollbar
 ::-webkit-scrollbar-thumb {
     box-shadow: inset 0 0 8px rgba(16,44,56,1);
     border-radius: 12px;
+}
+
+/* triangle */
+.triangle {
+    width: 0;
+    height: 0;
+    border-top: 1.0rem solid transparent;
+    border-left: 1.0rem solid #102C38;
+    border-bottom: 1.0rem solid transparent;
 }
