@@ -1,0 +1,164 @@
+html, body {
+    background: #89A9B7;
+    height: 100%;
+}
+
+
+h1 {
+    display: inline;
+    font-size: 2.4rem;
+    color: white;
+    margin: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+/* for the filters menu */
+.flex-wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0.1rem;
+    height: 100%;
+}
+.filter-menu {
+    position: sticky;
+    top: 0;
+    height: auto;
+    align-self: self-start;
+
+    background: #3F6677;
+    border: medium solid #102C38;
+    border-left: .5rem solid #102C38;
+
+    flex: 1;
+    overflow: hidden;
+
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+.filter-menu h1 {
+    display: block;
+    border-bottom: .5rem solid #102C38;
+}
+#show-filters-checkbox {
+    display: none;
+}
+#show-filters{
+    position: sticky;
+    align-self: self-start;
+    top: 0;
+    cursor: pointer;
+    flex: 0;
+}
+
+#show-filters .triangle{
+    /* this makes the triangle */
+    width: 0;
+    height: 0;
+    border-top: 1.4rem solid transparent;
+    border-left: 1.4rem solid #102C38;
+    border-bottom: 1.4rem solid transparent;
+    /* other settings */
+    margin: 0.1rem;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+
+#show-filters-checkbox:checked ~ label ~ .filter-menu {
+    flex: 0;
+}
+#show-filters-checkbox:not(:checked) ~ label  .filter-menu {
+    float: 1;
+}
+#show-filters-checkbox:checked ~ label > .triangle {
+    transform: rotate(0deg);
+}
+#show-filters-checkbox:not(:checked) ~ label > .triangle {
+    transform: rotate(180deg);
+}
+/*
+Setari pentru lista accordion
+*/
+.accordion {
+    flex: 3;
+}
+.accordion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.accordion li {
+    margin: 0;
+    padding: 0;
+}
+.accordion [type=checkbox] {
+    display: none;
+}
+.accordion label {
+    display: block;
+    border-left: .5rem solid #102C38;
+    background: #102C38;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+}
+
+.accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
+     background: #3F6677;
+     border: medium solid #102C38;
+     border-bottom-style: none;
+     border-left: .5rem solid #102C38;
+     font-size: 2.5rem;
+}
+
+.accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
+    background: #102C38;
+    font-size: 2.4rem;
+}
+
+.accordion .content {
+    overflow: hidden;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    background: #3F6677;
+}
+
+.accordion [type=checkbox]:checked ~ label ~ .content {
+    height: 300px;
+    overflow-y: scroll;
+    border: medium solid #102C38;
+    border-left: 0.5rem solid #102C38;
+    padding: 0.5rem;
+}
+
+.accordion [type=checkbox]:not(:checked) ~ label ~ .content {
+    height: 0;
+}
+
+/*  
+custom-scrollbar
+*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(63,102,119,1);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 8px rgba(16,44,56,1);
+    border-radius: 12px;
+}
