@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+
+.box-login{
+	width: 280px;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	
+	color: #318CE7;
+}
+
+.box-login h1{
+	font-size: 40px;
+	border-bottom: 6px solid #0000cc;
+	margin-bottom: 50px;
+	padding: 13px 0;
+	
+}
+
+
+.textbox{
+	width: 100%;
+	overflow:hidden;
+	font-size: 20px;
+	padding: 10px 0;
+	margin: 10px 0;
+	border-bottom: 2px solid;
+	
+	
+}
+
+.textbox i{
+	width: 25px;
+	text-align: center;
+	color:   #e60000;
+}
+
+
+
+
+.textbox input {
+	border: none;
+	outline: none;
+	background: none;
+	color: #004d4d;
+	font-size: 20px;
+	width: 80%;
+	margin: 0 10px;
+}
+
+
+.btn{
+	width: 100% ;
+	background: none;
+	border: 5px solid #2db300;
+	color: #2db300 ;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	margin: 15px 0;
+	
+}
