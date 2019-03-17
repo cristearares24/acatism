@@ -1,5 +1,5 @@
 html, body {
-    background: white;
+    background: #34495e;
     margin: 0;
     overflow: hidden;
     height: 100%;
@@ -7,26 +7,21 @@ html, body {
 
 h1 {
     display: inline;
-    font-size: 2rem;
-    color: white;
-    margin: 0;
-    font-family: "montserrat" ,sans-serif;
-    font-weight: normal;
-}
-h2 {
-    display: block;
     font-size: 1.5rem;
-    color: white;
+    color: inherit;
     margin: 0;
-    font-family: "montserrat" ,sans-serif;
+    font-family: sans-serif;
     font-weight: normal;
 }
 
-p {
-    font-size: 1rem;
-    color: white;
+h2 {
+    display: block;
+    font-size: 1.2rem;
+    color: inherit;
     margin: 0;
-    font-family: "montserrat" ,sans-serif;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin-top: 1rem;
 }
 
 .Site{
@@ -55,7 +50,7 @@ footer {
     height: 5vh;
     
 
-    background: #89A9B7;
+    background: #34495e;
     border-top: .5rem solid #102C38;
 }
 footer .triangle{
@@ -79,27 +74,42 @@ footer .triangle[direction="left"] {
 /* for the filters menu */
 .filter-menu {
     height: inherit;
-    background: #3F6677;
-    border: medium solid #102C38;
-    border-left: .5rem solid #102C38;
-
+    background: #34495e;
+    border-left: .25rem solid #102C38;
+    border-right: .25rem solid #102C38;
     flex: 1;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: white;
 
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
 }
-.filter-menu h1 {
-    display: block;
-    border-bottom: .5rem solid #102C38;
+
+.filter-menu > form{
+    padding: 2%;
 }
 
-.filter-menu ul {
+.filter-menu h1 {
+    display: block;
+    border-bottom: .2rem solid #102C38;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.filter-menu > form > ul {
     list-style-type: disk;
     font-size: 2rem;
     color: white;
+}
+.filter-menu > form > ul > li {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom:.1rem solid #102C38;
+
 }
 
 #show-filters-checkbox {
@@ -109,17 +119,19 @@ footer .triangle[direction="left"] {
     height: inherit;
     cursor: pointer;
     flex: 0;
+    background :#34495e;
 }
+
 
 #show-filters .triangle{
     /* this makes the triangle */
     width: 0;
     height: 0;
-    border-top: 1.4rem solid transparent;
-    border-left: 1.4rem solid #102C38;
-    border-bottom: 1.4rem solid transparent;
+    border-top: 1rem solid transparent;
+    border-left: 1rem solid white;
+    border-bottom: 1rem solid transparent;
     /* other settings */
-    margin: 0.1rem;
+    margin: 0.3rem;
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
@@ -137,6 +149,38 @@ footer .triangle[direction="left"] {
 }
 #show-filters-checkbox:not(:checked) ~ label > .triangle {
     transform: rotate(180deg);
+}
+
+.filter-menu input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background-color: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: white;
+    width: 60%;
+    
+}
+.filter-menu input[type="text"]:focus{
+    font-size: 1.2rem;
+    width: 80%;
+}
+::placeholder{
+    color: white;
+}
+
+#select-grad {
+    font-size: 1rem;
+    width: 60%;
+}
+#select-grad:focus {
+    font-size: 1.2rem;
+    width: 80%;
+}
+
+.btn[value="Filtreaza"]{
+    font: 1.2rem;
+    width: calc(auto + 2vw);
 }
 /*
 Setari pentru lista accordion
@@ -162,25 +206,35 @@ Setari pentru lista accordion
     display: none;
 }
 .accordion label {
-    display: block;
     border-left: .5rem solid #102C38;
     background: #102C38;
     cursor: pointer;
+    color: white;
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
 }
 
-.accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
-     background: #3F6677;
-     border: medium solid #102C38;
-     border-bottom-style: none;
-     border-left: .5rem solid #102C38;
+.accordion label h1 {
+    display: inline-block;
+    flex: 1;
 }
+.accordion label button{
+    flex: 0;
+}
+
+.accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
+     background: #008080;
+     border: medium solid #008080;
+     border-bottom-style: none;
+     border-left: .5rem solid #008080;
+     color: #102C38;
+    }
 
 .accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
     background: #102C38;
+    border-color: #102C38;
 }
 
 .accordion .content {
@@ -189,14 +243,16 @@ Setari pentru lista accordion
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
-    background: #3F6677;
+    background: #EEFFFF;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .accordion [type=checkbox]:checked ~ label ~ .content {
     height: 30vh;
     overflow-y: scroll;
-    border: medium solid #102C38;
-    border-left: 0.5rem solid #102C38;
+    border: medium solid #008080;
+    border-left: 0.5rem solid #008080;
     padding: 0.5rem;
 }
 
@@ -211,11 +267,11 @@ custom-scrollbar
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 8px rgba(63,102,119,1);
+    box-shadow: inset 0 0 8px rgba(52, 73, 94, 0.3);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 8px rgba(16,44,56,1);
+    box-shadow: inset 0 0 8px rgba(0,0,0,1);
     border-radius: 12px;
 }
 
@@ -226,4 +282,57 @@ custom-scrollbar
     border-top: 1.0rem solid transparent;
     border-left: 1.0rem solid #102C38;
     border-bottom: 1.0rem solid transparent;
+}
+
+ul.tag-area{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.tag-area li {
+    display: inline;
+}
+
+.tag-checkbox {
+    display: none;
+}
+.tag {
+    font-size: 1rem;
+    background: #eee;
+    border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+    color: #999;
+    display: inline-block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0 .2rem 0 .23rem;
+    position: relative;
+    margin: 0 .1rem .1rem 0;
+    text-decoration: none;
+    transition: color .2s;
+    -webkit-transition: color .2s;
+}
+
+.tag-checkbox:checked ~ .tag, .tag:hover{
+    background-color: #008080;
+    color: white;
+}
+
+.btn{
+	width: 10vw ;
+    background: #102C38;
+    border: none;
+    border-width: .2rem;
+    border-style: solid;
+    border-color: white;
+    margin: .2rem;
+	color: white;
+	padding: 0.1rem;
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.btn:hover, btn:focus {
+    border-color: #102C38;
+    color: #102C38;
+    background-color: #008080;
 }

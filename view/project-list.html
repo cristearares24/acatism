@@ -31,61 +31,74 @@
         </label>
         
         <section class="filter-menu">
-            <nav>
+            <form action="" method="GET">
               <h1>Filtre:</h1>
               <ul>
                 <li>
-                  <h2>Profesori:</h2>
+                  <h1>Profesori:</h1>
+                  <input type="text" name="" id="nume-prof" placeholder="Nume">
+                  <br>
+                  <input type="text" name="" id="prenume-prof" placeholder="Prenume">
+                  <br>
+                  <h2>Grad:</h2>
+                  <select name="" id="select-grad">
+                    <option value="">
+                      Lector
+                    </option>
+                    <option value="">
+                      Conferentiar
+                    </option>
+                    <option value="">
+                      Profesor
+                    </option>
+                  </select>
+
                 </li>
-              </ul>
-              <ul>
                 <li>
-                  <h2>Nume Proiect:</h2>
+                  <h1>Proiect:</h1>
+                  <input type="text" name="" id="nume-proiect" placeholder="Titlu">
+                  <br>
                 </li>
-              </ul>
-              <ul>
                 <li>
-                  <h2>Tags:</h2>
-                </li>
+                  <h1>Tags:</h1>
+                  <ul class="tag-area">
+                  <li>
+                    <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                    <label for="tag-checkbox1" class="tag">ML</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                    <label for="tag-checkbox2" class="tag">Graph Theory</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                    <label for="tag-checkbox3" class="tag">DataBases</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+                    <label for="tag-checkbox4" class="tag">AR/VR</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
+                    <label for="tag-checkbox5" class="tag">FAI</label>
+                  </li>
+                  </ul>
               </ul>
-            </nav>
+              <input class="btn" type="submit" name="" value="Filtreaza">
+            </form>
         </section>
         <!-- accordion list-->
         <div class="accordion">
           <ul>
             <li>
               <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1"><h1>Titlu Proiect 1</h1></label>
-              <section class="content">
-                <p> 
-                  Dea in ut in pariatur voluptate sit enim elit aute duis. Nisi amet deserunt culpa exercitation culpa. Ad deserunt laboris do magna exercitation officia aliqua aliquip in aliquip sit veniam ullamco occaecat. Anim mollit dolore excepteur dolore duis excepteur tempor do.
-                </p>
-              </section>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2"><h1>Titlu Proiect 2</h1></label>
+              <label for="checkbox1" class="flex-wrapper-row flex-content-center">
+                <h1>Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</h1>
+                <form action="" method="GET"><input class="btn" type="submit" name="" value="Aplica"></form>
+              </label>
               <section class="content">
                 <p>
-                Dolore ea in ut in pariatur voluptate sit enim elit aute duis. Nisi amet deserunt culpa exercitation culpa. Ad deserunt laboris do magna exercitation officia aliqua aliquip in aliquip sit veniam ullamco occaecat. Anim mollit dolore excepteur dolore duis excepteur tempor do.
-                </p>
-              </section>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox3" />
-              <label for="checkbox3"><h1>Titlu Proiect 3</h1></label>
-              <section class="content">
-                <p> 
-                  Dea in ut in pariatur voluptate sit enim elit aute duis. Nisi amet deserunt culpa exercitation culpa. Ad deserunt laboris do magna exercitation officia aliqua aliquip in aliquip sit veniam ullamco occaecat. Anim mollit dolore excepteur dolore duis excepteur tempor do.
-                </p>
-              </section>
-            </li>
-            <li>
-              <input type="checkbox" id="checkbox4" />
-              <label for="checkbox4"><h1>Titlu Proiect 4</h1></label>
-              <section class="content">
-                <p>
-                Dolore ea in ut in pariatur voluptate sit enim elit aute duis. Nisi amet deserunt culpa exercitation culpa. Ad deserunt laboris do magna exercitation officia aliqua aliquip in aliquip sit veniam ullamco occaecat. Anim mollit dolore excepteur dolore duis excepteur tempor do.
+                  Aceasta aplicatie va face poze 3D precum masina de la google.
                 </p>
               </section>
             </li>
