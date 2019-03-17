@@ -144,15 +144,19 @@ h2 {
     padding:1em;
 }
 
+li:before {
+    content:"• ";
+}
+
 /* credits */
 
 .creditRow {
     background-color:lightblue;
-    position:fixed;
     left:0;
     bottom:0;
     width:100%;
     text-align:center;
+    box-shadow: 0 50vh 0 50vh lightblue;
 }
 
 /* desc */
@@ -161,4 +165,9 @@ h2 {
     margin-left:5%;
     margin-right:5%;
     font-size:1.5rem;
+}
+
+.desc {
+    padding-top:2rem;
+    padding-bottom:2rem;
 }
