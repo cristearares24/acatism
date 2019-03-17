@@ -163,12 +163,14 @@ li:before {
 /* credits */
 
 .creditRow {
-    background-color:lightblue;
+    background-color:#102C38;
     left:0;
     bottom:0;
     width:100%;
     text-align:center;
-    box-shadow: 0 50vh 0 50vh lightblue;
+    box-shadow: 0 50vh 0 50vh #102C38;
+    color:white;
+    padding-top:1rem;
 }
 
 /* desc */
@@ -177,9 +179,11 @@ li:before {
     margin-left:5%;
     margin-right:5%;
     font-size:1.5rem;
+    color:white;
 }
 
 .desc {
     padding-top:2rem;
     padding-bottom:2rem;
+    background-color: #34495e;
 }
