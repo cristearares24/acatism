@@ -1,19 +1,34 @@
 html, body {
-    background: #89A9B7;
+    background: white;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
 }
 
 h1 {
     display: inline;
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: white;
     margin: 0;
+    font-family: "montserrat" ,sans-serif;
+    font-weight: normal;
 }
-
-p {
+h2 {
+    display: block;
     font-size: 1.5rem;
     color: white;
     margin: 0;
+    font-family: "montserrat" ,sans-serif;
+    font-weight: normal;
 }
+
+p {
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+    font-family: "montserrat" ,sans-serif;
+}
+
 .Site{
     min-height: 100vh; /* 100% of the viewport */
     display: block;
@@ -21,6 +36,7 @@ p {
 }
 #Site-content{
     flex: 1;
+    height: inherit;
 }
 
 .flex-content-center {
@@ -30,17 +46,14 @@ p {
 header{
     width: 100%;
     height: 10vh;
-    position: sticky;
+	background :#34495e;
     top: 0;
-
-    background: #89A9B7;
     border-bottom: .5rem solid #102C38;
 }
 footer {
     width: 100%;
     height: 5vh;
-    position: sticky;
-    bottom: 0;
+    
 
     background: #89A9B7;
     border-top: .5rem solid #102C38;
@@ -57,21 +70,15 @@ footer .triangle[direction="left"] {
 .flex-wrapper-col {
     display: flex;
     flex-direction: column;
-    padding: 0.1rem;
 }
 
 .flex-wrapper-row {
     display: flex;
     flex-direction: row;
-    padding: 0.1rem;
 }
 /* for the filters menu */
 .filter-menu {
-    position: sticky;
-    top: calc(10vh + 0.5rem);
-    height: auto;
-    align-self: self-start;
-
+    height: inherit;
     background: #3F6677;
     border: medium solid #102C38;
     border-left: .5rem solid #102C38;
@@ -88,13 +95,18 @@ footer .triangle[direction="left"] {
     display: block;
     border-bottom: .5rem solid #102C38;
 }
+
+.filter-menu ul {
+    list-style-type: disk;
+    font-size: 2rem;
+    color: white;
+}
+
 #show-filters-checkbox {
     display: none;
 }
 #show-filters{
-    position: sticky;
-    align-self: self-start;
-    top: calc(10vh + 0.5rem);
+    height: inherit;
     cursor: pointer;
     flex: 0;
 }
@@ -131,6 +143,11 @@ Setari pentru lista accordion
 */
 .accordion {
     flex: 3;
+    height: inherit;
+    display: block;
+    margin-left: 3%;
+    padding-right: 3%;
+    overflow-y: scroll;
 }
 .accordion ul {
     list-style: none;
@@ -176,7 +193,7 @@ Setari pentru lista accordion
 }
 
 .accordion [type=checkbox]:checked ~ label ~ .content {
-    height: 300px;
+    height: 30vh;
     overflow-y: scroll;
     border: medium solid #102C38;
     border-left: 0.5rem solid #102C38;
