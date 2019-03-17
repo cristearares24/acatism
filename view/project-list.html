@@ -9,9 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Acatism Project-List</title>
   </head>
+  <!-- in this page you will be able to see the project-list -->
   <body class="flex-wrapper-col Site">
-      <!-- in this page you will be able to see the project-list -->
-      <!-- meniu from Daniel -->
+      <!-- @Daniel -->
+      <!-------------------------------------------------------------------->
       <header>
         <div class="header">
           <ul class="meniu">
@@ -24,31 +25,35 @@
           </ul>
         </div>
       </header>
+      <!-------------------------------------------------------------------->
+      <!-- @Matei -->
+      <!-------------------------------------------------------------------->
       <main id="Site-content" class="flex-wrapper-row">
+        <!-- show filters -->
         <input type="checkbox" id="show-filters-checkbox"/>
         <label for="show-filters-checkbox" id="show-filters">
             <div class="triangle"></div>
         </label>
-        
+        <!-- filter menu -->
         <section class="filter-menu">
             <form action="" method="GET">
               <h1>Filtre:</h1>
               <ul>
                 <li>
                   <h1>Profesori:</h1>
-                  <input type="text" name="" id="nume-prof" placeholder="Nume">
+                  <input type="text" name="last-name-textbox" id="nume-prof" placeholder="Nume">
                   <br>
-                  <input type="text" name="" id="prenume-prof" placeholder="Prenume">
+                  <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
                   <br>
                   <h2>Grad:</h2>
                   <select name="" id="select-grad">
-                    <option value="">
+                    <option value="1" class="select-option">
                       Lector
                     </option>
-                    <option value="">
+                    <option value="2" class="select-option">
                       Conferentiar
                     </option>
-                    <option value="">
+                    <option value="3" class="select-option">
                       Profesor
                     </option>
                   </select>
@@ -87,10 +92,10 @@
               <input class="btn" type="submit" name="" value="Filtreaza">
             </form>
         </section>
-        <!-- accordion list-->
+        <!-- accordion project-list -->
         <div class="accordion">
           <ul>
-            <li>
+            <li> <!-- list element -->
               <input type="checkbox" id="checkbox1" />
               <label for="checkbox1" class="flex-wrapper-row flex-content-center">
                 <h1>Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</h1>
@@ -105,10 +110,12 @@
           </ul>
         </div>
       </main>
+      <!-- footer -->
       <footer class="flex-wrapper-row flex-content-center">
-        <a href="#"><div class="triangle" direction="left"></div></a>
+        <a href="#"><div class="triangle" facing="left"></div></a>
         <p>Page 1 out of 1</p>
-        <a href="#"><div class="triangle" direction="right"></div></a>
+        <a href="#"><div class="triangle" facing="right"></div></a>
       </footer>
+      <!-------------------------------------------------------------------->
   </body>
 </html>

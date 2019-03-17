@@ -1,5 +1,9 @@
+
 html, body {
-    background: #34495e;
+    --background-blue: #34495e;
+    --border-blue:  #102C38;
+    --select-blue: #008080;
+    background: var(--background-blue);
     margin: 0;
     overflow: hidden;
     height: 100%;
@@ -25,10 +29,11 @@ h2 {
 }
 
 .Site{
-    min-height: 100vh; /* 100% of the viewport */
+    min-height: 100vh;
     display: block;
     position: relative;
 }
+
 #Site-content{
     flex: 1;
     height: inherit;
@@ -38,27 +43,30 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+
 header{
     width: 100%;
     height: 10vh;
-	background :#34495e;
+	background :var(--background-blue);
     top: 0;
-    border-bottom: .5rem solid #102C38;
+    border-bottom: .5rem solid var(--border-blue);
 }
+
 footer {
     width: 100%;
-    height: 5vh;
-    
+    height: auto;
 
-    background: #34495e;
-    border-top: .5rem solid #102C38;
+    background: var(--background-blue);
+    border-top: .5rem solid var(--border-blue);
 }
+
 footer .triangle{
     margin: 0.5rem;
     margin-bottom: 0;
     margin-top: 0;
 }
-footer .triangle[direction="left"] {
+
+footer .triangle[facing="left"] {
     transform: rotate(180deg);
 }
 
@@ -74,9 +82,9 @@ footer .triangle[direction="left"] {
 /* for the filters menu */
 .filter-menu {
     height: inherit;
-    background: #34495e;
-    border-left: .25rem solid #102C38;
-    border-right: .25rem solid #102C38;
+    background: var(--background-blue);
+    border-left: .25rem solid var(--border-blue);
+    border-right: .25rem solid var(--border-blue);
     flex: 1;
     overflow-x: hidden;
     overflow-y: scroll;
@@ -94,7 +102,7 @@ footer .triangle[direction="left"] {
 
 .filter-menu h1 {
     display: block;
-    border-bottom: .2rem solid #102C38;
+    border-bottom: .2rem solid var(--border-blue);
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -108,7 +116,7 @@ footer .triangle[direction="left"] {
     margin: 0;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom:.1rem solid #102C38;
+    border-bottom:.1rem solid var(--border-blue);
 
 }
 
@@ -119,7 +127,7 @@ footer .triangle[direction="left"] {
     height: inherit;
     cursor: pointer;
     flex: 0;
-    background :#34495e;
+    background :var(--background-blue);
 }
 
 
@@ -173,17 +181,13 @@ footer .triangle[direction="left"] {
     font-size: 1rem;
     width: 60%;
 }
-#select-grad:focus {
-    font-size: 1.2rem;
-    width: 80%;
-}
 
 .btn[value="Filtreaza"]{
     font: 1.2rem;
     width: calc(auto + 2vw);
 }
 /*
-Setari pentru lista accordion
+Settings for the accordion list
 */
 .accordion {
     flex: 3;
@@ -206,8 +210,8 @@ Setari pentru lista accordion
     display: none;
 }
 .accordion label {
-    border-left: .5rem solid #102C38;
-    background: #102C38;
+    border-left: .5rem solid var(--border-blue);
+    background: var(--border-blue);
     cursor: pointer;
     color: white;
     transition: all .2s ease-out;
@@ -225,16 +229,16 @@ Setari pentru lista accordion
 }
 
 .accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
-     background: #008080;
-     border: medium solid #008080;
+     background: var(--select-blue);
+     border: medium solid var(--select-blue);
      border-bottom-style: none;
-     border-left: .5rem solid #008080;
-     color: #102C38;
+     border-left: .5rem solid var(--select-blue);
+     color: var(--border-blue);
     }
 
 .accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
-    background: #102C38;
-    border-color: #102C38;
+    background: var(--border-blue);
+    border-color: var(--border-blue);
 }
 
 .accordion .content {
@@ -251,8 +255,8 @@ Setari pentru lista accordion
 .accordion [type=checkbox]:checked ~ label ~ .content {
     height: 30vh;
     overflow-y: scroll;
-    border: medium solid #008080;
-    border-left: 0.5rem solid #008080;
+    border: medium solid var(--select-blue);
+    border-left: 0.5rem solid var(--select-blue);
     padding: 0.5rem;
 }
 
@@ -260,9 +264,9 @@ Setari pentru lista accordion
     height: 0;
 }
 
-/*  
-custom-scrollbar
-*/
+/* utils */
+
+/* custom-scrollbar */
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -280,15 +284,17 @@ custom-scrollbar
     width: 0;
     height: 0;
     border-top: 1.0rem solid transparent;
-    border-left: 1.0rem solid #102C38;
+    border-left: 1.0rem solid var(--border-blue);
     border-bottom: 1.0rem solid transparent;
 }
 
+/* tags and tag area */
 ul.tag-area{
     list-style: none;
     margin: 0;
     padding: 0;
 }
+
 ul.tag-area li {
     display: inline;
 }
@@ -296,13 +302,14 @@ ul.tag-area li {
 .tag-checkbox {
     display: none;
 }
+
 .tag {
     font-size: 1rem;
     background: #eee;
     border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
     color: #999;
     display: inline-block;
-    height: 1.2rem;
+    height: auto;
     line-height: 1.2rem;
     padding: 0 .2rem 0 .23rem;
     position: relative;
@@ -313,26 +320,66 @@ ul.tag-area li {
 }
 
 .tag-checkbox:checked ~ .tag, .tag:hover{
-    background-color: #008080;
+    background-color: var(--select-blue);
     color: white;
 }
 
 .btn{
-	width: 10vw ;
-    background: #102C38;
+    background: var(--border-blue);
     border: none;
     border-width: .2rem;
     border-style: solid;
     border-color: white;
     margin: .2rem;
 	color: white;
-	padding: 0.1rem;
+    padding: 0.1rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
 	font-size: 2rem;
 	cursor: pointer;
 }
 
 .btn:hover, btn:focus {
-    border-color: #102C38;
-    color: #102C38;
-    background-color: #008080;
+    border-color: var(--border-blue);
+    color: var(--border-blue);
+    background-color: var(--select-blue);
+}
+
+/* responsiveness */
+@media (orientation: portrait){
+    #Site-content.flex-wrapper-row {
+        flex-direction: column;
+    }
+
+    #show-filters .triangle{
+        /* this makes the triangle */
+        border-left: 1rem solid transparent;
+        border-top: 1rem solid white;
+        border-right: 1rem solid transparent;
+    }
+
+    .filter-menu{
+        flex: 2;
+        border: none;
+        border-top: .25rem solid var(--border-blue);
+        border-bottom: .25rem solid var(--border-blue);
+    }
+}
+
+@media(max-width: 800px){
+    html, body{
+        font-size: 0.75rem;
+    }
+    .btn {
+        font-size: 1.5rem;
+    }
+    .accordion label h1 {
+        font-size: 1.2rem;
+    }
+}
+@media(min-width: 2400px){
+    html, body{
+        font-size: 1.75rem;
+    }
+
 }
