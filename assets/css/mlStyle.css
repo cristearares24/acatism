@@ -52,6 +52,11 @@ header{
     border-bottom: .5rem solid var(--border-blue);
 }
 
+.header {
+    height: 10vh;
+    border-bottom: .5rem solid var(--border-blue);
+}
+
 footer {
     width: 100%;
     height: auto;
@@ -223,6 +228,7 @@ Settings for the accordion list
 .accordion label h1 {
     display: inline-block;
     flex: 1;
+    margin: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
 .accordion label button{
     flex: 0;
