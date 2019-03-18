@@ -228,6 +228,7 @@ Settings for the accordion list
 .accordion label h1 {
     display: inline-block;
     flex: 1;
+    margin: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
 .accordion label button{
     flex: 0;
