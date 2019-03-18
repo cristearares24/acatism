@@ -52,6 +52,11 @@ header{
     border-bottom: .5rem solid var(--border-blue);
 }
 
+.header {
+    height: 10vh;
+    border-bottom: .5rem solid var(--border-blue);
+}
+
 footer {
     width: 100%;
     height: auto;
