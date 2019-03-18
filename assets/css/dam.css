@@ -1,0 +1,30 @@
+.flex-wrapper-row {
+    display: flex;
+    flex-direction: row;
+}   
+
+body {
+    background-color: rgb(102, 140, 255);
+}
+
+main {
+    margin-top: calc(10vh + 0.5rem);
+}
+
+.description_label {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 5rem;
+}
+
+.description_textbox {
+    font-size: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+flex_box_row {
+    display: flex;
+    flex-direction: column;
+}
