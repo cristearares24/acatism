@@ -13,16 +13,10 @@
 	 
 	 position: fixed;;
 	 width: 100%;
-	  
-
-   
-	
-	
-
+	 z-index: 1;
 }
 
 .logo{
-	line-height: 100px;
 	float:  left;
 	text-transform: uppercase;
 	color: white;
@@ -135,7 +129,7 @@
 	
 	
 	
-	@media (max-width:985px)
+	@media (max-width:1280px)
 	{
 	.show-menu-btn,.hide-menu-btn{
 		display: block;
@@ -195,7 +189,6 @@
 		 align-items: center;
 		 justify-content: space-between;
 		 line-height: normal;
-	
 	
 	}
 	
