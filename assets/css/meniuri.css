@@ -1,83 +1,217 @@
+/* Facut de Iacob Daniel  , aici am implementat un fisier css pentru toate cele 3 meniuri */
+
+
 *{
 	margin: 0;
 	padding: 0;
 	font-family: "montserrat" ,sans-serif;
 }
-	
+
 .header{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items:center;
-	font-family: "montserrat" ,sans-serif;
-    width: 100%;
-    height: 10vh;
-	background :#34495e;
-	position: fixed;
-	top: 0;
-	border-bottom: .5rem solid #102C38;
+	 height: 70px;
+	 background :#34495e;
+	 
+	 position: fixed;;
+	 width: 100%;
+	  
+
+   
+	
+	
+
 }
+
+.logo{
+	line-height: 100px;
+	float:  left;
+	text-transform: uppercase;
+	color: white;
+	
+}
+
+
+/* maresc inaltimea asa pt a avea si un efect mai bun al meniului*/
 .meniu{
-     margin: 0;
-	padding: 0;
-	display:flex;
-	position: fixed;
+    float: right;
+	display: flex;
+	flex-direction: row;
+	
+	line-height: 50px;
+	
+	
+	
+	
+	
+	
+	
 }
 .meniu  a {
+	/*sa dispara de la lista ordonata acele markers*/
      list-style: none ;
 	 margin: 0 20px;
 	 color: #fff;
+	 /*incep pe o noua linie si ocup intreaga latime*/
 	  display: block;
 	 position: relative;
 	 text-decoration: none;
 	padding: 5px;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: sans-serif;
 	color: #fff;
 	text-transform: uppercase;
 	transition: 0.5s;
+	
+	
+
+	
  }
+
  
- .meniu:hover a  {
-transform: scale(1.0);
- opacity: .2;
- filter:blur(5px);
- 
- }
- 
- 
- .meniu a:hover
- {
-	 transform: scale(2);
- opacity: 1;
- filter:blur(0);
- 
- }
- 
- 
- 
+.show-menu-btn,.hide-menu-btn{
+	transition: 0.4s;
+	cursor: pointer;
+	display: none;
+	color: white;
+	
+}
+
+
+/* duc butonul pt meniu in dreapta*/
+.show-menu-btn{
+	float: right;
+	
+	
+}
+
+
+/*la trecerea mouse-ului peste aceste butoane vreau sa le schimb culoare pt o oarecare interactiune cu vizitatorul*/
+.show-menu-btn:hover,.hide-menu-btn:hover{
+	color: #008080;
+	
+	
+}
+/*ascund checkbox-ul */
+#chk{
+	position: absolute;
+	visibility: hidden;
+	z-index: -1111;
+	
+	
+}
+
+/* la trecerea cu mouse-ul peste oricare dintre elementele meniului am vrut sa dau acelui element un efect de colorare in alabastru deschis*/
+
+/* formarea efectului de culoare albastru deschis*/
   .meniu a:before
- {
+ {/* before pt a insera inaintea content-ului elemetului selectat */
+	 /* introduc drept content elementul 'null' caruia ii dau culoare si caracteristici*/
 	 content : '';
 	 position: absolute;
 	 top: 0;
 	 left: 0;
 	 z-index: -1;
 	 width: 100%;
-	 height: 100%;
+	 height: 45px;
 	 background: #008080;
 	 transition: 0.5s;
+	 /* pe orizontal */
 	 transform-origin: transform right;
+	 /* ii pun efectului o ordine inferioara pt a fii sigur ca nu imi acopar elementul selectat ci doar ii ofer "un fundal" (ordine stiva elemete)*/
+	 /* pun 0 pt ca daca nu am cursorul pe elemnt eu vreau sa nu se vada colorat*/
 	 transform: scaleX(0);
-	 
-	 
+
+
  }
- 
+/*dupa ce pun cursorul  pe elemntul meniului transform la scala 1 initial 0 (X) pt ca vreau efectul pe orizontal*/
   .meniu a:hover:before
   { 	
      transition: 0.5s;
+	 /*pt orixontal*/
 	 transform-origin: transform left;
+	 /*la atingere cursor vreau culoare*/
 	 transform: scaleX(1);
-  }
-
+  }	 
+	
+	
+	
+	
+	@media (max-width:985px)
+	{
+	.show-menu-btn,.hide-menu-btn{
+		display: block;
+		font-size: 40px;
+	}
+	
+	@media (orientation: portait){
+		.show-menu-btn,.hide-menu-btn{display: block;
+		                               font-size: 40px;}
+		
+		.meniu{
+		
+	    position: fixed;
+		width: 100%;
+		
+		height: 100vh;
+		background: black;
+		right: -100%;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		 align-items: center;
+		 justify-content: space-between;
+		 line-height: normal;
+	
+	
+	}
+	
+	.meniu a {
+		
+		display: block;
+	}
+	
+	.hide-menu-btn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		 
+	}
+	#chk:checked ~ .meniu{
+		right: 0;
+	}
+		
+		
+	}
+	.meniu{
+		
+	    position: fixed;
+		width: 100%;
+		
+		height: 100vh;
+		background: black;
+		right: -100%;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		 align-items: center;
+		 justify-content: space-between;
+		 line-height: normal;
+	
+	
+	}
+	
+	.meniu a {
+		
+		display: block;
+	}
+	
+	.hide-menu-btn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		 
+	}
+	#chk:checked ~ .meniu{
+		right: 0;
+	}
+	
+	}
