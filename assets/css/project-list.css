@@ -1,14 +1,55 @@
+@import url("utils.css");
 
 html, body {
-    --background-blue: #34495e;
-    --border-blue:  #102C38;
-    --select-blue: #008080;
-    background: var(--background-blue);
     margin: 0;
     overflow: hidden;
     height: 100%;
 }
+/* main */
+.Site{
+    min-height: 100vh;
+    display: block;
+    position: relative;
+}
 
+#Site-content{
+    flex: 1;
+    height: inherit;
+}
+
+/* header */
+header{
+    width: 100%;
+    height: 10vh;
+	background :var(--background-color);
+    top: 0;
+    border-bottom: .5rem solid var(--border-color);
+}
+
+.header {
+    height: 10vh;
+    border-bottom: .5rem solid var(--border-color);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: auto;
+
+    background: var(--background-color);
+    border-top: .5rem solid var(--border-color);
+}
+
+footer .triangle{
+    margin: 0.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+footer .triangle[facing="left"] {
+    transform: rotate(180deg);
+}
+/* helpful */
 h1 {
     display: inline;
     font-size: 1.5rem;
@@ -28,53 +69,6 @@ h2 {
     margin-top: 1rem;
 }
 
-.Site{
-    min-height: 100vh;
-    display: block;
-    position: relative;
-}
-
-#Site-content{
-    flex: 1;
-    height: inherit;
-}
-
-.flex-content-center {
-    align-items: center;
-    justify-content: center;
-}
-
-header{
-    width: 100%;
-    height: 10vh;
-	background :var(--background-blue);
-    top: 0;
-    border-bottom: .5rem solid var(--border-blue);
-}
-
-.header {
-    height: 10vh;
-    border-bottom: .5rem solid var(--border-blue);
-}
-
-footer {
-    width: 100%;
-    height: auto;
-
-    background: var(--background-blue);
-    border-top: .5rem solid var(--border-blue);
-}
-
-footer .triangle{
-    margin: 0.5rem;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-footer .triangle[facing="left"] {
-    transform: rotate(180deg);
-}
-
 .flex-wrapper-col {
     display: flex;
     flex-direction: column;
@@ -84,16 +78,22 @@ footer .triangle[facing="left"] {
     display: flex;
     flex-direction: row;
 }
+
+.flex-content-center {
+    align-items: center;
+    justify-content: center;
+}
+
 /* for the filters menu */
 .filter-menu {
     height: inherit;
-    background: var(--background-blue);
-    border-left: .25rem solid var(--border-blue);
-    border-right: .25rem solid var(--border-blue);
+    background: var(--background-color);
+    border-left: .25rem solid var(--border-color);
+    border-right: .25rem solid var(--border-color);
     flex: 1;
     overflow-x: hidden;
     overflow-y: scroll;
-    color: white;
+    color: var(--main-text-color);
 
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
@@ -107,7 +107,7 @@ footer .triangle[facing="left"] {
 
 .filter-menu h1 {
     display: block;
-    border-bottom: .2rem solid var(--border-blue);
+    border-bottom: .2rem solid var(--border-color);
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -115,13 +115,13 @@ footer .triangle[facing="left"] {
 .filter-menu > form > ul {
     list-style-type: disk;
     font-size: 2rem;
-    color: white;
+    color: var(--main-text-color);
 }
 .filter-menu > form > ul > li {
     margin: 0;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
-    border-bottom:.1rem solid var(--border-blue);
+    border-bottom:.1rem solid var(--border-color);
 
 }
 
@@ -132,16 +132,15 @@ footer .triangle[facing="left"] {
     height: inherit;
     cursor: pointer;
     flex: 0;
-    background :var(--background-blue);
+    background :var(--background-color);
 }
-
 
 #show-filters .triangle{
     /* this makes the triangle */
     width: 0;
     height: 0;
     border-top: 1rem solid transparent;
-    border-left: 1rem solid white;
+    border-left: 1rem solid var(--main-text-color);
     border-bottom: 1rem solid transparent;
     /* other settings */
     margin: 0.3rem;
@@ -154,23 +153,26 @@ footer .triangle[facing="left"] {
 #show-filters-checkbox:checked ~ label ~ .filter-menu {
     flex: 0;
 }
+
 #show-filters-checkbox:not(:checked) ~ label  .filter-menu {
     float: 1;
 }
+
 #show-filters-checkbox:checked ~ label > .triangle {
     transform: rotate(0deg);
 }
+
 #show-filters-checkbox:not(:checked) ~ label > .triangle {
     transform: rotate(180deg);
 }
 
 .filter-menu input[type="text"] {
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--main-text-color);
     background-color: transparent;
     outline: none;
     font-size: 1rem;
-    color: white;
+    color: var(--main-text-color);
     width: 60%;
     
 }
@@ -179,7 +181,7 @@ footer .triangle[facing="left"] {
     width: 80%;
 }
 ::placeholder{
-    color: white;
+    color: var(--main-text-color);
 }
 
 #select-grad {
@@ -191,9 +193,8 @@ footer .triangle[facing="left"] {
     font: 1.2rem;
     width: calc(auto + 2vw);
 }
-/*
-Settings for the accordion list
-*/
+
+/* Settings for the accordion list */
 .accordion {
     flex: 3;
     height: inherit;
@@ -215,10 +216,10 @@ Settings for the accordion list
     display: none;
 }
 .accordion label {
-    border-left: .5rem solid var(--border-blue);
-    background: var(--border-blue);
+    border-left: .5rem solid var(--border-color);
+    background: var(--border-color);
     cursor: pointer;
-    color: white;
+    color: var(--main-text-color);
     transition: all .2s ease-out;
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
@@ -235,16 +236,16 @@ Settings for the accordion list
 }
 
 .accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
-     background: var(--select-blue);
-     border: medium solid var(--select-blue);
+     background: var(--select-color);
+     border: medium solid var(--select-color);
      border-bottom-style: none;
-     border-left: .5rem solid var(--select-blue);
-     color: var(--border-blue);
+     border-left: .5rem solid var(--select-color);
+     color: var(--border-color);
     }
 
 .accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
-    background: var(--border-blue);
-    border-color: var(--border-blue);
+    background: var(--border-color);
+    border-color: var(--border-color);
 }
 
 .accordion .content {
@@ -253,102 +254,21 @@ Settings for the accordion list
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
     -o-transition: all .5s ease-out;
-    background: #EEFFFF;
-    color: black;
+    background: var(--main-text-color);
+    color: var(--secondary-text-color);
     font-size: 1.2rem;
 }
 
 .accordion [type=checkbox]:checked ~ label ~ .content {
-    height: 30vh;
+    height: min(auto 30vh);
     overflow-y: scroll;
-    border: medium solid var(--select-blue);
-    border-left: 0.5rem solid var(--select-blue);
+    border: medium solid var(--select-color);
+    border-left: 0.5rem solid var(--select-color);
     padding: 0.5rem;
 }
 
 .accordion [type=checkbox]:not(:checked) ~ label ~ .content {
     height: 0;
-}
-
-/* utils */
-
-/* custom-scrollbar */
-::-webkit-scrollbar{
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 8px rgba(52, 73, 94, 0.3);
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 8px rgba(0,0,0,1);
-    border-radius: 12px;
-}
-
-/* triangle */
-.triangle {
-    width: 0;
-    height: 0;
-    border-top: 1.0rem solid transparent;
-    border-left: 1.0rem solid var(--border-blue);
-    border-bottom: 1.0rem solid transparent;
-}
-
-/* tags and tag area */
-ul.tag-area{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.tag-area li {
-    display: inline;
-}
-
-.tag-checkbox {
-    display: none;
-}
-
-.tag {
-    font-size: 1rem;
-    background: #eee;
-    border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
-    color: #999;
-    display: inline-block;
-    height: auto;
-    line-height: 1.2rem;
-    padding: 0 .2rem 0 .23rem;
-    position: relative;
-    margin: 0 .1rem .1rem 0;
-    text-decoration: none;
-    transition: color .2s;
-    -webkit-transition: color .2s;
-}
-
-.tag-checkbox:checked ~ .tag, .tag:hover{
-    background-color: var(--select-blue);
-    color: white;
-}
-
-.btn{
-    background: var(--border-blue);
-    border: none;
-    border-width: .2rem;
-    border-style: solid;
-    border-color: white;
-    margin: .2rem;
-	color: white;
-    padding: 0.1rem;
-    padding-right: .5rem;
-    padding-left: .5rem;
-	font-size: 2rem;
-	cursor: pointer;
-}
-
-.btn:hover, btn:focus {
-    border-color: var(--border-blue);
-    color: var(--border-blue);
-    background-color: var(--select-blue);
 }
 
 /* responsiveness */
@@ -367,8 +287,8 @@ ul.tag-area li {
     .filter-menu{
         flex: 2;
         border: none;
-        border-top: .25rem solid var(--border-blue);
-        border-bottom: .25rem solid var(--border-blue);
+        border-top: .25rem solid var(--border-color);
+        border-bottom: .25rem solid var(--border-color);
     }
 }
 
