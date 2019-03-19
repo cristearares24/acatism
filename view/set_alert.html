@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Acatism - Home</title>
+    <meta name="description" content="Acatism Homepage">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="../assets/css/meniuri.css">
+    <link rel="stylesheet" href="../assets/css/mlStyle.css">
+    <link rel="stylesheet" href="../assets/css/message.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul class="meniu">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+                <a href="#">Proiectele mele</a></li>
+                <a href="#">Add event</a></li>
+                <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+                <a href="#">Logout</a></li>
+                <a href="#"><i class="fas fa-cog"></i> Setari</a>
+            </ul>
+        </div>
+    </header>
+    <main id="Site-content" class="flex-wrapper-row">
+        <form>
+            <li>
+                <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
+                <h1>Tip Alerta:</h1>
+                <ul class="name-area">
+                    <li>
+                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                        <label for="tag-checkbox1" class="tag">Deadline</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                        <label for="tag-checkbox2" class="tag">Intalnire</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                        <label for="tag-checkbox3" class="tag">Consultatii</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+                        <label for="tag-checkbox4" class="tag">Altele</label>
+                    </li>
+                </ul>
+                <h1>Importanta:</h1>
+                <ul class="name-area">
+                    <li>
+                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                        <label for="tag-checkbox1" class="tag">Mica</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                        <label for="tag-checkbox2" class="tag">Medie</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                        <label for="tag-checkbox3" class="tag">Ridicata</label>
+                    </li>
+                </ul>
+                <h1>Nume Alerta:</h1>
+                <p><input type="text" required=true name="title"></p>
+                <h1>Descriere:</h1>
+                <p><textarea class="bigtextinput" required=false></textarea></p>
+                <h1>Data de Inceput: </h1><input type="date" name="startdate"><h1> Data de Terminare:</h1> <input type="date" name="enddate">
+                <p></p><h1>Ora de Inceput: </h1><input type="time" name="starttime"><h1> Ora de Terminare:</h1> <input type="time" name="endtime">
+                <ul class="name-area">
+                        <h1>Frecventa: </h1>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                        <label for="tag-checkbox1" class="tag">O singura data</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                        <label for="tag-checkbox2" class="tag">Zilnic</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                        <label for="tag-checkbox3" class="tag">Saptamanal</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+                        <label for="tag-checkbox4" class="tag">Lunar</label>
+                    </li>
+                </ul>
+                <h1>Numar Repetitii: <input type="number" required=false name="repeats" min=1></h1>
+                <p><input value="seteaza alerta" type="submit" class="styled"></input></p>
+            </li>
+        </form>
+    </main>
+</body>
+
+</html>

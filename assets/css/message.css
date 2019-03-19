@@ -265,3 +265,9 @@ form {
 [name="title"]{
     width: var(--tbWidth);
 }
+
+/*setalert*/
+
+[type="number"]{
+    width: 2.5rem;
+}
