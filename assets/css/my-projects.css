@@ -1,3 +1,8 @@
+/*
+--------------------------------------------------------------------
+-- @Matei --
+--------------------------------------------------------------------
+*/
 @import url("utils.css");
 
 html, body {
@@ -84,6 +89,10 @@ h2 {
     justify-content: center;
 }
 
+.new-project-warper {
+    margin: 0.4rem;
+    margin-left: 0;
+}
 /* Settings for the accordion list */
 .accordion {
     flex: 3;
@@ -150,7 +159,8 @@ h2 {
 }
 
 .accordion [type=checkbox]:checked ~ label ~ .content {
-    height: min(auto 30vh);
+    height: auto;
+    max-height: 30vh;
     overflow-y: scroll;
     border: medium solid var(--select-color);
     border-left: 0.5rem solid var(--select-color);
