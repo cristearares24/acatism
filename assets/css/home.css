@@ -19,8 +19,10 @@ ul{
 
 .main {
     display: flex;
+    flex: 1px 1px 1px 1px;
     flex-direction:var(--categoryDirection);
     justify-content:center;
+    background-color: #102C38;
 }
 
 /*.main > * {
@@ -118,7 +120,7 @@ h2 {
     padding-bottom:1rem;
     padding-top:1rem;
     text-align:center;
-    box-shadow: -40vh 0 0 0 lightblue;
+    box-shadow: -980px 0 0 0 lightblue;
 }
 
 .studRow > .centerContent > ul{
@@ -142,7 +144,7 @@ h2 {
     padding-bottom:1rem;
     padding-top:1rem;
     text-align:center;
-    box-shadow: 70vh 0 0 0 lightcoral;
+    box-shadow: 980px 0 0 0 lightcoral;
 }
 
 .profRow > .centerContent > ul{
@@ -154,6 +156,12 @@ h2 {
 .profRow > .centerContent > ul > li{
     flex:1;
     padding:var(--listPadding);
+}
+
+.profBG {
+    display:block;
+    background-color:black;
+    color:black;
 }
 
 li:before {
@@ -171,6 +179,7 @@ li:before {
     box-shadow: 0 50vh 0 50vh #102C38;
     color:white;
     padding-top:1rem;
+	padding-bottom:1rem;
 }
 
 /* desc */
