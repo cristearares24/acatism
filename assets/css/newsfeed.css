@@ -89,6 +89,15 @@ h2 {
     justify-content: center;
 }
 
+.notif-grid-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.notif-grid-wrapper > h1 {
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
 /* for the filters menu */
 .filter-menu {
     height: inherit;
@@ -240,7 +249,7 @@ h2 {
     flex: 0;
 }
 
-.accordion ul li label:hover, .accordion [type=checkbox]:checked ~ label{
+.accordion ul li > label:hover, .accordion ul li > [type=checkbox]:checked ~ label{
      background: var(--select-color);
      border: medium solid var(--select-color);
      border-bottom-style: none;
@@ -248,7 +257,7 @@ h2 {
      color: var(--border-color);
     }
 
-.accordion [type=checkbox]:not(:checked) ~ label:not(:hover){
+.accordion ul li > [type=checkbox]:not(:checked) ~ label:not(:hover){
     background: var(--border-color);
     border-color: var(--border-color);
 }
@@ -277,6 +286,27 @@ h2 {
     height: 0;
 }
 
+/* tag overrites */
+.accordion .tag:hover {
+    background: #eee;
+    color: #999;
+}
+
+.red-tag, .tag.red-tag:hover {
+    background: red;
+    color: white;
+}
+
+.orange-tag, .tag.orange-tag:hover {
+    background: orange;
+    color: white;
+}
+
+.yellow-tag, .tag.yellow-tag:hover {
+    background: yellowgreen;
+    color: white;
+}
+
 /* responsiveness */
 @media (orientation: portrait){
     #Site-content.flex-wrapper-row {
@@ -286,7 +316,7 @@ h2 {
     #show-filters .triangle{
         /* this makes the triangle */
         border-left: 1rem solid transparent;
-        border-top: 1rem solid var(--main-text-color);
+        border-top: 1rem solid white;
         border-right: 1rem solid transparent;
     }
 
