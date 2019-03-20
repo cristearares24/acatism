@@ -13,7 +13,6 @@ body {
 }
 
 main {
-    /* margin-top: calc(10vh + 0.5rem); */
     margin-top: 10vh;
 }
 
@@ -96,4 +95,16 @@ a {
 
 .center_thing {
     align-self: center;
+}
+
+.calendar {
+    display: flex;
+    border-width: 0;
+    width: 80%;
+    height: 50rem;
+}
+
+.big_title {
+    font-size: 3rem;
+    
 }

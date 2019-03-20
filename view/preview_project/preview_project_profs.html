@@ -14,101 +14,103 @@
 </head>
 
 <body>
-    <div class="header">
-        <h2 class="logo">MENIU</h2>
-        <input type="checkbox" id="chk">
-        <label for="chk" class="show-menu-btn">
-            <i class="fas fa-ellipsis-h"></i>
-        </label>
-
-        <ul class="meniu">
-            <a href="#"><i class="fas fa-home"></i> Home</a>
-            <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-            <a href="#">Proiectele mele</a></li>
-            <a href="#">Add event</a></li>
-            <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
-            <a href="#"><i class="far fa-envelope"></i> Send message</a></li>
-            <a href="#">Logout</a></li>
-            <a href="#"><i class="fas fa-cog"></i> Setari</a>
-
-            <label for="chk" class="hide-menu-btn">
-                <i class="fas fa-times"></i>
+    <header>
+        <div class="header">
+            <h2 class="logo">MENIU</h2>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
             </label>
-        </ul>
-    </div>
+
+            <nav class="meniu">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+                <a href="#">Proiectele mele</a>
+                <a href="#">Add event</a>
+                <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+                <a href="#"><i class="far fa-envelope"></i> Send message</a>
+                <a href="#">Logout</a>
+                <a href="#"><i class="fas fa-cog"></i> Setari</a>
+
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </nav>
+        </div>
+    </header>
 
 
     <main id="preview_project_all" class="flex-wrapper-row">
         <section class="project_data bubbles">
-            <article class="red_bubble bubble_base">
+            <h1 class="big_title">Transpiler</h1>
+            <div class="red_bubble bubble_base">
                 <p class="description_label">Scrie mesaj: </p>
                 <div class="flex_wrapper_definitelly_row">
                     <p class="description_textbox write_message_textbox">
                         <button type="button" class="btn">Trimite mesaj studentului</button>
                     </p>
                 </div>
-            </article>
+            </div>~
 
             <div class="scrollable_window">
-                <article class="blue_bubble bubble_base">
+                <div class="blue_bubble bubble_base">
                     <p class="description_label">Mesaj student: Am schimbat documentatia</p>
-                    </p>
                     <p class="description_textbox">
                         Buna ziua. Am schimbat ce era de schimbat.
                         <button type="button" class="btn">Raspunde</button>
                     </p>
-                </article>
+                </div>
 
-                <article class="red_bubble bubble_base">
+                <div class="red_bubble bubble_base">
                     <p class="description_label">Mesaj profesor: Schimba documentatia</p>
-                    </p>
                     <p class="description_textbox">Ar merge sa schimbi documentatia la pagina 2.
                         <button type="button" class="btn">Raspunde</button>
                     </p>
-                </article>
+                </div>
 
-                <article class="blue_bubble bubble_base">
+                <div class="blue_bubble bubble_base">
                     <p class="description_label">Commit nou: Preview project page first version </p>
                     <p class="description_textbox">17 hours ago. 72 additions and 0 deletions.
                         <a href="https://github.com/xTachyon/acatism/commit/1f9c9044907c60bba26045f851c25ea429bbecf8">Link
                             catre commit</a></p>
-                </article>
+                </div>
             </div>
 
-            <article class="red_bubble bubble_base">
+            <div class="red_bubble bubble_base">
                 <p class="description_label">Titlu proiect: </p>
                 <p class="description_textbox">Transpiler C++ to Rust</p>
-            </article>
+            </div>
 
-            <article class="blue_bubble bubble_base">
+            <div class="blue_bubble bubble_base">
                 <p class="description_label">Descriere proiect: </p>
                 <p class="description_textbox">Folosing libclang(sau libtooling), din C++ sau Rust, scris un transpiler
                     care primeste ca input o sursa C++ si generaza la output o sursa Rust, echivalenta cu sursa C++ de
                     la input.</p>
-            </article>
+            </div>
 
-            <article class="red_bubble bubble_base">
+            <div class="red_bubble bubble_base">
                 <p class="description_label">Student: </p>
                 <p class="description_textbox">Ion Creanga</p>
-            </article>
+            </div>
 
-            <article class="blue_bubble bubble_base">
+            <div class="blue_bubble bubble_base">
                 <p class="description_label">Resources: </p>
                 <p class="description_textbox">Libclang: <a href="https://clang.llvm.org/doxygen/group__CINDEX.html">Link</a>
                     <br>Rust book: <a href="https://doc.rust-lang.org/book/">hLink</a></p>
-            </article>
+            </div>
 
-            <article class="red_bubble bubble_base">
+            <div class="red_bubble bubble_base">
                 <p class="description_label">Git repository: </p>
-                <p class="description_textbox"><a href="https://github.com/xTachyon/acatism">Link</a>. <a href="../repository_page.html">Link intern</a></p>
-            </article>
+                <p class="description_textbox"><a href="https://github.com/xTachyon/acatism">Link</a>. <a href="../repository_page.html">Link
+                        intern</a></p>
+            </div>
 
-            <article class="blue_bubble bubble_base">
+            <div class="blue_bubble bubble_base">
                 <p class="description_label">Renunta la student: </p>
                 <p class="description_textbox"><button type="button" class="btn">Renunta !</button></p>
-            </article>
+            </div>
 
-            <article class="red_bubble bubble_base">
+            <div class="red_bubble bubble_base">
                 <p class="description_label">Tags: </p>
                 <p class="description_textbox">
                     <ul class="tag-area center_thing">
@@ -125,11 +127,9 @@
                             <label for="tag-checkbox3" class="tag">Clang</label>
                         </li>
                     </ul>
-                </p>
-            </article>
+            </div>
 
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%2333ff33&amp;src=1va1gkombr2cfl30um5moou1ms%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FBucharest"
-                style="border-width:0" width="80%" height="600" frameborder="0" scrolling="no"></iframe>
+            <iframe class="calendar" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%2333ff33&amp;src=1va1gkombr2cfl30um5moou1ms%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FBucharest"></iframe>
         </section>
     </main>
 </body>
