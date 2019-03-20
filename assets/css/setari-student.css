@@ -7,8 +7,14 @@
 	
 	
 }
+
+
+
+
 .setari{
 	margin-left: 2%;
+	margin-top:20%;
+
 	
 }
 
@@ -26,7 +32,8 @@
 /*lucrez dor cu cele 3 div fara cele de pe net*/
 div.setari  {
 	list-style: none;
-    color: #58FAF4;
+	color: #58FAF4;
+	margin-top: 70px;
 	
 	
 	
