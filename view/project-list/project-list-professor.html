@@ -1,201 +1,230 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <link rel="stylesheet" href="../../assets/css/meniuri.css">
-    <link rel="stylesheet" href="../../assets/css/project-list.css">
-	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Acatism Project-List</title>
-  </head>
-  <!-- in this page you will be able to see the project-list -->
-  <body class="flex-wrapper-col Site">
-      <!-- @Daniel -->
-      <!-- ================================================================ -->
-      <header>
-          <div class="header">
-  
-              <h2 class="logo">MENIU</h2>
-              <input type="checkbox" id="chk">
-                  <label for="chk"   class="show-menu-btn">
-                  <i class="fas fa-ellipsis-h"></i>
-                </label>	
-              
-              
-              <nav class="meniu">
-               <a href="#"><i class="fas fa-home"></i> Home</a>
-               <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-               <a href="#">Proiectele mele</a>
-               <a href="#">Add event</a>
-               <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
-               <a href="#"><i class="far fa-envelope"></i> Send message</a>
-               <a href="#">Logout</a>
-               <a href="#"><i class="fas fa-cog"></i> Setari</a> 
-               
-               
-               <label for="chk"   class="hide-menu-btn">
-                  <i class="fas fa-times"></i>
-                </label>	
-               
-              </nav>
-              </div>
-      </header>
-      <!-- ================================================================ -->
-      <!-- @Matei -->
-      <!-- ================================================================ -->
-      <main id="Site-content" class="flex-wrapper-row">
-        <!-- show filters -->
-        <input type="checkbox" id="show-filters-checkbox"/>
-        <label for="show-filters-checkbox" id="show-filters">
-            <i class="triangle"></i>
-        </label>
-        <!-- filter menu -->
-        <section class="filter-menu">
-            <form action="#" method="GET">
-              <h1>Filtre:</h1>
-              <ul>
-                <li>
-                  <h1>Profesori:</h1>
-                  <input type="text" name="last-name-textbox" id="nume-prof" placeholder="Nume">
-                  <br>
-                  <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
-                  <br>
-                  <h2>Grad:</h2>
-                  <select name="Grad" id="select-grad">
-                    <option value="1" class="select-option">
-                      Lector
-                    </option>
-                    <option value="2" class="select-option">
-                      Conferentiar
-                    </option>
-                    <option value="3" class="select-option">
-                      Profesor
-                    </option>
-                  </select>
 
-                </li>
-                <li>
-                  <h1>Proiect:</h1>
-                  <input type="text" name="title-checkbox" id="nume-proiect" placeholder="Titlu">
-                  <br>
-                </li>
-                <li>
-                  <h1>Tags:</h1>
-                  <ul class="tag-area">
-                  <li>
-                    <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
-                    <label for="tag-checkbox1" class="tag">ML</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
-                    <label for="tag-checkbox2" class="tag">Graph Theory</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
-                    <label for="tag-checkbox3" class="tag">DataBases</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
-                    <label for="tag-checkbox4" class="tag">AR/VR</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
-                    <label for="tag-checkbox5" class="tag">FAI</label>
-                  </li>
-                  </ul>
-              </ul>
-              <input class="btn" type="submit" name="filter-submit" value="Filtreaza">
-            </form>
-        </section>
-        <!-- accordion project-list -->
-        <div class="accordion">
-          <ul>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1" class="flex-wrapper-row flex-content-center">
-                <span class="h1-like">Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</span>
-                <a href="#" class="btn">Edit</a>
-              </label>
-              <div class="content">
-                <p>
-                  Aceasta aplicatie va face poze 3D precum masina de la google.
-                </p>
-              </div>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2" class="flex-wrapper-row flex-content-center">
-                <span class="h1-like">Panu Andrei - Academic Thesis Manager</span>
-              </label>
-              <div class="content">
-                <p>
-                  Sa se realizeze o aplicatie Web privind managementul tezelor de licenta/master la nivelul unei facultati. 
-                  Din punctul de vedere al profesorului, sistemul va oferi posibilitatea gestionarii temelor propuse si a studentilor arondati,
-                  inclusiv crearea unei planificari a celor mai importante etape pana la momentul sustinerii. Pentru studenti, aplicatia va fi capabila sa listeze/filtreze 
-                  subiectele de interes pentru fiecare profesor in parte si sa permita inscrierea unei persoane in vederea indrumarii, eventual conform unor cerinte prelabile. 
-                </p>
-                <p>
-                  Sistemul va verifica indeplinirea acestor cerinte, inclusiv va notifica -- via un flux Atom sau prin e-mail -- profesorul/studentul atunci cand survin intarzieri 
-                  in efectuarea unor activitati (e.g., transmiterea unui raport preliminar) sau daca apar actualizari -- de pilda, profesorul a plasat o lista de lecturi recomandate. 
-                  De asemenea, aplicatia va semnala posibile probleme privind variantele intermediare ale documentelor intocmite de student referitoare la format sau standarde de redactare.
-                  Progresul implementarii tezei va putea fi monitorizat automat prin intermermediul unui sistem online de management de cod-sursa precum Github.
-                </p>
-              </div>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox3" />
-              <label for="checkbox3" class="flex-wrapper-row flex-content-center">
-                <span class="h1-like">Panu Andrei - HTTPcafe</span>
-              </label>
-              <div class="content">
-                <p>
-                  Sa se implementeze o aplicatie Web care simuleaza o cafenea destinata in special studentilor informaticieni. Interactiunea cu "clientii" se va realiza din pagini 
-                  Web publice gazduite pe un anumit server Web, pe baza cimpului 'Referer' din antetul unui mesaj HTTP. Aplicatia trebuie sa puna la dispozitia "clientilor" o serie 
-                  de resurse identificate via URI precum '/intrare', '/meniu', '/prefer/cafea', '/comanda/suc', '/comanda/zacusca', '/nota', '/iesire' etc. (dati frau liber imaginatiei).
-                </p>
-                <p>
-                  Desi identificarea clientului se va face pe baza contului din URL-ul oferit de Referer, trebuie mentinut un nivel minimal contabil si informativ: ce produse sunt in stoc 
-                  si la ce pret, cine si ce a comandat, care e valoarea totala a notei de plata, la ce ora s-a inregistrat o comanda, cine mai era atunci in cafenea etc. Resursele sunt disponibile 
-                  in cantitati finite, eventual ajustabile dinamic. "Filmul" ocuparii cafenelei va putea fi expus, in mod dinamic, ca document HTML, ca date JSON si ca flux de stiri Atom. 
-                  De asemenea, "barman"-ul trebuie sa raspunda clientilor in mod "politicos HTTP" -- exemplu: daca se recurge la 'GET /comanda/alcool', se va intoarce codul 403 Forbidden.
-                </p>
-              </div>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox4" />
-              <label for="checkbox4" class="flex-wrapper-row flex-content-center">
-                <span class="h1-like">Varlan Cosmin - Recunoasterea automata a semnelor de circulatie</span>
-                <a href="#" class="btn">Edit</a>
-              </label>
-              <div class="content">
-                <p>
-                  O aplicatie care cu ajutorul unei mici camere video sa recunoasca cemnalele semaforului. Camera trebuie sa fie la bordul unei masini si sa recunoasca semnalele in real-time.
-                </p>
-              </div>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox5" />
-              <label for="checkbox5" class="flex-wrapper-row flex-content-center">
-                <span class="h1-like">Varlan Cosmin - Sistem distribuit pentru compilarea si verificarea problemelor C/C++</span>
-                <a href="#" class="btn">Edit</a>
-              </label>
-              <div class="content">
-                <p>
-                  Un sistem distribuit pentru compilarea si verificarea problemelor C/C++ ce va putea fi folosit pentru o mai rapida verificare a numeroase programe voluminoase de C/C++.
-                  Posibile utilizari: punctaj OJI.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </main>
-      <!-- footer -->
-      <footer class="flex-wrapper-row flex-content-center">
-        <a href="#"><div class="triangle facing-left"></div></a>
-        <p>Page 1 out of 1</p>
-        <a href="#"><div class="triangle facing-right"></div></a>
-      </footer>
-      <!-- ================================================================ -->
-  </body>
+<head>
+  <link rel="stylesheet" href="../../assets/css/meniuri.css">
+  <link rel="stylesheet" href="../../assets/css/project-list.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acatism Project-List</title>
+</head>
+<!-- in this page you will be able to see the project-list -->
+
+<body class="flex-wrapper-col Site">
+  <!-- @Daniel -->
+  <!-- ================================================================ -->
+  <header>
+    <div class="header">
+
+      <h2 class="logo">MENIU</h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+
+      <nav class="meniu">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+        <a href="#">Proiectele mele</a>
+        <a href="#">Add event</a>
+        <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+        <a href="#"><i class="far fa-envelope"></i> Send message</a>
+        <a href="#">Logout</a>
+        <a href="#"><i class="fas fa-cog"></i> Setari</a>
+
+
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+
+      </nav>
+    </div>
+  </header>
+  <!-- ================================================================ -->
+  <!-- @Matei -->
+  <!-- ================================================================ -->
+  <main id="Site-content" class="flex-wrapper-row">
+    <!-- show filters -->
+    <input type="checkbox" id="show-filters-checkbox" />
+    <label for="show-filters-checkbox" id="show-filters">
+      <i class="triangle"></i>
+    </label>
+    <!-- filter menu -->
+    <section class="filter-menu">
+      <form action="#" method="GET">
+        <h1>Filtre:</h1>
+        <ul>
+          <li>
+            <h1>Profesori:</h1>
+            <input type="text" name="last-name-textbox" id="nume-prof" placeholder="Nume">
+            <br>
+            <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
+            <br>
+            <h2>Grad:</h2>
+            <select name="Grad" id="select-grad">
+              <option value="1" class="select-option">
+                Lector
+              </option>
+              <option value="2" class="select-option">
+                Conferentiar
+              </option>
+              <option value="3" class="select-option">
+                Profesor
+              </option>
+            </select>
+
+          </li>
+          <li>
+            <h1>Proiect:</h1>
+            <input type="text" name="title-checkbox" id="nume-proiect" placeholder="Titlu">
+            <br>
+          </li>
+          <li>
+            <h1>Tags:</h1>
+            <ul class="tag-area">
+              <li>
+                <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                <label for="tag-checkbox1" class="tag">ML</label>
+              </li>
+              <li>
+                <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                <label for="tag-checkbox2" class="tag">Graph Theory</label>
+              </li>
+              <li>
+                <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                <label for="tag-checkbox3" class="tag">DataBases</label>
+              </li>
+              <li>
+                <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+                <label for="tag-checkbox4" class="tag">AR/VR</label>
+              </li>
+              <li>
+                <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
+                <label for="tag-checkbox5" class="tag">FAI</label>
+              </li>
+            </ul>
+        </ul>
+        <input class="btn" type="submit" name="filter-submit" value="Filtreaza">
+      </form>
+    </section>
+    <!-- accordion project-list -->
+    <div class="accordion">
+      <ul>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox1" />
+          <label for="checkbox1" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</span>
+            <a href="#" class="btn">Edit</a>
+          </label>
+          <div class="content">
+            <p>
+              Aceasta aplicatie va face poze 3D precum masina de la google.
+            </p>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox2" />
+          <label for="checkbox2" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Panu Andrei - Academic Thesis Manager</span>
+          </label>
+          <div class="content">
+            <p>
+              Sa se realizeze o aplicatie Web privind managementul tezelor de licenta/master la nivelul unei facultati.
+              Din punctul de vedere al profesorului, sistemul va oferi posibilitatea gestionarii temelor propuse si a
+              studentilor arondati,
+              inclusiv crearea unei planificari a celor mai importante etape pana la momentul sustinerii. Pentru
+              studenti, aplicatia va fi capabila sa listeze/filtreze
+              subiectele de interes pentru fiecare profesor in parte si sa permita inscrierea unei persoane in vederea
+              indrumarii, eventual conform unor cerinte prelabile.
+            </p>
+            <p>
+              Sistemul va verifica indeplinirea acestor cerinte, inclusiv va notifica -- via un flux Atom sau prin
+              e-mail -- profesorul/studentul atunci cand survin intarzieri
+              in efectuarea unor activitati (e.g., transmiterea unui raport preliminar) sau daca apar actualizari -- de
+              pilda, profesorul a plasat o lista de lecturi recomandate.
+              De asemenea, aplicatia va semnala posibile probleme privind variantele intermediare ale documentelor
+              intocmite de student referitoare la format sau standarde de redactare.
+              Progresul implementarii tezei va putea fi monitorizat automat prin intermermediul unui sistem online de
+              management de cod-sursa precum Github.
+            </p>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox3" />
+          <label for="checkbox3" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Panu Andrei - HTTPcafe</span>
+          </label>
+          <div class="content">
+            <p>
+              Sa se implementeze o aplicatie Web care simuleaza o cafenea destinata in special studentilor
+              informaticieni. Interactiunea cu "clientii" se va realiza din pagini
+              Web publice gazduite pe un anumit server Web, pe baza cimpului 'Referer' din antetul unui mesaj HTTP.
+              Aplicatia trebuie sa puna la dispozitia "clientilor" o serie
+              de resurse identificate via URI precum '/intrare', '/meniu', '/prefer/cafea', '/comanda/suc',
+              '/comanda/zacusca', '/nota', '/iesire' etc. (dati frau liber imaginatiei).
+            </p>
+            <p>
+              Desi identificarea clientului se va face pe baza contului din URL-ul oferit de Referer, trebuie mentinut
+              un nivel minimal contabil si informativ: ce produse sunt in stoc
+              si la ce pret, cine si ce a comandat, care e valoarea totala a notei de plata, la ce ora s-a inregistrat o
+              comanda, cine mai era atunci in cafenea etc. Resursele sunt disponibile
+              in cantitati finite, eventual ajustabile dinamic. "Filmul" ocuparii cafenelei va putea fi expus, in mod
+              dinamic, ca document HTML, ca date JSON si ca flux de stiri Atom.
+              De asemenea, "barman"-ul trebuie sa raspunda clientilor in mod "politicos HTTP" -- exemplu: daca se
+              recurge la 'GET /comanda/alcool', se va intoarce codul 403 Forbidden.
+            </p>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox4" />
+          <label for="checkbox4" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Varlan Cosmin - Recunoasterea automata a semnelor de circulatie</span>
+            <a href="#" class="btn">Edit</a>
+          </label>
+          <div class="content">
+            <p>
+              O aplicatie care cu ajutorul unei mici camere video sa recunoasca cemnalele semaforului. Camera trebuie sa
+              fie la bordul unei masini si sa recunoasca semnalele in real-time.
+            </p>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox5" />
+          <label for="checkbox5" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Varlan Cosmin - Sistem distribuit pentru compilarea si verificarea problemelor
+              C/C++</span>
+            <a href="#" class="btn">Edit</a>
+          </label>
+          <div class="content">
+            <p>
+              Un sistem distribuit pentru compilarea si verificarea problemelor C/C++ ce va putea fi folosit pentru o
+              mai rapida verificare a numeroase programe voluminoase de C/C++.
+              Posibile utilizari: punctaj OJI.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="flex-wrapper-row flex-content-center">
+    <a href="#">
+      <div class="triangle facing-left"></div>
+    </a>
+    <p>Page 1 out of 1</p>
+    <a href="#">
+      <div class="triangle facing-right"></div>
+    </a>
+  </footer>
+  <!-- ================================================================ -->
+</body>
+
 </html>
