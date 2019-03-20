@@ -51,11 +51,11 @@ footer .triangle{
     margin-top: 0;
 }
 
-footer .triangle[facing="left"] {
+footer .triangle.facing-left {
     transform: rotate(180deg);
 }
 /* helpful */
-h1 {
+h1, .h1-like {
     display: inline;
     font-size: 1.5rem;
     color: inherit;
@@ -157,10 +157,14 @@ h2 {
 
 #show-filters-checkbox:checked ~ label ~ .filter-menu {
     flex: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #show-filters-checkbox:not(:checked) ~ label  .filter-menu {
-    float: 1;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 #show-filters-checkbox:checked ~ label > .triangle {
@@ -231,7 +235,7 @@ h2 {
     -o-transition: all .2s ease-out;
 }
 
-.accordion label h1 {
+.accordion label h1,.accordion label .h1-like {
     display: inline-block;
     flex: 1;
     margin: 0.4rem 0.4rem 0.4rem 0.4rem;

@@ -1,137 +1,151 @@
 <!DOCTYPE html>
 <html lang="ro">
-  <head>
-    <link rel="stylesheet" href="../../assets/css/meniuri.css">
-    <link rel="stylesheet" href="../../assets/css/admin-list.css">
-	  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Acatism Admin-Page</title>
-  </head>
-  <!-- in this page you will be able to see the project-list -->
-  <body class="flex-wrapper-col Site">
-      <!-- @Daniel -->
-      <!-------------------------------------------------------------------->
-      <header>
-          <div class="header">
-              <h2 class="logo">MENIU</h2>
-              <input type="checkbox" id="chk">
-                  <label for="chk"   class="show-menu-btn">
-                  <i class="fas fa-ellipsis-h"></i>
-                </label>	
-            
-              <ul class="meniu">
-              
-               <a href="./admin-profi.html"> Profesori</a>
-               <a href="./admin-studs.html"> Studenti </a>
-               <a href="#"> Logout </a></li>
-               
-               
-                <label for="chk"   class="hide-menu-btn">
-                  <i class="fas fa-times"></i>
-                </label>	
-              
-               
-               </ul>
-            
-              </div>
-      </header>
-      <!-------------------------------------------------------------------->
-      <!-- @Matei -->
-      <!-------------------------------------------------------------------->
-      <main id="Site-content" class="flex-wrapper-row">
-        <!-- show filters -->
-        <input type="checkbox" id="show-filters-checkbox"/>
-        <label for="show-filters-checkbox" id="show-filters">
-            <div class="triangle"></div>
+
+<head>
+  <link rel="stylesheet" href="../../assets/css/meniuri.css">
+  <link rel="stylesheet" href="../../assets/css/admin-list.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Acatism Admin-Page</title>
+</head>
+<!-- in this page you will be able to see the project-list -->
+
+<body class="flex-wrapper-col Site">
+  <!-- @Daniel -->
+  <!-- ================================================================ -->
+  <header>
+    <div class="header">
+      <h2 class="logo">MENIU</h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+      <nav class="meniu">
+
+        <a href="./admin-profi.html"> Profesori</a>
+        <a href="./admin-studs.html"> Studenti </a>
+        <a href="#"> Logout </a>
+
+
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
         </label>
-        <!-- filter menu -->
-        <section class="filter-menu">
-            <form action="" method="GET">
-              <h1>Filtre:</h1>
-              <nav>
-                <input type="text" name="last-name-textbox" id="nume-prof" placeholder="Nume">
-                <br><br>
-                <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
-                <br><br>
-                <input type="text" name="email-textbox" id="email-prof" placeholder="Email">
-                <br>
-                <h2>An Studiu:</h2>
-                <select name="" id="select-grad">
-                <option value="1" class="select-option">
-                    Licenta 2
-                </option>
-                <option value="2" class="select-option">
-                    Licenta 3
-                </option>
-                <option value="3" class="select-option">
-                    Master 1
-                </option>
-                <option value="3" class="select-option">
-                    Master 2
-                </option>
-                </select>
-                </nav>
-                <input class="btn" type="submit" name="" value="Filtreaza">
-            </form>
-        </section>
-        <!-- accordion project-list -->
-        <div class="accordion">
-          <ul>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox1" />
-              <label for="checkbox1" class="flex-wrapper-row flex-content-center">
-                <h1>Pop Popescu</h1>
-                <a href="#" class="btn">Accept</a>
-                <a href="#" class="btn">Decline</a>
-              </label>
-              <section class="content">
-                <ul>
-                    <li>Nume: Pop</li>
-                    <li>Prenume: Popescu</li>
-                    <li>An: Licenta 3</li>
-                    <li>Email: poppopescu@mail.fals</li>
-                </ul>
-              </section>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox2" />
-              <label for="checkbox2" class="flex-wrapper-row flex-content-center">
-                <h1>Popescu Ana</h1>
-                <a href="#" class="btn">Accept</a>
-                <a href="#" class="btn">Decline</a>
-              </label>
-              <section class="content">
-                    <li>Nume: Popescu</li>
-                    <li>Prenume: Ana</li>
-                    <li>An: Master 2</li>
-                    <li>Email: popescuana@mail.fals</li>
-              </section>
-            </li>
-            <li> <!-- list element -->
-              <input type="checkbox" id="checkbox3" />
-              <label for="checkbox3" class="flex-wrapper-row flex-content-center">
-                <h1>Popescu Marius</h1>
-                <a href="#" class="btn">Accept</a>
-                <a href="#" class="btn">Decline</a>
-              </label>
-              <section class="content">
-                    <li>Nume: Popescu</li>
-                    <li>Prenume: Marius</li>
-                    <li>An: Licenta 3</li>
-                    <li>Email: popescumarius@mail.fals</li>
-              </section>
-            </li>
-          </ul>
-        </div>
-      </main>
-      <!-- footer -->
-      <footer class="flex-wrapper-row flex-content-center">
-        <a href="#"><div class="triangle" facing="left"></div></a>
-        <p>Page 1 out of 1</p>
-        <a href="#"><div class="triangle" facing="right"></div></a>
-      </footer>
-      <!-------------------------------------------------------------------->
-  </body>
+
+
+      </nav>
+
+    </div>
+  </header>
+  <!-- ================================================================ -->
+  <!-- @Matei -->
+  <!-- ================================================================ -->
+  <main id="Site-content" class="flex-wrapper-row">
+    <!-- show filters -->
+    <input type="checkbox" id="show-filters-checkbox" />
+    <label for="show-filters-checkbox" id="show-filters">
+      <i class="triangle"></i>
+    </label>
+    <!-- filter menu -->
+    <section class="filter-menu">
+      <form action="#" method="GET">
+        <h1>Filtre:</h1>
+        <nav>
+          <input type="text" name="last-name-textbox" id="nume-prof" placeholder="Nume">
+          <br><br>
+          <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
+          <br><br>
+          <input type="text" name="email-textbox" id="email-prof" placeholder="Email">
+          <br>
+          <h2>An Studiu:</h2>
+          <select name="An" id="select-an">
+            <option value="1" class="select-option">
+              Licenta 2
+            </option>
+            <option value="2" class="select-option">
+              Licenta 3
+            </option>
+            <option value="3" class="select-option">
+              Master 1
+            </option>
+            <option value="3" class="select-option">
+              Master 2
+            </option>
+          </select>
+        </nav>
+        <input class="btn" type="submit" name="filter-submit" value="Filtreaza">
+      </form>
+    </section>
+    <!-- accordion project-list -->
+    <div class="accordion">
+      <ul>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox1" />
+          <label for="checkbox1" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Pop Popescu</span>
+            <a href="#" class="btn">Accept</a>
+            <a href="#" class="btn">Decline</a>
+          </label>
+          <div class="content">
+            <ul>
+              <li>Nume: Pop</li>
+              <li>Prenume: Popescu</li>
+              <li>An: Licenta 3</li>
+              <li>Email: poppopescu@mail.fals</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox2" />
+          <label for="checkbox2" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Popescu Ana</span>
+            <a href="#" class="btn">Accept</a>
+            <a href="#" class="btn">Decline</a>
+          </label>
+          <div class="content">
+            <ul>
+              <li>Nume: Popescu</li>
+              <li>Prenume: Ana</li>
+              <li>An: Master 2</li>
+              <li>Email: popescuana@mail.fals</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <!-- list element -->
+          <input type="checkbox" id="checkbox3" />
+          <label for="checkbox3" class="flex-wrapper-row flex-content-center">
+            <span class="h1-like">Popescu Marius</span>
+            <a href="#" class="btn">Accept</a>
+            <a href="#" class="btn">Decline</a>
+          </label>
+          <div class="content">
+            <ul>
+              <li>Nume: Popescu</li>
+              <li>Prenume: Marius</li>
+              <li>An: Licenta 3</li>
+              <li>Email: popescumarius@mail.fals</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="flex-wrapper-row flex-content-center">
+    <a href="#">
+      <div class="triangle facing-left"></div>
+    </a>
+    <p>Page 1 out of 1</p>
+    <a href="#">
+      <div class="triangle facing-right"></div>
+    </a>
+  </footer>
+  <!-- ================================================================ -->
+</body>
+
 </html>
