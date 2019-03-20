@@ -6,9 +6,9 @@
     <title>Acatism - Home</title>
     <meta name="description" content="Acatism Homepage">
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <link rel="stylesheet" href="../assets/css/meniuri.css">
-    <link rel="stylesheet" href="../assets/css/mlStyle.css">
-    <link rel="stylesheet" href="../assets/css/message.css">
+    <link rel="stylesheet" href="../../assets/css/meniuri.css">
+    <link rel="stylesheet" href="../../assets/css/project-list.css">
+    <link rel="stylesheet" href="../../assets/css/message.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -17,18 +17,33 @@
 
 <body>
     <header>
-        <div class="header">
-            <ul class="meniu">
-                <a href="#"><i class="fas fa-home"></i> Home</a>
-                <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-                <a href="#">Proiectele mele</a></li>
-                <a href="#">Add event</a></li>
-                <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
-                <a href="#">Logout</a></li>
-                <a href="#"><i class="fas fa-cog"></i> Setari</a>
-            </ul>
-        </div>
-    </header>
+    <div class="header">
+
+      <h2 class="logo">MENIU</h2>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+
+      <nav class="meniu">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+        <a href="#">Proiectele mele</a>
+        <a href="#">Add event</a>
+        <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+        <a href="#"><i class="far fa-envelope"></i> Send message</a>
+        <a href="#">Logout</a>
+        <a href="#"><i class="fas fa-cog"></i> Setari</a>
+
+
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+
+      </nav>
+    </div>
+  </header>
     <main id="Site-content" class="flex-wrapper-row">
         <form>
             <li>
