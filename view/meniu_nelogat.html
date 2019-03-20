@@ -1,5 +1,7 @@
 
 <!DOCTYPE html>
+<!-- Facut de Iacob Daniel, am implementat meniul pentru orice persoana ce foloseste aplicatia dar care inca nu e logata-->
+<!--Pentru icons am specificat prin atributul href ca folosesc o cale absoluta la un site ce imi ofera icons-->
 <html>
   <head>
     <meta charset="utf-8"> 
@@ -9,14 +11,27 @@
   </head>
   <body>
   <div class="header">
+  <h2 class="logo">MENIU</h2>
+  <input type="checkbox" id="chk">
+    	<label for="chk"   class="show-menu-btn">
+	    <i class="fas fa-ellipsis-h"></i>
+    </label>	
+
   <ul class="meniu">
+  
    <a href="#"><i class="fas fa-home"></i> Home</a>
-   <a href="#"><i class="fas fa-list-ul"></i> Lista </a>
-   <a href="#">Proiecte</a></li>
+   <a href="#"><i class="fas fa-list-ul"></i> Lista proiecte </a>
    <a href="#">Register</a></li>
-   <a href="#">Logout</a></li>
-   <a href="#"><i class="fas fa-cog"></i> Setari</a> 
+   <a href="#">Login</a></li>
+   
+   
+    <label for="chk"   class="hide-menu-btn">
+	    <i class="fas fa-times"></i>
+    </label>	
+	
+   
    </ul>
+
   </div>
   
   
