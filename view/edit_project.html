@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <link rel="stylesheet" href="../assets/css/dam.css">
+    <link rel="stylesheet" href="../assets/css/meniuri.css">
+    <link rel="stylesheet" href="../assets/css/utils.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/jerry.png"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit project</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <ul class="meniu">
+                <a href="#"><i class="fas fa-home"></i> Home</a>
+                <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+                <a href="#">Proiectele mele</a></li>
+                <a href="#">Add event</a></li>
+                <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+                <a href="#"><i class="far fa-envelope"></i> Send message</a></li>
+                <a href="#">Logout</a></li>
+                <a href="#"><i class="fas fa-cog"></i> Setari</a>
+
+
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+    </header>
+
+    <main id="preview_project_all" class="flex-wrapper-row">
+        <section class="project_data bubbles">
+            <article class="red_bubble bubble_base">
+                <p class="description_label">Titlu proiect: </p>
+                <p class="description_textbox">
+                    <textarea class="write_message_textbox" placeholder="Transpiler C++ to Rust"></textarea>
+                    <button type="button" class="btn">Trimite</button>
+                </p>
+            </article>
+
+            <article class="blue_bubble bubble_base">
+                <p class="description_label">Descriere proiect: </p>
+                <p class="description_textbox">
+                    <textarea class="write_message_textbox" placeholder="Folosing libclang(sau libtooling), din C++ sau Rust, scris un transpiler care primeste ca input o sursa C++ si generaza la output o sursa Rust, echivalenta cu sursa C++ de la input."></textarea>
+                    <button type="button" class="btn">Trimite</button>
+                </p>
+            </article>
+
+            <article class="red_bubble bubble_base">
+                <p class="description_label">Student: </p>
+                <p class="description_textbox">Ion Creanga</p>
+            </article>
+
+            <article class="blue_bubble bubble_base">
+                <p class="description_label">Renunta la proiect: </p>
+                <p class="description_textbox"><button type="button" class="btn">Renunta !</button></p>
+            </article>
+
+            <article class="blue_bubble bubble_base">
+                <p class="description_label">Resources: </p>
+                <p class="description_textbox">
+                    <textarea class="write_message_textbox" placeholder="Libclang: https://clang.llvm.org/doxygen/group__CINDEX.html. Rust book: https://doc.rust-lang.org/book/"></textarea>
+                    <button type="button" class="btn">Trimite</button>
+                </p>
+            </article>
+
+            <article class="red_bubble bubble_base">
+                <p class="description_label">Tags: </p>
+                <p class="description_textbox">
+                    <ul class="tag-area center_thing">
+                        <li>
+                            <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
+                            <label for="tag-checkbox1" class="tag">ML</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+                            <label for="tag-checkbox2" class="tag">Graph Theory</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+                            <label for="tag-checkbox3" class="tag">DataBases</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+                            <label for="tag-checkbox4" class="tag">AR/VR</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
+                            <label for="tag-checkbox5" class="tag">FAI</label>
+                        </li>
+                    </ul>
+                </p>
+            </article>
+
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%2333ff33&amp;src=1va1gkombr2cfl30um5moou1ms%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=Europe%2FBucharest"
+                style="border-width:0" width="80%" height="600" frameborder="0" scrolling="no"></iframe>
+        </section>
+    </main>
+</body>
+
+</html>
