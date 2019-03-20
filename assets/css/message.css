@@ -1,0 +1,273 @@
+/* reset */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body, html, ul, li {
+    margin:0px;
+    padding:0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin:0.1em;
+}
+ul{
+    list-style-type:none;
+}
+li{
+    list-style:none;
+}
+
+/* main */
+
+.main {
+    display: flex;
+    flex: 1px 1px 1px 1px;
+    flex-direction:var(--categoryDirection);
+    justify-content:center;
+    background-color: #102C38;
+}
+
+/*.main > * {
+}                     pt separat portiuni student, profesor*/
+
+.centerContent {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-content:center;
+    justify-content:space-between;
+}
+
+/*button*/
+
+.buttonRow {
+    display:flex;
+    flex-direction:var(--buttonDirection); /*schimbat in column cand rezolutia e mica */
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+.button {
+    text-transform:uppercase;
+    width:12rem;
+}
+
+.styled {
+    border: 1px;
+    font-weight:bold;
+    line-height: 3;
+    padding: 0 2rem;
+    margin:var(--buttonvMargin) 3em;
+    font-size: 1rem;
+    text-align: center;
+    text-transform:uppercase;
+    color: #fff;
+    border-radius: 0.8rem;
+    background-color: rgb(0, 199, 10);
+    background-image: linear-gradient(to right,
+                                      rgba(0, 0, 0, .1),
+                                      rgba(0, 0, 0, .1) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+
+.styled:hover {
+    background-color: rgb(0, 100, 12);
+}
+
+.styled:active {
+    background-color: rgb(0, 161, 19);
+}
+
+h2 {
+    text-transform:uppercase;
+}
+
+
+/* variables */
+
+:root {
+    --tbWidth: 15rem;
+    --formWidth:100%;
+}
+
+@media(min-width:280px){
+    :root {
+        --tbWidth:260px;
+    }
+}
+@media(min-width:300px){
+    :root {
+        --tbWidth:280px;
+    }
+}
+@media(min-width:320px){
+    :root {
+        --tbWidth:300px;
+    }
+}
+@media(min-width:340px){
+    :root {
+        --tbWidth:320px;
+    }
+}
+@media(min-width:360px){
+    :root {
+        --tbWidth:340px;
+    }
+}
+@media(min-width:380px){
+    :root {
+        --tbWidth:360px;
+    }
+}
+@media(min-width:400px){
+    :root {
+        --tbWidth:380px;
+    }
+}
+@media(min-width:420px){
+    :root {
+        --tbWidth:400px;
+    }
+}
+@media(min-width:440px){
+    :root {
+        --tbWidth:420px;
+    }
+}
+@media(min-width:460px){
+    :root {
+        --tbWidth:440px;
+    }
+}
+@media(min-width:480px){
+    :root {
+        --tbWidth:460px;
+    }
+}
+@media(min-width:500px){
+    :root {
+        --tbWidth:480px;
+    }
+}
+@media(min-width:520px){
+    :root {
+        --tbWidth:500px;
+    }
+}
+@media(min-width:540px){
+    :root {
+        --tbWidth:520px;
+    }
+}
+@media(min-width:560px){
+    :root {
+        --tbWidth:540px;
+    }
+}
+@media(min-width:580px){
+    :root {
+        --tbWidth:560px;
+    }
+}
+@media(min-width:600px){
+    :root {
+        --tbWidth:580px;
+    }
+}
+@media(min-width:620px){
+    :root {
+        --tbWidth:600px;
+    }
+}
+@media(min-width:640px){
+    :root {
+        --tbWidth:620px;
+    }
+}
+@media(min-width:660px){
+    :root {
+        --tbWidth:640px;
+    }
+}
+@media(min-width:680px){
+    :root {
+        --tbWidth:660px;
+    }
+}
+@media(min-width:700px){
+    :root {
+        --tbWidth:680px;
+    }
+}
+@media(min-width:720px){
+    :root {
+        --tbWidth:700px;
+    }
+}
+@media(min-width:740px){
+    :root {
+        --tbWidth:720px;
+    }
+}
+@media(min-width:760px){
+    :root {
+        --tbWidth:740px;
+    }
+}
+@media(min-width:780px){
+    :root {
+        --tbWidth:760px;
+    }
+}
+@media(min-width:800px){
+    :root {
+        --tbWidth:780px;
+    }
+}
+
+/**/
+
+ul.name-area{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul.name-area li {
+    display: inline;
+}
+
+h1 {
+    display: inline;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+.bigtextinput{
+    height:10rem;
+    width:var(--tbWidth);
+
+}
+main{
+    justify-content:center;
+}
+form > li {
+    line-height:2rem;
+}
+form {
+    padding: 0 15px 0 15px;
+    width:var(--tbWidth - 5);
+}
+[name="title"]{
+    width: var(--tbWidth);
+}
+
+/*setalert*/
+
+[type="number"]{
+    width: 2.5rem;
+}
