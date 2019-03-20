@@ -8,7 +8,7 @@ body{
 .register{
 	width: 280px;
 	position: absolute;
-	top: 30%;
+	top: 10%;
 	left: 30%;
 	
 	color: #318CE7;
@@ -65,3 +65,75 @@ body{
 	margin: 15px 0;
 	
 }
+
+
+
+@media (min-width: 2560px){
+	
+.register{
+	width: 2000px;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	
+	color: #318CE7;
+}
+
+.register h1{
+	font-size: 100px;
+	border-bottom: 20px solid #0000cc;
+	margin-bottom: 50px;
+	padding: 15px 0;
+	
+}
+
+
+.textbox{
+	width: 100%;
+	overflow:hidden;
+	font-size: 90px;
+	padding: 20px 0;
+	margin: 20px 0;
+	border-bottom: 2px solid;
+	
+	
+}
+
+.textbox i{
+	width: 100px;
+	text-align: center;
+	color:   #e60000;
+}
+
+
+
+
+.textbox input {
+	border: none;
+	outline: none;
+	background: none;
+	color: #004d4d;
+	font-size: 100px;
+	width: 80%;
+	margin: 0 20px;
+}
+
+
+.btn{
+	width: 100% ;
+	background: none;
+	border: 5px solid #2db300;
+	color: #2db300 ;
+	padding: 10px;
+	font-size: 80px;
+	cursor: pointer;
+	margin: 15px 0;
+	
+}
+
+
+}
+
+
+
+

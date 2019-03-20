@@ -1,17 +1,22 @@
+/* Facut de Iacob Daniel*/
 body{
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
+	
 }
 
 
 .box-login{
 	width: 280px;
 	position: absolute;
-	top: 30%;
-	left: 30%;
+	top: 0;
+	left: 35%;
 	
 	color: #318CE7;
+	
+	
+	
 }
 
 .box-login h1{
@@ -65,3 +70,97 @@ body{
 	margin: 15px 0;
 	
 }
+
+
+@media (min-width: 2560px){
+
+	
+.box-login{
+	width: 1500px;
+	position: flex;
+	align-items: flex-start;
+	
+	 
+	top: 2%;
+	left: 20%;
+	color: #318CE7;
+}
+	
+	
+.box-login h1{
+	font-size: 150px;
+	border-bottom: 15px solid #0000cc;
+	margin-bottom: 50px;
+	padding: 100px 0;
+	
+}
+
+
+.textbox{
+	width: 100%;
+	overflow:hidden;
+	font-size: 100px;
+	padding: 100px 0;
+	margin: 10px 0;
+	border-bottom: 15px solid;
+	
+	
+}
+
+
+.textbox i{
+	width: 100px;
+	text-align: center;
+	color:   #e60000;
+}
+
+
+.textbox input {
+	border: none;
+	outline: none;
+	background: none;
+	color: #004d4d;
+	font-size: 100px;
+	width: 80%;
+	margin: 0 10px;
+}
+	
+	
+	
+.btn{
+	width: 100% ;
+	background: none;
+	border: 10px solid #2db300;
+	color: #2db300 ;
+	padding: 10px;
+	font-size: 100px;
+	cursor: pointer;
+	margin: 15px 0;
+	
+}
+	
+	
+}
+
+
+	
+ @media (max-width: 800px){
+		
+.box-login{
+	width: 280px;
+	position: absolute;
+	top: 0;
+	left: 35%;
+	
+	color: black;
+	
+	
+	
+}
+}
+
+	
+
+	
+
+
