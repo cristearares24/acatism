@@ -22,7 +22,6 @@ li{
 
 .main {
     display: flex;
-    flex: 1px 1px 1px 1px;
     flex-direction:var(--categoryDirection);
     justify-content:center;
     background-color: #102C38;
