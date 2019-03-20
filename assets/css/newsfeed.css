@@ -166,10 +166,14 @@ h2 {
 
 #show-filters-checkbox:checked ~ label ~ .filter-menu {
     flex: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #show-filters-checkbox:not(:checked) ~ label  .filter-menu {
-    float: 1;
+    flex: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 #show-filters-checkbox:checked ~ label > .triangle {
