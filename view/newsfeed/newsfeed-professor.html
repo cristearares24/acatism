@@ -12,46 +12,47 @@
   <!-- in this page you will be able to see the project-list -->
   <body class="flex-wrapper-col Site">
       <!-- @Daniel -->
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
       <header>
-          <div class="header">
+        <div class="header">
 
             <h2 class="logo">MENIU</h2>
             <input type="checkbox" id="chk">
                 <label for="chk"   class="show-menu-btn">
                 <i class="fas fa-ellipsis-h"></i>
-              </label>
+              </label>	
             
-            <ul class="meniu">
-              <a href="#"><i class="fas fa-home"></i> Home</a>
-              <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-              <a href="#">Proiectele mele</a></li>
-              <a href="#">Add event</a></li>
-              <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
-              <a href="#"><i class="far fa-envelope"></i> Send message</a></li>
-              <a href="#">Logout</a></li>
-              <a href="#"><i class="fas fa-cog"></i> Setari</a> 
-              
-              
-              <label for="chk"   class="hide-menu-btn">
+            
+            <nav class="meniu">
+             <a href="#"><i class="fas fa-home"></i> Home</a>
+             <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+             <a href="#">Proiectele mele</a>
+             <a href="#">Add event</a>
+             <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
+             <a href="#"><i class="far fa-envelope"></i> Send message</a>
+             <a href="#">Logout</a>
+             <a href="#"><i class="fas fa-cog"></i> Setari</a> 
+             
+             
+             <label for="chk"   class="hide-menu-btn">
                 <i class="fas fa-times"></i>
               </label>	
-              
-              </ul>
-          </div>
-      </header>
-      <!-------------------------------------------------------------------->
+             
+            </nav>
+            </div>
+    </header>
+      <!-- ================================================================ -->
       <!-- @Matei -->
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
       <main id="Site-content" class="flex-wrapper-row">
         <!-- show filters -->
         <input type="checkbox" id="show-filters-checkbox"/>
         <label for="show-filters-checkbox" id="show-filters">
-            <div class="triangle"></div>
+            <i class="triangle"></i>
         </label>
         <!-- filter menu -->
         <section class="filter-menu">
-            <form action="" method="GET">
+            <form action="#" method="GET">
               <h1>Filtre:</h1>
               <ul>
                 <li>
@@ -59,7 +60,7 @@
                   <input type="text" name="title-textbox" id="notification-title" placeholder="Titlu">
                   <br>
                   <h2>Importanta:</h2>
-                  <select name="" id="select-importance">
+                  <select name="Importanta" id="select-importance">
                     <option value="1" class="select-option">
                       Mica
                     </option>
@@ -93,7 +94,7 @@
                   </li>
                   </ul>
               </ul>
-              <input class="btn" type="submit" name="" value="Filtreaza">
+              <input class="btn" type="submit" name="filter-submit" value="Filtreaza">
             </form>
         </section>
         <!-- accordion project-list -->
@@ -102,16 +103,16 @@
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox1" />
               <label for="checkbox1" class="notif-grid-wrapper flex-content-center">
-                <h1>Message From "Popescu Pop": [Reply] Alpha Version</h1>
-                <section class="tag-area">
-                    <span class="tag orange-tag">Medie</span>
-                </section>
-                <section class="tag-area">
-                    <span class="tag">Mesaj</span>
-                </section>
+                <span class="h1-like">Message From "Popescu Pop": [Reply] Alpha Version</span>
+                <span class="tag-area">
+                    <i class="tag orange-tag">Medie</i>
+                </span>
+                <span class="tag-area">
+                    <i class="tag">Mesaj</i>
+                </span>
                 <a href="#" class="btn">Raspunde</a>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                     [Reply] Alpha Version
                 </p>
@@ -122,24 +123,24 @@
                   Cu respect, <br>
                   Popescu Pop
                 </p>
-              </section>
+              </div>
             </li>
             <li> <!-- list element -->
                 <input type="checkbox" id="checkbox2" />
                 <label for="checkbox2" class="notif-grid-wrapper flex-content-center">
-                  <h1>"Popescu Ana" vrea sa se inscrie la "Sistem distribuit pentru compilarea si verificarea problemelor C/C++" </h1>
-                  <section class="tag-area">
-                      <span class="tag red-tag">Ridicata</span>
-                  </section>
-                  <section class="tag-area">
-                      <span class="tag">Inscriere</span>
-                  </section>
-                  <div></div> <!-- used to align the buttons easier -->
-                  <div></div> <!-- used to align the buttons easier -->
+                  <span class="h1-like">"Popescu Ana" vrea sa se inscrie la "Sistem distribuit pentru compilarea si verificarea problemelor C/C++" </span>
+                  <span class="tag-area">
+                      <i class="tag red-tag">Ridicata</i>
+                  </span>
+                  <span class="tag-area">
+                      <i class="tag">Inscriere</i>
+                  </span>
+                  <span></span> <!-- used to align the buttons easier -->
+                  <span></span> <!-- used to align the buttons easier -->
                   <a href="#" class="btn">Accepta</a>
                   <a href="#" class="btn">Raspunde</a>
                 </label>
-                <section class="content">
+                <div class="content">
                   <p>
                       [Inscriere] Sistem distribuit pentru compilarea si verificarea problemelor C/C++
                   </p>
@@ -150,21 +151,21 @@
                     Cu respect, <br>
                     Popescu Ana
                   </p>
-                </section>
+                </div>
               </li>
               <li> <!-- list element -->
                 <input type="checkbox" id="checkbox3" />
                 <label for="checkbox3" class="notif-grid-wrapper flex-content-center">
-                  <h1>"Popescu Marius" s-a retras de la "Recunoasterea automata a semnelor de circulatie" </h1>
-                  <section class="tag-area">
-                      <span class="tag red-tag">Ridicata</span>
-                  </section>
-                  <section class="tag-area">
-                      <span class="tag">Renuntare</span>
-                  </section>
+                  <span class="h1-like">"Popescu Marius" s-a retras de la "Recunoasterea automata a semnelor de circulatie" </span>
+                  <span class="tag-area">
+                      <i class="tag red-tag">Ridicata</i>
+                  </span>
+                  <span class="tag-area">
+                      <i class="tag">Renuntare</i>
+                  </span>
                   <a href="#" class="btn">Raspunde</a>
                 </label>
-                <section class="content">
+                <div class="content">
                   <p>
                       [Retragere] Sistem distribuit pentru compilarea si verificarea problemelor C/C++
                   </p>
@@ -175,43 +176,40 @@
                     Popescu Marius
                     <br>
                   </p>
-                </section>
+                </div>
               </li>
               <li> <!-- list element -->
                 <input type="checkbox" id="checkbox4" />
                 <label for="checkbox4" class="notif-grid-wrapper flex-content-center">
-                  <h1>"Popescu Pop" : Progress Update </h1>
-                  <section class="tag-area">
-                      <span class="tag yellow-tag">Mica</span>
-                  </section>
-                  <section class="tag-area">
-                      <span class="tag">Progress Update</span>
-                  </section>
+                  <span class="h1-like">"Popescu Pop" : Progress Update </span>
+                  <span class="tag-area">
+                      <i class="tag yellow-tag">Mica</i>
+                  </span>
+                  <span class="tag-area">
+                      <i class="tag">Progress Update</i>
+                  </span>
                   <a href="#" class="btn">Raspunde</a>
                 </label>
-                <section class="content">
+                <div class="content">
                   <p>
                       [Progress Update] "Popescu Pop": "Aplicatie android pentru realizarea fotografiilor 3D (sfera)"
                   </p>
-                  <p>
-                    <p>Commit nou: Preview project page first version </p>
-                    <p>17 hours ago. 72 additions and 0 deletions.
-                        <a href="https://github.com/xTachyon/acatism/commit/1f9c9044907c60bba26045f851c25ea429bbecf8">Link
-                            catre commit</a>
-                    </p>
-                    <br>
+                  <p>Commit nou: Preview project page first version </p>
+                  <p>17 hours ago. 72 additions and 0 deletions.
+                      <a href="https://github.com/xTachyon/acatism/commit/1f9c9044907c60bba26045f851c25ea429bbecf8">Link
+                          catre commit</a>
                   </p>
-                </section>
+                </div>
               </li>
           </ul>
         </div>
       </main>
       <!-- footer -->
       <footer class="flex-wrapper-row flex-content-center">
-        <a href="#"><div class="triangle" facing="left"></div></a>
+        <a href="#"><div class="triangle facing-left"></div></a>
         <p>Page 1 out of 1</p>
-        <a href="#"><div class="triangle" facing="right"></div></a>
+        <a href="#"><div class="triangle facing-right"></div></a>
       </footer>
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
   </body>
 </html>

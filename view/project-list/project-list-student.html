@@ -12,7 +12,7 @@
   <!-- in this page you will be able to see the project-list -->
   <body class="flex-wrapper-col Site">
       <!-- @Daniel -->
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
       <header>
           <div class="header">
   
@@ -22,33 +22,33 @@
                   <i class="fas fa-ellipsis-h"></i>
               </label>	
   
-              <ul class="meniu">
+              <nav class="meniu">
                <a href="#"><i class="fas fa-home"></i> Home</a>
                <a href="#"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-               <a href="#">Proiectul meu</a></li>
+               <a href="#">Proiectul meu</a>
                <a href="#"><i class="far fa-newspaper"></i> Newsfeed</a>
-               <a href="#"><i class="far fa-envelope"></i> Send message</a></li>
-               <a href="#">Logout</a></li>
+               <a href="#"><i class="far fa-envelope"></i> Send message</a>
+               <a href="#">Logout</a>
                <a href="#"><i class="fas fa-cog"></i> Setari</a> 
                
               <label for="chk"   class="hide-menu-btn">
                   <i class="fas fa-times"></i>
               </label>	
-               </ul>
+            </nav>
               </div>
       </header>
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
       <!-- @Matei -->
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
       <main id="Site-content" class="flex-wrapper-row">
         <!-- show filters -->
         <input type="checkbox" id="show-filters-checkbox"/>
         <label for="show-filters-checkbox" id="show-filters">
-            <div class="triangle"></div>
+            <i class="triangle"></i>
         </label>
         <!-- filter menu -->
         <section class="filter-menu">
-            <form action="" method="GET">
+            <form action="#" method="GET">
               <h1>Filtre:</h1>
               <ul>
                 <li>
@@ -58,7 +58,7 @@
                   <input type="text" name="first-name-textbox" id="prenume-prof" placeholder="Prenume">
                   <br>
                   <h2>Grad:</h2>
-                  <select name="" id="select-grad">
+                  <select name="Grad" id="select-grad">
                     <option value="1" class="select-option">
                       Lector
                     </option>
@@ -73,7 +73,7 @@
                 </li>
                 <li>
                   <h1>Proiect:</h1>
-                  <input type="text" name="" id="nume-proiect" placeholder="Titlu">
+                  <input type="text" name="title-checkbox" id="nume-proiect" placeholder="Titlu">
                   <br>
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                   </li>
                   </ul>
               </ul>
-              <input class="btn" type="submit" name="" value="Filtreaza">
+              <input class="btn" type="submit" name="filter-submit" value="Filtreaza">
             </form>
         </section>
         <!-- accordion project-list -->
@@ -110,22 +110,22 @@
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox1" />
               <label for="checkbox1" class="flex-wrapper-row flex-content-center">
-                <h1>Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</h1>
-                <form action="" method="GET"><input class="btn" type="submit" name="" value="Aplica"></form>
+                <span class="h1-like">Varlan Cosmin - Aplicatie android pentru realizarea fotografiilor 3D (sfera)</span>
+                <a href="#" class="btn">Aplica</a>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                   Aceasta aplicatie va face poze 3D precum masina de la google.
                 </p>
-              </section>
+              </div>
             </li>
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox2" />
               <label for="checkbox2" class="flex-wrapper-row flex-content-center">
-                <h1>Panu Andrei - Academic Thesis Manager</h1>
-                <form action="" method="GET"><input class="btn" type="submit" name="" value="Aplica"></form>
+                <span class="h1-like">Panu Andrei - Academic Thesis Manager</span>
+                <a href="#" class="btn">Aplica</a>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                   Sa se realizeze o aplicatie Web privind managementul tezelor de licenta/master la nivelul unei facultati. 
                   Din punctul de vedere al profesorului, sistemul va oferi posibilitatea gestionarii temelor propuse si a studentilor arondati,
@@ -138,15 +138,15 @@
                   De asemenea, aplicatia va semnala posibile probleme privind variantele intermediare ale documentelor intocmite de student referitoare la format sau standarde de redactare.
                   Progresul implementarii tezei va putea fi monitorizat automat prin intermermediul unui sistem online de management de cod-sursa precum Github.
                 </p>
-              </section>
+              </div>
             </li>
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox3" />
               <label for="checkbox3" class="flex-wrapper-row flex-content-center">
-                <h1>Panu Andrei - HTTPcafe</h1>
-                <form action="" method="GET"><input class="btn" type="submit" name="" value="Aplica"></form>
+                <span class="h1-like">Panu Andrei - HTTPcafe</span>
+                <a href="#" class="btn">Aplica</a>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                   Sa se implementeze o aplicatie Web care simuleaza o cafenea destinata in special studentilor informaticieni. Interactiunea cu "clientii" se va realiza din pagini 
                   Web publice gazduite pe un anumit server Web, pe baza cimpului 'Referer' din antetul unui mesaj HTTP. Aplicatia trebuie sa puna la dispozitia "clientilor" o serie 
@@ -158,41 +158,41 @@
                   in cantitati finite, eventual ajustabile dinamic. "Filmul" ocuparii cafenelei va putea fi expus, in mod dinamic, ca document HTML, ca date JSON si ca flux de stiri Atom. 
                   De asemenea, "barman"-ul trebuie sa raspunda clientilor in mod "politicos HTTP" -- exemplu: daca se recurge la 'GET /comanda/alcool', se va intoarce codul 403 Forbidden.
                 </p>
-              </section>
+              </div>
             </li>
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox4" />
               <label for="checkbox4" class="flex-wrapper-row flex-content-center">
-                <h1>Varlan Cosmin - Recunoasterea automata a semnelor de circulatie</h1>
-                <form action="" method="GET"><input class="btn" type="submit" name="" value="Aplica"></form>
+                <span class="h1-like">Varlan Cosmin - Recunoasterea automata a semnelor de circulatie</span>
+                <a href="#" class="btn">Aplica</a>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                   O aplicatie care cu ajutorul unei mici camere video sa recunoasca cemnalele semaforului. Camera trebuie sa fie la bordul unei masini si sa recunoasca semnalele in real-time.
                 </p>
-              </section>
+              </div>
             </li>
             <li> <!-- list element -->
               <input type="checkbox" id="checkbox5" />
               <label for="checkbox5" class="flex-wrapper-row flex-content-center">
-                <h1>Varlan Cosmin - Sistem distribuit pentru compilarea si verificarea problemelor C/C++</h1>
+                <span class="h1-like">Varlan Cosmin - Sistem distribuit pentru compilarea si verificarea problemelor C/C++</span>
               </label>
-              <section class="content">
+              <div class="content">
                 <p>
                   Un sistem distribuit pentru compilarea si verificarea problemelor C/C++ ce va putea fi folosit pentru o mai rapida verificare a numeroase programe voluminoase de C/C++.
                   Posibile utilizari: punctaj OJI.
                 </p>
-              </section>
+              </div>
             </li>
           </ul>
         </div>
       </main>
       <!-- footer -->
       <footer class="flex-wrapper-row flex-content-center">
-        <a href="#"><div class="triangle" facing="left"></div></a>
+        <a href="#"><div class="triangle facing-left"></div></a>
         <p>Page 1 out of 1</p>
-        <a href="#"><div class="triangle" facing="right"></div></a>
+        <a href="#"><div class="triangle facing-right"></div></a>
       </footer>
-      <!-------------------------------------------------------------------->
+      <!-- ================================================================ -->
   </body>
 </html>

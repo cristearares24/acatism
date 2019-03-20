@@ -29,6 +29,7 @@ html, body {
 
 /* triangle */
 .triangle {
+    display: block;
     width: 0;
     height: 0;
     border-top: 1.0rem solid transparent;
