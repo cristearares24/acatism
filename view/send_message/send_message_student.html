@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Acatism - Home</title>
-    <meta name="description" content="Acatism Homepage">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <link rel="stylesheet" href="../../assets/css/meniuri.css">
-    <link rel="stylesheet" href="../../assets/css/project-list.css">
-    <link rel="stylesheet" href="../../assets/css/message.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto');
-    </style>
+  <meta charset="utf-8">
+  <title>Acatism - Home</title>
+  <meta name="description" content="Acatism Homepage">
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+  <link rel="stylesheet" href="../../assets/css/meniuri.css">
+  <link rel="stylesheet" href="../../assets/css/project-list.css">
+  <link rel="stylesheet" href="../../assets/css/message.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+  </style>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <a href="../newsfeed/newsfeed-student.html"><i class="far fa-newspaper"></i> Newsfeed</a>
         <a href="#"><i class="far fa-envelope"></i> Send message</a>
         <a href="../home/home_nelogat.html">Logout</a>
-        <a href="../setari/setari_student.html"><i class="fas fa-cog"></i> Setari</a>
+        <a href="../setari/setari-student.html"><i class="fas fa-cog"></i> Setari</a>
 
         <label for="chk" class="hide-menu-btn">
           <i class="fas fa-times"></i>
@@ -40,21 +40,23 @@
       </nav>
     </div>
   </header>
-    <main id="Site-content" class="flex-wrapper-row">
-        <form>
-            <li>
-                <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
-                <p>
-                    <h1>Destinatar: Varlan Cosmin</h1>
-                </p>
-                <h1>Subiect:</h1>
-                <p><input type="text" required=true name="title"></p>
-                <h1>Continut:</h1>
-                <p><textarea class="bigtextinput" required=true></textarea></p>
-                <p><a href="#"><input value="trimite mesaj" type="submit" class="styled"></input></a></p>
-            </li>
-        </form>
-    </main>
+  <main class="centerContent">
+    <form>
+      <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
+      <h1>Tip Mesaj:</h1><br>
+      <input type="radio" name="tipm" value="inscriere"><small>Inscriere</small>
+      <input type="radio" name="tipm" value="renuntare"><small>Renuntare</small>
+      <input type="radio" name="tipm" value="actprogres"><small>Actualizare Progres</small>
+      <input type="radio" name="tipm" value="altele" checked><small>Altele</small>
+      <br>
+      <h1>Destinatar: Varlan Cosmin</h1><br>
+      <h1>Subiect:</h1><br>
+      <input type="text" required name="title"><br>
+      <h1>Continut:</h1><br>
+      <textarea class="bigtextinput" required></textarea><br>
+      <input value="trimite mesaj" type="submit" class="styled">
+    </form>
+  </main>
 </body>
 
 </html>
