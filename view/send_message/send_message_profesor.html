@@ -18,85 +18,62 @@
 <body>
     <header>
         <div class="header">
-    
-          <h2 class="logo">MENIU</h2>
-          <input type="checkbox" id="chk">
-          <label for="chk" class="show-menu-btn">
-            <i class="fas fa-ellipsis-h"></i>
-          </label>
-    
-    
-          <nav class="meniu">
-            <a href="../home/home_profesor.html"><i class="fas fa-home"></i> Home</a>
-            <a href="../project-list/project-list-professor.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-            <a href="../my-projects.html">Proiectele mele</a>
-            <a href="../set_alert.html">Add event</a>
-            <a href="../newsfeed/newsfeed-professor.html"><i class="far fa-newspaper"></i> Newsfeed</a>
-            <a href="#"><i class="far fa-envelope"></i> Send message</a>
-            <a href="../home/home_nelogat.html">Logout</a>
-            <a href="../setari/setari-profi.html"><i class="fas fa-cog"></i> Setari</a>
-    
-    
-            <label for="chk" class="hide-menu-btn">
-              <i class="fas fa-times"></i>
+
+            <h2 class="logo">MENIU</h2>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
             </label>
-    
-          </nav>
+
+
+            <nav class="meniu">
+                <a href="../home/home_profesor.html"><i class="fas fa-home"></i> Home</a>
+                <a href="../project-list/project-list-professor.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+                <a href="../my-projects.html">Proiectele mele</a>
+                <a href="../set_alert.html">Add event</a>
+                <a href="../newsfeed/newsfeed-professor.html"><i class="far fa-newspaper"></i> Newsfeed</a>
+                <a href="#"><i class="far fa-envelope"></i> Send message</a>
+                <a href="../home/home_nelogat.html">Logout</a>
+                <a href="../setari/setari-profi.html"><i class="fas fa-cog"></i> Setari</a>
+
+
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+
+            </nav>
         </div>
-      </header>
-    <main id="Site-content" class="flex-wrapper-row">
+    </header>
+    <main class="centerContent">
         <form>
-            <li>
-                <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
-                <h1>Destinatari:</h1>
-                <ul class="name-area">
-                    <li>
-                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
-                        <label for="tag-checkbox1" class="tag">Sergiu Salceanu</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
-                        <label for="tag-checkbox2" class="tag">Daniel Iacob</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
-                        <label for="tag-checkbox3" class="tag">Lucian Ilea</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
-                        <label for="tag-checkbox4" class="tag">Nicolae Tesla</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
-                        <label for="tag-checkbox5" class="tag">Lipan Matei</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox6" class="tag-checkbox">
-                        <label for="tag-checkbox6" class="tag">Nume 3</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox7" class="tag-checkbox">
-                        <label for="tag-checkbox7" class="tag">Urmatorul Nume</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox8" class="tag-checkbox">
-                        <label for="tag-checkbox8" class="tag">Lucian Ilea</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox9" class="tag-checkbox">
-                        <label for="tag-checkbox9" class="tag">Test</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox10" class="tag-checkbox">
-                        <label for="tag-checkbox10" class="tag">FAI</label>
-                    </li>
-                </ul>
-                <h1>Subiect:</h1>
-                <p><input type="text" required=true name="title"></p>
-                <h1>Continut:</h1>
-                <p><textarea class="bigtextinput" required=true></textarea></p>
-                <p><a href = #><input value="trimite mesaj" type="submit" class="styled"></input></a></p>
-            </li>
+            <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
+            <h1>Destinatari:</h1><br>
+            <input type="checkbox" name = "checkbox" id="tag-checkbox1" class="tag-checkbox">
+            <label for="tag-checkbox1" class="tag">Sergiu Salceanu</label>
+            <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
+            <label for="tag-checkbox2" class="tag">Daniel Iacob</label>
+            <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
+            <label for="tag-checkbox3" class="tag">Lucian Ilea</label>
+            <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
+            <label for="tag-checkbox4" class="tag">Nicolae Tesla</label>
+            <input type="checkbox" id="tag-checkbox5" class="tag-checkbox">
+            <label for="tag-checkbox5" class="tag">Lipan Matei</label>
+            <input type="checkbox" id="tag-checkbox6" class="tag-checkbox">
+            <label for="tag-checkbox6" class="tag">Nume 3</label>
+            <input type="checkbox" id="tag-checkbox7" class="tag-checkbox">
+            <label for="tag-checkbox7" class="tag">Urmatorul Nume</label>
+            <input type="checkbox" id="tag-checkbox8" class="tag-checkbox">
+            <label for="tag-checkbox8" class="tag">Lucian Ilea</label>
+            <input type="checkbox" id="tag-checkbox9" class="tag-checkbox">
+            <label for="tag-checkbox9" class="tag">Test</label>
+            <input type="checkbox" id="tag-checkbox10" class="tag-checkbox">
+            <label for="tag-checkbox10" class="tag">FAI</label>
+            <br>
+            <h1>Subiect:</h1><br>
+            <input type="text" required name="title"><br>
+            <h1>Continut:</h1><br>
+            <textarea class="bigtextinput" required></textarea><br>
+            <input value="trimite mesaj" type="submit" class="styled">
         </form>
     </main>
 </body>
