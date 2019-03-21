@@ -1,14 +1,43 @@
+<!--facut de Iacob Daniel-->
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
 	<title>Setari student</title>
+	<link rel="stylesheet" href="../../assets/css/meniuri.css">
 	<link rel="stylesheet" href="../../assets/css/setari-student.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 
 <body>
+
+		
+				<div class="header">
+			
+				  <h2 class="logo">MENIU</h2>
+				  <input type="checkbox" id="chk">
+				  <label for="chk" class="show-menu-btn">
+					<i class="fas fa-ellipsis-h"></i>
+				  </label>
+			
+				  <nav class="meniu">
+					<a href="../home/home_student.html"><i class="fas fa-home"></i> Home</a>
+					
+					<a href="../project-list/project-list-student.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+					<a href="../preview_project/preview_project_students.html">Proiectul meu</a>
+					<a href="../newsfeed/newsfeed-student.html"><i class="far fa-newspaper"></i> Newsfeed</a>
+					<a href="../send_message/send_message_student.html"><i class="far fa-envelope"></i> Send message</a>
+					<a href="../home/home_nelogat.html">Logout</a>
+					<a href="#"><i class="fas fa-cog"></i> Setari</a>
+			
+					<label for="chk" class="hide-menu-btn">
+					  <i class="fas fa-times"></i>
+					</label>
+				  </nav>
+				</div>
+			
+			
 	
 	<div class="setari">
 		<h1>Modifica-ti setarile</h1>
@@ -17,27 +46,29 @@
 			<li>Setari de cont
 				<ul>
 					<li>Schimba parola <div class="textbox"><i class="fas fa-lock"></i>
-							<input type="password" placeholder="Noua parola" name="" value="">
+							<input type="password" placeholder="Noua parola" name="n" value="">
 						</div>
 					</li>
 
 
 					<li>Confirmare parola noua <div class="textbox"><i class="fas fa-lock"></i>
-							<input type="password" placeholder="Introdu iar parola" name="" value="">
+							<input type="password" placeholder="Introdu iar parola" name="n" value="">
 						</div>
 					</li>
 
 
 
 					<li>Schimba email <div class="textbox"><i class="fas fa-at"></i>
-							<input type="email" placeholder="Noul Email " name="" value="">
+							<input type="email" placeholder="Noul Email " name="n" value="">
 						</div>
 					</li>
 
 
-					<li><input class="btn" type="button" name="n" value="Sterge cont"></li>
+					<li><input class="btn" type="button" name="n" value="Aplica"></li>
 
 				</ul>
+				
+					<input   class="btn" type="button" name="n" value="Sterge contul"></a>
 			</li>
 		</div>
 
@@ -45,38 +76,38 @@
 			<li>Setari de interfata
 				<ul>
 					<li>Numar elemente pe pagina news <div class="textbox">
-							<input type="number" placeholder="Introdu un numar" name="" value="">
+							<input type="number" placeholder="Introdu un numar" name="n" value="">
 						</div>
 					</li>
 
 
 					<li>Numar de elemente pe pag. proiect <div class="textbox">
-							<input type="number" placeholder="Introdu un numar" name="" value="">
+							<input type="number" placeholder="Introdu un numar" name="n" value="">
 						</div>
 					</li>
 
 
 
 					<li>Culoare background <div class="textbox">
-							<input type="text" placeholder="Introdu cod sau nume " name="" value="">
+							<input type="text" placeholder="Introdu cod sau nume " name="n" value="">
 						</div>
 					</li>
 
 
 
 					<li>Culoare border : <div class="textbox">
-							<input type="text" placeholder="Introdu cod sau nume " name="" value="">
+							<input type="text" placeholder="Introdu cod sau nume " name="n" value="">
 						</div>
 					</li>
 					<li>Culoare text : <div class="textbox">
-							<input type="text" placeholder="Introdu cod sau nume " name="" value="">
+							<input type="text" placeholder="Introdu cod sau nume " name="n" value="">
 						</div>
 					</li>
 					<li>Culoare select : <div class="textbox">
-							<input type="text" placeholder="Introdu cod sau nume " name="" value="">
+							<input type="text" placeholder="Introdu cod sau nume " name="n" value="">
 						</div>
 					</li>
-
+					<li><input class="btn" type="button" name="n" value="Aplica"></li>
 				</ul>
 			</li>
 		</div>
@@ -87,15 +118,15 @@
 			<li>Setari de notificari
 				<ul>
 
-					<li>Notifica slab <input type="checkbox" id="chk"></li>
-					<li>Notifica mediu <input type="checkbox" id="chk"></li>
-					<li>Notifica puternic <input type="checkbox" id="chk"></li>
-					<li>Nu ma notifica <input type="checkbox" id="chk"></li>
+					<li>Notifica slab <input type="checkbox" id="chk1"></li>
+					<li>Notifica mediu <input type="checkbox" id="chk1"></li>
+					<li>Notifica puternic <input type="checkbox" id="chk1"></li>
+					<li>Nu ma notifica <input type="checkbox" id="chk1"></li>
                     <li>Deadline:  
 						    <ul>
-									<li>Mica <input type="checkbox" id="chk"></li>
-									<li>Medie <input type="checkbox" id="chk"></li>
-									<li>Ridicata <input type="checkbox" id="chk"></li>
+									<li>Mica <input type="checkbox" id="chk1"></li>
+									<li>Medie <input type="checkbox" id="chk1"></li>
+									<li>Ridicata <input type="checkbox" id="chk1"></li>
 
 
 
@@ -104,9 +135,9 @@
 
 						<li>Intalnire:  
 								<ul>
-										<li>Mica <input type="checkbox" id="chk"></li>
-										<li>Medie <input type="checkbox" id="chk"></li>
-										<li>Ridicata <input type="checkbox" id="chk"></li>
+										<li>Mica <input type="checkbox" id="chk1"></li>
+										<li>Medie <input type="checkbox" id="chk1"></li>
+										<li>Ridicata <input type="checkbox" id="chk1"></li>
 	
 	
 	
@@ -117,9 +148,9 @@
 
 							<li>Consultatii:  
 								<ul>
-										<li>Mica <input type="checkbox" id="chk"></li>
-										<li>Medie <input type="checkbox" id="chk"></li>
-										<li>Ridicata <input type="checkbox" id="chk"></li>
+										<li>Mica <input type="checkbox" id="chk1"></li>
+										<li>Medie <input type="checkbox" id="chk1"></li>
+										<li>Ridicata <input type="checkbox" id="chk1"></li>
 	
 	
 	
@@ -129,9 +160,9 @@
 
 							<li>Altele:  
 							<ul>
-									<li>Mica <input type="checkbox" id="chk"></li>
-									<li>Medie <input type="checkbox" id="chk"></li>
-									<li>Ridicata <input type="checkbox" id="chk"></li>
+									<li>Mica <input type="checkbox" id="chk1"></li>
+									<li>Medie <input type="checkbox" id="chk1"></li>
+									<li>Ridicata <input type="checkbox" id="chk1"></li>
 
 
 
@@ -140,9 +171,9 @@
 
 						<li>Modificari:  
 						<ul>
-								<li>Mica <input type="checkbox" id="chk"></li>
-								<li>Medie <input type="checkbox" id="chk"></li>
-								<li>Ridicata <input type="checkbox" id="chk"></li>
+								<li>Mica <input type="checkbox" id="chk1"></li>
+								<li>Medie <input type="checkbox" id="chk1"></li>
+								<li>Ridicata <input type="checkbox" id="chk1"></li>
 
 
 
@@ -153,9 +184,9 @@
 
 						<li>Mesaj:  
 						<ul>
-								<li>Mica <input type="checkbox" id="chk"></li>
-								<li>Medie <input type="checkbox" id="chk"></li>
-								<li>Ridicata <input type="checkbox" id="chk"></li>
+								<li>Mica <input type="checkbox" id="chk1"></li>
+								<li>Medie <input type="checkbox" id="chk1"></li>
+								<li>Ridicata <input type="checkbox" id="chk1"></li>
 
 
 
@@ -166,9 +197,9 @@
 
 					<li>Automatic warning:  
 								<ul>
-										<li>Mica <input type="checkbox" id="chk"></li>
-										<li>Medie <input type="checkbox" id="chk"></li>
-										<li>Ridicata <input type="checkbox" id="chk"></li>
+										<li>Mica <input type="checkbox" id="chk1"></li>
+										<li>Medie <input type="checkbox" id="chk1"></li>
+										<li>Ridicata <input type="checkbox" id="chk1"></li>
 	
 	
 	
@@ -177,11 +208,11 @@
 
 
 
-							<li>Eliminare:  
+			     	<li>Eliminare:  
 							<ul>
-									<li>Mica <input type="checkbox" id="chk"></li>
-									<li>Medie <input type="checkbox" id="chk"></li>
-									<li>Ridicata <input type="checkbox" id="chk"></li>
+									<li>Mica <input type="checkbox" id="chk1"></li>
+									<li>Medie <input type="checkbox" id="chk1"></li>
+									<li>Ridicata <input type="checkbox" id="chk1"></li>
 
 
 
@@ -194,17 +225,9 @@
 
 
 
-
-					</li>
-
-
-
-
 					</ul>
-					
-				
-				</li>
-
+					<li><input class="btn" type="button" name="n" value="Aplica"></li>
+					</li>
          </div>
 
 

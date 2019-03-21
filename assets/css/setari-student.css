@@ -1,5 +1,5 @@
 
-*{
+*{  
 	margin: 0;
 	padding: 0;
 	font-family: "montserrat" ,sans-serif;
@@ -8,12 +8,19 @@
 	
 }
 
+.header{
+	position: fixed;
+	 top: 0;
+}
+.Setari-de-notificari li{
+padding: 5px 0;
 
+}
 
 
 .setari{
 	margin-left: 2%;
-	margin-top:20%;
+	margin-top:0;
 
 	
 }
@@ -92,4 +99,18 @@ ul li {
 	border-bottom: 6px solid #0000cc;
 	padding: 13px 0;
 	
+}
+
+
+
+@media (max-width:800px)
+{
+.btn{font-size: 15px;
+	width: 30% ;
+
+
+}
+
+
+
 }

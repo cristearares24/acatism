@@ -10,8 +10,7 @@
 .header{
 	 height: 70px;
 	 background :#34495e;
-	 
-	 position: fixed;;
+	 position: fixed;
 	 width: 100%;
 	 z-index: 1;
 }
@@ -29,7 +28,6 @@
     float: right;
 	display: flex;
 	flex-direction: row;
-	
 	line-height: 50px;
 	
 	
@@ -84,7 +82,8 @@
 	
 	
 }
-/*ascund checkbox-ul */
+/*ascund checkbox-ul*/
+ /*select toate elem cu id chk*/
 #chk{
 	position: absolute;
 	visibility: hidden;
@@ -136,7 +135,43 @@
 		font-size: 40px;
 	}
 	
-	@media (orientation: portait){
+	
+	.meniu{
+		
+	    position: fixed;
+		width: 100%;
+		
+		height: 100vh;
+		background: black;
+		right: -100%;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		 align-items: center;
+		 justify-content: space-between;
+		 line-height: normal;
+	
+	}
+	
+	.meniu a {
+		
+		display: block;
+	}
+	
+	.hide-menu-btn{
+		position: absolute;
+		top: 40px;
+		right: 40px;
+		 
+	}
+	#chk:checked ~ .meniu{
+		right: 0;
+	}
+	
+	}
+
+
+	@media (orientation: portrait){
 		.show-menu-btn,.hide-menu-btn{display: block;
 		                               font-size: 40px;}
 		
@@ -174,37 +209,4 @@
 	}
 		
 		
-	}
-	.meniu{
-		
-	    position: fixed;
-		width: 100%;
-		
-		height: 100vh;
-		background: black;
-		right: -100%;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		 align-items: center;
-		 justify-content: space-between;
-		 line-height: normal;
-	
-	}
-	
-	.meniu a {
-		
-		display: block;
-	}
-	
-	.hide-menu-btn{
-		position: absolute;
-		top: 40px;
-		right: 40px;
-		 
-	}
-	#chk:checked ~ .meniu{
-		right: 0;
-	}
-	
 	}
