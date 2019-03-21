@@ -1,13 +1,46 @@
-
+<!--facut de Iacob Daniel-->
+<!--Am utilizat acelasi fisier css si pt setari studenti si pt setari prof-->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"> 
-    <title>Setari student</title>
+	<title>Setari profesor</title>
+	<link rel="stylesheet" href="../../assets/css/meniuri.css">
     <link rel="stylesheet" href="../../assets/css/setari-student.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
   </head>
   <body>
+
+			<div class="header">
+
+					<h2 class="logo">MENIU</h2>
+					<input type="checkbox" id="chk">
+					<label for="chk" class="show-menu-btn">
+						<i class="fas fa-ellipsis-h"></i>
+					</label>
+		
+		
+					<nav class="meniu">
+						<a href="../home/home_profesor.html"><i class="fas fa-home"></i> Home</a>
+						<a href="../project-list/project-list-professor.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+						<a href="../my-projects.html">Proiectele mele</a>
+						<a href="../set_alert.html">Add event</a>
+						<a href="../newsfeed/newsfeed-professor.html"><i class="far fa-newspaper"></i> Newsfeed</a>
+						<a href="../send_message/send_message_profesor.html"><i class="far fa-envelope"></i> Send message</a>
+						<a href="../home/home_nelogat.html">Logout</a>
+						<a href="#"><i class="fas fa-cog"></i> Setari</a>
+		
+		
+						<label for="chk" class="hide-menu-btn">
+							<i class="fas fa-times"></i>
+						</label>
+		
+					</nav>
+				</div>
+		  
+
+
+
   <div class="setari">
      <h1>Modifica-ti setarile</h1>
 	 
@@ -78,21 +111,74 @@
 			  <li>Notifica mediu    <input type="checkbox" id="chk"></li>
 			  <li>Notifica puternic <input type="checkbox" id="chk"></li>
 			  <li>Nu ma notifica    <input type="checkbox" id="chk"></li>
+			  <li>Inscriere:  
+					<ul>
+							<li>Mica <input type="checkbox" id="chk1"></li>
+							<li>Medie <input type="checkbox" id="chk1"></li>
+							<li>Ridicata <input type="checkbox" id="chk1"></li>
+
+
+
+					</ul>
+				</li>
+
+				<li>Renuntare:  
+						<ul>
+								<li>Mica <input type="checkbox" id="chk1"></li>
+								<li>Medie <input type="checkbox" id="chk1"></li>
+								<li>Ridicata <input type="checkbox" id="chk1"></li>
+
+
+
+						</ul>
+					</li>
+
+					<li>Mesaj:  
+						    <ul>
+									<li>Mica <input type="checkbox" id="chk1"></li>
+									<li>Medie <input type="checkbox" id="chk1"></li>
+									<li>Ridicata <input type="checkbox" id="chk1"></li>
+
+
+
+							</ul>
+						</li>
+
+						<li>Progress Update:  
+								<ul>
+										<li>Mica <input type="checkbox" id="chk1"></li>
+										<li>Medie <input type="checkbox" id="chk1"></li>
+										<li>Ridicata <input type="checkbox" id="chk1"></li>
+	
+	
+	
+								</ul>
+							</li>
+	
+
+							<li>Trimite-mi mail pt.notificarile de importanta:  
+									<ul>
+											<li> <input type="checkbox" id="chk1">Mica</li>
+											<li><input type="checkbox" id="chk1">Medie </li>
+											<li><input type="checkbox" id="chk1">Ridicata </li>
+		
+		
+		
+									</ul>
+								</li>
+
   
-  <!--   <ul class="nu-ma-notifica">  --> 
-       <!--   <li>Notifica slab <input type="checkbox" id="chk"></li> -->
-		 <!-- <li>Notifica mediu <input type="checkbox" id="chk"></li> -->
-		 <!-- <li>Nu ma notifica <input type="checkbox" id="chk"></li> -->
 		
   
   
   
+  </ul>
+         </li>
   
   
   
   
-  
-  
+  </div>
   </div>
   </body>
   </html>
