@@ -134,6 +134,21 @@ body{
 
 }
 
+	
+@media (max-width: 800px){
+		
+	.register{
+		width: 280px;
+		position: absolute;
+		top: 0;
+		left: 35%;
+		padding: 10px 0;
+		color: black;
+		
+		
+		
+	}
+	}
 
 
 
