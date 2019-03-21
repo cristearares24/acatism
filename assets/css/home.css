@@ -1,4 +1,4 @@
-/* reset */
+﻿/* reset */
 
 * {
     box-sizing: border-box;
@@ -45,12 +45,8 @@ ul{
     width:100%;
 }
 
-.button {
-    text-transform:uppercase;
-    width:12rem;
-}
-
 .styled {
+    text-decoration: none;
     border: 1px;
     font-weight:bold;
     line-height: 3;

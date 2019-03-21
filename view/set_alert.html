@@ -18,98 +18,69 @@
 <body>
     <header>
         <div class="header">
-    
-          <h2 class="logo">MENIU</h2>
-          <input type="checkbox" id="chk">
-          <label for="chk" class="show-menu-btn">
-            <i class="fas fa-ellipsis-h"></i>
-          </label>
-    
-    
-          <nav class="meniu">
-            <a href="./home/home_profesor.html"><i class="fas fa-home"></i> Home</a>
-            <a href="./project-list/project-list-professor.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
-            <a href="./my-projects.html">Proiectele mele</a>
-            <a href="#">Add event</a>
-            <a href="./newsfeed/newsfeed-professor.html"><i class="far fa-newspaper"></i> Newsfeed</a>
-            <a href="./send_message/send_message_profesor.html"><i class="far fa-envelope"></i> Send message</a>
-            <a href="./home/home_nelogat.html">Logout</a>
-            <a href="./setari/setari-profi.html"><i class="fas fa-cog"></i> Setari</a>
-    
-    
-            <label for="chk" class="hide-menu-btn">
-              <i class="fas fa-times"></i>
+
+            <h2 class="logo">MENIU</h2>
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-btn">
+                <i class="fas fa-ellipsis-h"></i>
             </label>
-    
-          </nav>
+
+
+            <nav class="meniu">
+                <a href="./home/home_profesor.html"><i class="fas fa-home"></i> Home</a>
+                <a href="./project-list/project-list-professor.html"><i class="fas fa-list-ul"></i> Lista Proiecte</a>
+                <a href="./my-projects.html">Proiectele mele</a>
+                <a href="#">Add event</a>
+                <a href="./newsfeed/newsfeed-professor.html"><i class="far fa-newspaper"></i> Newsfeed</a>
+                <a href="./send_message/send_message_profesor.html"><i class="far fa-envelope"></i> Send message</a>
+                <a href="./home/home_nelogat.html">Logout</a>
+                <a href="./setari/setari-profi.html"><i class="fas fa-cog"></i> Setari</a>
+
+
+                <label for="chk" class="hide-menu-btn">
+                    <i class="fas fa-times"></i>
+                </label>
+
+            </nav>
         </div>
-      </header>
-    <main id="Site-content" class="flex-wrapper-row">
+    </header>
+    <main class = "centerContent">
         <form>
-            <li>
-                <!-- in loc de destinatari e sending message to profulescu in cealalta pagina -->
-                <h1>Tip Alerta:</h1>
-                <ul class="name-area">
-                    <li>
-                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
-                        <label for="tag-checkbox1" class="tag">Deadline</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
-                        <label for="tag-checkbox2" class="tag">Intalnire</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
-                        <label for="tag-checkbox3" class="tag">Consultatii</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
-                        <label for="tag-checkbox4" class="tag">Altele</label>
-                    </li>
-                </ul>
-                <h1>Importanta:</h1>
-                <ul class="name-area">
-                    <li>
-                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
-                        <label for="tag-checkbox1" class="tag">Mica</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
-                        <label for="tag-checkbox2" class="tag">Medie</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
-                        <label for="tag-checkbox3" class="tag">Ridicata</label>
-                    </li>
-                </ul>
-                <h1>Nume Alerta:</h1>
-                <p><input type="text" required=true name="title"></p>
-                <h1>Descriere:</h1>
-                <p><textarea class="bigtextinput" required=false></textarea></p>
-                <h1>Data de Inceput: </h1><input type="date" name="startdate"><h1> Data de Terminare:</h1> <input type="date" name="enddate">
-                <p></p><h1>Ora de Inceput: </h1><input type="time" name="starttime"><h1> Ora de Terminare:</h1> <input type="time" name="endtime">
-                <ul class="name-area">
-                        <h1>Frecventa: </h1>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox1" class="tag-checkbox">
-                        <label for="tag-checkbox1" class="tag">O singura data</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox2" class="tag-checkbox">
-                        <label for="tag-checkbox2" class="tag">Zilnic</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox3" class="tag-checkbox">
-                        <label for="tag-checkbox3" class="tag">Saptamanal</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="tag-checkbox4" class="tag-checkbox">
-                        <label for="tag-checkbox4" class="tag">Lunar</label>
-                    </li>
-                </ul>
-                <h1>Numar Repetitii: <input type="number" required=false name="repeats" min=1></h1>
-                <p><input value="seteaza alerta" type="submit" class="styled"></input></p>
-            </li>
+
+            <h1>Tip Alerta:</h1><br>
+            <input type="radio" name="tip" value="deadline"><small>Deadline</small>
+            <input type="radio" name="tip" value="intalnire"><small>Intalnire</small>
+            <input type="radio" name="tip" value="consultatii"><small>Consultatii</small>
+            <input type="radio" name="tip" value="altele" checked><small>Altele</small>
+            <br>
+            <h1>Importanta:</h1><br>
+            <input type="radio" name="importanta" value="mica" checked><small>Mica</small>
+            <input type="radio" name="importanta" value="medie"><small>Medie</small>
+            <input type="radio" name="importanta" value="mare"><small>Mare</small>
+            <br>
+            <h1>Nume Alerta:</h1><br>
+            <input type="text" required name="title">
+            <br>
+            <h1>Descriere:</h1><br>
+            <textarea class="bigtextinput"></textarea>
+            <br>
+            <h1>Data de Inceput: </h1><input type="date" name="startdate"><br>
+            <h1>Data de Terminare:</h1> <input type="date" name="enddate"><br>
+            <br>
+            <h1>Ora de Inceput: </h1><input type="time" name="starttime"><br>
+            <h1> Ora de Terminare:</h1> <input type="time" name="endtime">
+            <br>
+            <h1>Frecventa: </h1>
+            <input type="radio" name="frecv" value="odata" checked><small>O singura data</small>
+            <input type="radio" name="frecv" value="zilnic"><small>Zilnic</small>
+            <input type="radio" name="frecv" value="saptamanal"><small>Saptamanal</small>
+            <input type="radio" name="frecv" value="lunar"><small>Lunar</small>
+            <br>
+            <h1>Numar Repetitii: <input type="number" name="repeats" min=1></h1>
+            <br><br>
+            <input value="seteaza alerta" type="submit" class="styled">
+
+
         </form>
     </main>
 </body>

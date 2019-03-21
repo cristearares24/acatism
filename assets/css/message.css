@@ -7,6 +7,7 @@
 body, html, ul, li {
     margin:0px;
     padding:0px;
+    overflow:auto;
 }
 h1, h2, h3, h4, h5, h6 {
     margin:0.1em;
@@ -20,11 +21,10 @@ li{
 
 /* main */
 
-.main {
-    display: flex;
-    flex-direction:var(--categoryDirection);
-    justify-content:center;
+main {
     background-color: #102C38;
+    padding-top:1rem;
+    padding-bottom:1rem;
 }
 
 /*.main > * {
@@ -36,6 +36,7 @@ li{
     align-items:center;
     align-content:center;
     justify-content:space-between;
+    
 }
 
 /*button*/
@@ -43,8 +44,8 @@ li{
 .buttonRow {
     display:flex;
     flex-direction:var(--buttonDirection); /*schimbat in column cand rezolutia e mica */
-    justify-content:center;
-    align-items:center;
+    justify-content:var(--alignThings);
+    align-items: var(--alignThings);
     width:100%;
 }
 
@@ -87,144 +88,56 @@ h2 {
 /* variables */
 
 :root {
-    --tbWidth: 15rem;
-    --formWidth:100%;
+    --tbWidth: 400px;
+    --alignThings: flex-start;
+    --radioScale: 1,1;
+    --radioFontScale: 1.5rem;
 }
 
-@media(min-width:280px){
+@media(min-width: 600px){
     :root {
-        --tbWidth:260px;
+        --tbWidth: 500px;
+        --alignThings: center;
+        --radioScale:1,1;
+        --radioFontScale:1.3rem;
     }
+
 }
-@media(min-width:300px){
-    :root {
-        --tbWidth:280px;
+
+@media(min-width: 1000px){
+    html, body{
+        font-size: 1.2rem;
     }
+    :root {
+        --tbWidth: 800px;
+        --radioScale:1,1;
+        --radioFontScale:1rem;
+    }
+
 }
-@media(min-width:320px){
-    :root {
-        --tbWidth:300px;
+
+@media(min-width: 1800px){
+    html, body{
+        font-size: 1.4rem;
     }
+    :root {
+        --tbWidth: 1200px;
+        --radioScale:1.5,1.5;
+        --radioFontScale:1.2rem;
+    }
+
 }
-@media(min-width:340px){
-    :root {
-        --tbWidth:320px;
+
+@media(min-width: 2400px){
+    html, body{
+        font-size: 1.75rem;
     }
-}
-@media(min-width:360px){
     :root {
-        --tbWidth:340px;
+        --tbWidth: 1400px;
+        --radioScale:1.5,1.5;
+        --radioFontScale:1rem;
     }
-}
-@media(min-width:380px){
-    :root {
-        --tbWidth:360px;
-    }
-}
-@media(min-width:400px){
-    :root {
-        --tbWidth:380px;
-    }
-}
-@media(min-width:420px){
-    :root {
-        --tbWidth:400px;
-    }
-}
-@media(min-width:440px){
-    :root {
-        --tbWidth:420px;
-    }
-}
-@media(min-width:460px){
-    :root {
-        --tbWidth:440px;
-    }
-}
-@media(min-width:480px){
-    :root {
-        --tbWidth:460px;
-    }
-}
-@media(min-width:500px){
-    :root {
-        --tbWidth:480px;
-    }
-}
-@media(min-width:520px){
-    :root {
-        --tbWidth:500px;
-    }
-}
-@media(min-width:540px){
-    :root {
-        --tbWidth:520px;
-    }
-}
-@media(min-width:560px){
-    :root {
-        --tbWidth:540px;
-    }
-}
-@media(min-width:580px){
-    :root {
-        --tbWidth:560px;
-    }
-}
-@media(min-width:600px){
-    :root {
-        --tbWidth:580px;
-    }
-}
-@media(min-width:620px){
-    :root {
-        --tbWidth:600px;
-    }
-}
-@media(min-width:640px){
-    :root {
-        --tbWidth:620px;
-    }
-}
-@media(min-width:660px){
-    :root {
-        --tbWidth:640px;
-    }
-}
-@media(min-width:680px){
-    :root {
-        --tbWidth:660px;
-    }
-}
-@media(min-width:700px){
-    :root {
-        --tbWidth:680px;
-    }
-}
-@media(min-width:720px){
-    :root {
-        --tbWidth:700px;
-    }
-}
-@media(min-width:740px){
-    :root {
-        --tbWidth:720px;
-    }
-}
-@media(min-width:760px){
-    :root {
-        --tbWidth:740px;
-    }
-}
-@media(min-width:780px){
-    :root {
-        --tbWidth:760px;
-    }
-}
-@media(min-width:800px){
-    :root {
-        --tbWidth:780px;
-    }
+
 }
 
 /**/
@@ -239,16 +152,15 @@ ul.name-area li {
 }
 
 h1 {
-    display: inline;
     font-size: 1.5rem;
     color: white;
-    margin: 0;
     font-family: sans-serif;
-    font-weight: normal;
+    font-weight: bold;
 }
 .bigtextinput{
     height:10rem;
     width:var(--tbWidth);
+    margin-bottom:1rem;
 
 }
 main{
@@ -259,7 +171,8 @@ form > li {
 }
 form {
     padding: 0 15px 0 15px;
-    width:var(--tbWidth - 5);
+    width:var(--tbWidth);
+    /*transform:scale(1.5,1.5);*/
 }
 [name="title"]{
     width: var(--tbWidth);
@@ -269,4 +182,13 @@ form {
 
 [type="number"]{
     width: 2.5rem;
+}
+
+[type = "radio"]{
+    transform:scale(var(--radioScale))
+}
+
+small{
+    margin-left:10px;
+    font-size:var(--radioFontScale)
 }
