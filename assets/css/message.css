@@ -7,6 +7,7 @@
 body, html, ul, li {
     margin:0px;
     padding:0px;
+    overflow:auto;
 }
 h1, h2, h3, h4, h5, h6 {
     margin:0.1em;
