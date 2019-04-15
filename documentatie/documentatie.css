@@ -1,0 +1,24 @@
+body {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    font-size: 1.5rem;
+}
+body > header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.align-self-center {
+    align-self: center;
+}
+
+section > section {
+    margin-left: 5vw;
+}
+
+#lista_echipa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

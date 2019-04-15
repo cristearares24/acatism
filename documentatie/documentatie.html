@@ -1,11 +1,600 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ro">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Acatism Documentatie</title>
+    <link rel="stylesheet" href="documentatie.css">
+    <title>Documentatie Acatism</title>
 </head>
-<body>
-    Aici vom scrie Documentatia.
+
+<body prefix="schema: http://schema.org">
+    <header>
+        <h1 class="align-self-center">
+            Documentatie Acatism
+        </h1>
+        <div role="contentinfo">
+            <section typeof="sa:AuthorsList">
+                <h2>
+                    <span>
+                        0.
+                    </span>
+                    Echipa:
+                </h2>
+                <ul id="lista_echipa">
+                    <li typeof="schema:author">
+                        Lipan Radu Matei, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Damian Andrei, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Salceanu Paul Sergiu, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Iacob Daniel, A3
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <section role="doc-introduction">
+        <h2>
+            <span>
+                1.
+            </span>
+            Introducere
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    1.1.
+                </span>
+                Descriere
+            </h3>
+            <p>
+                Acatism este o aplicatie web dedicata gestionarii tezelor de licenta si de master pentru studentii unei
+                facultati.
+                Aceasta ofera functionalitati atat pentru profesori cat si pentru studenti. Studentul poate sa se
+                inscrie la un
+                proiect propus pentru licenta, si, in urma confirmarii inscrierii, poate sa trimita si sa primeasca
+                mesaje de la
+                profesorul coordonator cu privire la proiect. Acestea pot fi conversatii, intrebari, deadline-uri sau
+                notificari
+                cu privire la orele de consultatii ale profesorului. Studentul va configura un repository de github al
+                carui actualizari
+                vor aparea in notificarile aplicatiei. Profesorul isi poate crea o lista de proiecte propuse, incluzand
+                o descriere, resurse
+                necesare si tag-uri pentru fiecare. Are abilitatea de a accepta sau refuza inscrierile studentilor la
+                proiectele sale.
+                Prin intermediul aplicatiei, poate programa evenimente de care studentii vor fi notificati. Atat
+                conturile de student cat si
+                cele de profesor trebuie confirmate de un administrator.
+            </p>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    1.2
+                </span>
+                Argument
+            </h3>
+            <p>
+                Teza de licenta este un subiect de interes ridicat, mai ales pentru noi, apropiindu-ne de momentul in
+                care va trebui
+                sa o facem si noi. Acesta este unul dintre motivele pentru care am ales acest proiect. Aplicatia este
+                utila deoarece,
+                filtrand proiectele dupa interese (prin tag-uri) studentului ii va fi mai usor sa decida ce teza de
+                licenta sa realizeze.
+                De asemenea, este pus accentul pe comunicarea dintre student si profesor prin sistemul de news feed care
+                ii notifica pe ambii
+                in situatii importante si ofera functionalitatea de a pune intrebari si de a crea deadline-uri.
+                Integrarea cu github incurajeaza
+                studentul sa se familiarizeze cu software ce urmareste schimbarile in codul sursa.
+            </p>
+        </section>
+
+    </section>
+    <section>
+        <h2>
+            <span>
+                2.
+            </span>
+            Tipuri de utilizatori
+        </h2>
+        <p>
+            --DANIEL
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                3.
+            </span>
+            Tehnologii utilizate
+        </h2>
+        <p>
+            --ANDREI
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                4.
+            </span>
+            Distributia pe Module functionale
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    4.1.
+                </span>
+                Register / Login
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.1.1.
+                    </span>
+                </h4>
+                <p>
+                    Crearea de conturi de utilizator noi. Preluarea si validarea formularului de inregistrare si
+                    salvarea informatiilor in baza de date urmand ca inregistrarea sa fie validata de un admin.
+                </p>
+
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.1.2.
+                    </span>
+                </h4>
+                <p>
+                    Preluarea si validarea formularului de login si crearea unei noi sesiuni pentru utilizatorul
+                    respectiv.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.2.
+                </span>
+                Confirmare utilizatori
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.2.1.
+                    </span>
+                </h4>
+                <p>
+                    Verificarea de catre un admin a formularelor de inregistrare noi aparute in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.2.2.
+                    </span>
+                </h4>
+                <p>
+                    Un utilizator neconfirmat nu poate sa se autentifice (sa foloseasca Login).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.2.3.
+                    </span>
+                </h4>
+                <p>
+                    Un formular refuzat este sters din baza de date.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.3.
+                </span>
+                Afisare proiecte
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.3.1.
+                    </span>
+                </h4>
+                <p>
+                    Se va afisa o lista de proiecte in aplicatie. Fiecare proiect va avea afisat numele profesorului,
+                    titlul, o mica descriere, numele studentului inscris (daca exista), nota, anul.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.3.2.
+                    </span>
+                </h4>
+                <p>
+                    Lista va fi afisata initial de la cel mai nou la cel mai vechi proiect, dar se pot aplica filtre
+                    (titlu, taguri, profesor...).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.3.3.
+                    </span>
+                </h4>
+                <p>
+                    Un formular refuzat este sters din baza de date.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.4.
+                </span>
+                Afisare proiecte
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.4.1.
+                    </span>
+                </h4>
+                <p>
+                    Afisarea detaliilor proiectului la care studentul este inscris.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.4.2.
+                    </span>
+                </h4>
+                <p>
+                    Afisarea alertelor si mesajelor legate de proiect atat intr-o lista cat si pe un Google Calendar.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.4.3.
+                    </span>
+                </h4>
+                <p>
+                    Optiunea de a renunta la proiect sau la student.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.5.
+                </span>
+                Afisare newsfeed
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.5.1.
+                    </span>
+                </h4>
+                <p>
+                    Afisare mesaje, evenimente, alerte automate si cereri de inscriere in ordine cronologica.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.5.2.
+                    </span>
+                </h4>
+                <p>
+                    Se pot aplica filtre precum: titlu, importanta, expeditor, tip de notificare.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.6.
+                </span>
+                Adaugare / Editare / Eliminare proiect
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.6.1.
+                    </span>
+                </h4>
+                <p>
+                    Editare informatii pentru un proiect nou sau unul deja existent (titlu, descriere, resurse, taguri,
+                    student) si adaugarea sau actualizarea acestora in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.6.2.
+                    </span>
+                </h4>
+                <p>
+                    Optiunea de a sterge proiectul.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.7.
+                </span>
+                Aplicare la Proiect / Retragere de la proiect
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.7.1.
+                    </span>
+                </h4>
+                <p>
+                    Trimiterea unei cerere de inscriere catre profesorul care a propus un anumit proiect. Aceasta va
+                    trebui acceptata manual.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.7.2.
+                    </span>
+                </h4>
+                <p>
+                    Renuntarea la proiectul ales. Aceasta nu va trebui acceptata manual, dar profesorul va fi notificat.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.8.
+                </span>
+                Trimitere mesaje
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.8.1.
+                    </span>
+                </h4>
+                <p>
+                    Profesorul poate sa trimita un mesaj catre unul sau mai multi dintre studentii inscrisi la
+                    proiectele sale.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.8.2.
+                    </span>
+                </h4>
+                <p>
+                    Studentul poate sa trimita un mesaj catre profesorul care a propus proiectul la care este inscris
+                    sau doreste sa se inscrie.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.8.3.
+                    </span>
+                </h4>
+                <p>
+                    Mesajelor le poate fi atribuit un nivel de importanta. Acestea apar in aplicatie, dar pot aparea si
+                    pe e-mailul destinatarului in functie de importanta si setarile utilizatorului.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.9.
+                </span>
+                Adaugare / Eliminare eveniment
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.9.1.
+                    </span>
+                </h4>
+                <p>
+                    Adaugarea in calendar sau eliminarea din acesta a unui eveniment caracterizat de: tip, importanta,
+                    nume, descriere, data, ora, frecventa si numar de repetitii.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.10.
+                </span>
+                Modificare setari cont
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.10.1.
+                    </span>
+                </h4>
+                <p>
+                    Preluarea si validarea unui formular al carui date vor reprezenta setarile utilizatorului curent si
+                    salvarea acestora in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.10.2.
+                    </span>
+                </h4>
+                <p>
+                    Setarile sunt separate in trei categorii: de cont (credentialele si e-mailul), de interfata (numarul
+                    de elemente afisate pe pagini, culorile utilizate in aplicatie) si de notificari (nivelul de
+                    importanta si daca vor fi trimise prin e-mail).
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.11.
+                </span>
+                Urmarirea progresului proiectului
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.11.1.
+                    </span>
+                </h4>
+                <p>
+                    Trimiterea unei notificari profesorului la aparitia unui nou commit in repository.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.11.2.
+                    </span>
+                </h4>
+                <p>
+                    Afisare repository-ului proiectului.
+                </p>
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                5.
+            </span>
+            Scenarii Use-Case
+        </h2>
+        <p>
+            --DANIEL
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                6.
+            </span>
+            Arhitectura proiectului
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    6.1.
+                </span>
+                Diagrame UML
+            </h3>
+            </div>
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;"
+                data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;page&quot;:0,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-15T13:54:36.700Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;On40MxEHVlG8SSe_hW20\&quot; version=\&quot;10.6.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;zy95by1VItXjAMpHBgAX\&quot; name=\&quot;Overview\&quot;&gt;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&lt;/diagram&gt;&lt;diagram id=\&quot;9U_p7xbsn7NVxuyRtTou\&quot; name=\&quot;Classes\&quot;&gt;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&lt;/diagram&gt;&lt;diagram name=\&quot;MVC\&quot; id=\&quot;c4acf3e9-155e-7222-9cf6-157b1a14988f\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}">
+            </div>
+            <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    6.2.
+                </span>
+                Explicatii pentru diagramele UML
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        6.2.1
+                    </span>
+                    Overview
+                </h4>
+                <p>
+                    --ML
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.2
+                    </span>
+                    Classes
+                </h4>
+                <p>
+                    --ML
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.3
+                    </span>
+                    Model-View-Controller
+                </h4>
+                <p>
+                    --ML
+                </p>
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                7.
+            </span>
+            Schema bazei de date
+        </h2>
+        <p>
+            --SERGIU
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                8.
+            </span>
+            Distribuirea sarcinilor
+        </h2>
+        <p>
+            --SERGIU
+        </p>
+    </section>
+    <section role="doc-bibliography">
+        <h2>
+            <span>
+                9.
+            </span>
+            Bibliografie
+        </h2>
+        <p>
+            --SERGIU
+        </p>
+    </section>
+    <section role="doc-conclusion">
+        <h2>
+            <span>
+                10.
+            </span>
+            Concluzie
+        </h2>
+        <p>
+            --SERGIU
+        </p>
+    </section>
 </body>
+
 </html>
