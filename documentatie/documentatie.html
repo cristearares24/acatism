@@ -115,7 +115,91 @@
             Tehnologii utilizate
         </h2>
         <p>
-            --ANDREI
+            <h2>
+                <span>
+                    3.1.
+                </span>
+                Mediul de dezvoltare
+            </h2>
+        </p>
+        <p>
+            Pentru dezvoltarea acestui proiect am folosit pachetul XAMPP, care contine, printre altele:
+            <ul>
+                <li> serverul web Apache; </li>
+                <li> interpretorul PHP versiunea 7.3.3; </li>
+                <li> baza de date MariaDB, care este de fapt un fork foarte popular de MySQL. </li>
+            </ul>
+            Am luat decizia de a folosi aceasta versiune de PHP si de MySQL pentru proiectul nostru.
+        </p>
+
+        <p>
+            <h2>
+                <span>
+                    3.2.
+                </span>
+                Librarii si API-uri externe
+            </h2>
+            <p>
+                <h3>
+                    <span>
+                        3.2.1.
+                    </span>
+                    Git si Github
+                </h3>
+                <p> Pe pagina in care pot fi vizualizate informatii despre proiect si in newfeed se vor putea vedea, de
+                    asemenea, datele si titlurile commiturilor de pe git. De asemenea, cand un student face o schimbare
+                    pe git, profesorul la care este acel student va primi un mail cu informatii despre schimbare. </p>
+                <p> Pentru a face acest lucru posibil, folosim webhook-urile oferite de github pentru a fi notificati
+                    cand un student face o schimbare in repository-ul lui. Un exemplu tipical ar fi: studentul face un
+                    commit pe repository, Github ne trimite un request POST pe o adresa oferita de noi cu multe
+                    informatii despre eveniment. De acolo, putem da <i> pull </i> pe repository-ul local, putem trimite
+                    un mail
+                    profesorului ca ceva s-a schimbat, si bagam in baza de date o inregistrare care sa ateste acest
+                    lucru. </p>
+                <p> Alternativa "naiva" pentru webhook-uri ar fi fost verificare la fiecare x minute daca s-a schimbat
+                    ceva. Dezavantajul imens a acestei abordari este faptul ca foarte mult din resursele serverelui s-ar
+                    pierde, deoarece, mai ales cu un numar mare de repository-uri verificate, operatia ar deveni din ce
+                    in ce mai greoaie. De asemenea, precizia ar fi mai proasta, deoarece nu s-ar primi notificatia exact
+                    cand se intampla, ci s-ar verifica dupa o perioada posibil mare de timp. </p>
+                <p> Pagina in care se poate vizualiza repository-ul este un simplu filesystem viewer cu un folder local
+                    in care este repository-ul, clonat si updatat la ultima versiune de fiecare data cand se primeste un
+                    event de la Github. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.2.
+                    </span>
+                    Google Calendar
+                </h3>
+                <p> Pentru a usura viata profesorilor si a studentilor, profesorii vor putea seta, pentru fiecare
+                    student (sau pentru toti studentii lui), deadline-uri pentru anumite task-uri, intalniri
+                    saptamanale/lunare, etc. </p>
+                <p> Pentru aceasta, folosim Google Calendar. Folosim o librarie oferita de Google pentru a adauga
+                    calendare si date importante in acestea. Aceasta librarie face request la API-ul de la Google, care
+                    face schimbarile dorite. In final, utilizatorii pot vedea calendarul pe pagina proiectului. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.3.
+                    </span>
+                    Markdown
+                </h3>
+                <p> Pentru mesajele trimise intre studenti si profesori, acestia vor avea optiunea sa formateze textul
+                    folosind limbajul markdown. Markdown este un limbaj de formatare simplut, dar destul de puternic
+                    pentru cazul nostru de utilizare. In baza de date vom pastra textul in format Markdown, dar inainte
+                    de afisare, il vom converti in html. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.4.
+                    </span>
+                    Sendgrid
+                </h3>
+                <p> Pentru trimis de mailuri, am ales sa folosim serviciul extern Sendgrid. Acesta are avantajul unei integrari mult mai bune cu PHP, si de faptul ca e mult mai de incredere decat un server SMTP pe care l-am hosta noi. Am putea folosi un server SMTP extern, dar unul de incredere or ar fi limitat la putine email-uri, ori ar trebui platit. De aceea, am decis ca Sendgrid este cea mai buna solutie. </p>
+            </p>
         </p>
     </section>
     <section>
@@ -493,7 +577,9 @@
                 </span>
                 Diagrame UML
             </h3>
-            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;page&quot;:1,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-15T19:33:43.875Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;vT5avzo_wYnse4NFZ6oo\&quot; version=\&quot;10.6.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;zy95by1VItXjAMpHBgAX\&quot; name=\&quot;Overview\&quot;&gt;7VtZc9s2EP41mnEe5OEt6tGS7CQdp1btTpo8ZWASEtGABA1CV359FyQoHqAV+VAsp854YmK5uHY/7H4A6J49jtfvOUqjTyzEtGcZ4bpnT3qWZdpDB35JyUZJhgO3kMw5CZWsEtyQH1gJDSVdkBBnDUXBGBUkbQoDliQ4EA0Z4pytmmozRpu9pmiONcFNgKgu/YeEIiqkvjWo5B8wmUdlz6Y3LN7EqFRWM8kiFLJVTWSf9+wxZ0wUT/F6jKm0XmkX8sfaO0v5+VUQROb0yw9q/CX6RWMXD6mynQLHiXh005O+++c68icr9lHcvZ/OrsdXE1XFWCK6UPa6WmK+JHil5iw2pSFh+ql8XMT0gqMYHkeriAh8k6JAylcAIJBFIqZQMuFxz2Gr6UG/Aq9rTlPTeI9ZjAXfgIp6a6tRK0j2TdNVklXl4YGvZFHNu36piBSq5tvGK8vBgzLeA3xkaYa8wUmYgWiCBNKMiUMAqSoyLiI2Zwmi55V0xNkiCbHs0oBSpXPJWKrs+y8WYqNWHFoI1rQ+XhPxpfb8VTZ16qrSZK1azgubspCALWSlvnFqGHYpqVWVxapuXmpUnmJOwKKYK+HDMJCxBQ/wDj0VjQTic7yzPeVnaeedkOKYIkGWzWDRhY686hnnaFNTSBlJRFZreSoFNaRaLaj6TmuRtio4hvvECqZheC00F6OusL2d/uPhbmtwn+AY1QFvXEvLAoAt4ywQhCXZq1sENch/bSC+G/8vBPXBkSLd2A1cz2kjvVnhMLh1NNz2LI+CeUdpA5ve3UKm9VEM1idJzz6Dt0a6hv9zRxuFvC8kDOU7p/YOspjoI0rmql4AeIB4uG0Tnubqd97zbVtASsGYAcAYpXltWqhckLY6yLQmQJa2ZRGXUywJWjka8/6BPcokFM9EzSbttvtS33LinGjmaopz3j/uAw4jJzq51uec8hy58XqW1P32DbhyJvgiECfvCu0lA9SXcOJNdQIRdN2l2JxmKzZLNkaARZ8VOJ7kSB8pVE+KcY4YaM1ozolnRC7E0QwQq4KxaanyBYoJlav8A6ZLLFv9NTTRbPNE3xue+rZtu7Y38G3fdTXSaA47SKNpHoo0ulo0+oQSki5k4jwG6lhlyq+1N0edNQf7EkTrudPmk5DgHe32weg9ijkNGiAwjxMEzlFhYPCquEk7bb9+WhLCSrtFGS7UJmXp2Ie+Fyn43XO967Zy/cDQj4Q6s7vvHmg5+9py/tx5rLYiMUUJLg2q3pg1D6hFao+6HRVEhIaXaMMWckqZQMH3sjSKGCc/oFlUOgBe89JrltfQuJE1VUDmWMJ6WvrJbIk+oXVD8RJlQgkC2K+gNCO322kUMB4xIVj8qHi/PwycYQsGpuHrOLDNLpbnWj/ZEsfraxwIlMxhZlWPXptk2nqHXkd/ltfsDlHwcQLEbyQzd6bB7xk2v0MNkWobRBVcZNS4EZwk854cnrTTdqsko2OhgYqjgRaOZWbJ8cXZdzxmlMkTwIQVwIaA0RK1oks3srMUBTCYy1xn4lSSa2VHpxmYIhKGOMnZj5DhOx+bnIM6vYCBuiP4gfmMJZdxYeBjKJtVGX6kOhfjPJwikgMUA75XOBP7Q9ffG7qbJh5+hlPHOVC8Kjtr8I+WkynJnVc4ubxOMR/l4Rh8lTNV5dK/c17aNzW327rb7Q4XU3SL6ZRlRJ41gowXui3Xv5R3B3tGIf9QzjU7nNvmDZ2RoEkmyqBQVAYrhZif7FJBWQb+lk0vESeFv+phZqwOYopx3dPtW6h5XjD6+4FxcLBQo9+W1eh2CaCTGyJzrWDJuwasjodA2f5LEag69z4orzZa9Ma19EhmdZ6a+d6h0KNfPimOQmAdoSTQd3AtLpOG7GNDdTq52gWx/0vAqa8fY19IWXtjSmHI1sNPJ4KcHYT8aQDqugV6YzrP5N6ODVenew9GdfRT9f7OA5J6cAAtCk7dSWnKKHPyTnsF1RGVeQAAIDkPzChiYWPbpAgPhPSsJlf9xWSNO2jWIidQ2R3t5E5dTY2t3pmManIoOJYufotph4xp/p4xbXgw1Huah1/somh7L/Cgi6JffEdgKk+8sksCU78luAamml8Xigjn47hbSOhr18HgvFInYJzLjy0tQ//EoH5/3B0zagDI2eu9C3eyDwffpsc8r42AQs9zXJYBCGLhLP/3AAyU12nt9bv9zFQNuVf/krOL//aNU9MzW1+qKP75sA9qqg9gShU2m2VYaIh4hoM+Uz97nhAIxSKIpJ+PZwP1+51Am22wOOX3xPXUYHVtmMqt1vPHDP3g943v/mzpPOXgttO/h8r8Vte57e4rwSa9BJtkWBLMBacdR3CKt7YqUYbCKnfI2mXe0Ujt2xneIWBnO/vBznv4MQwUq79qKHJS9cch9vl/&lt;/diagram&gt;&lt;diagram id=\&quot;9U_p7xbsn7NVxuyRtTou\&quot; name=\&quot;Classes\&quot;&gt;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&lt;/diagram&gt;&lt;diagram name=\&quot;MVC\&quot; id=\&quot;c4acf3e9-155e-7222-9cf6-157b1a14988f\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;"
+                data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;page&quot;:1,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-15T19:33:43.875Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;vT5avzo_wYnse4NFZ6oo\&quot; version=\&quot;10.6.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;zy95by1VItXjAMpHBgAX\&quot; name=\&quot;Overview\&quot;&gt;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&lt;/diagram&gt;&lt;diagram id=\&quot;9U_p7xbsn7NVxuyRtTou\&quot; name=\&quot;Classes\&quot;&gt;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&lt;/diagram&gt;&lt;diagram name=\&quot;MVC\&quot; id=\&quot;c4acf3e9-155e-7222-9cf6-157b1a14988f\&quot;&gt;7Z1bd5u4FoB/TdbqeXAXIG5+TNKkt7QnbWbmTOclS7EVmwaDB3Au/fVHAgkDkgHbyOBUWbOmRkggtDfSp62tzQk4Xzy/j+By/iWcIv/E0KbPJ+DdiWHopqnhf0jKC01xLSdLmUXelKatE268X4gm0oKzlTdFcSljEoZ+4i3LiZMwCNAkKaXBKAqfytnuQ7981yWcIS7hZgJ9PvV/3jSZZ6mupa3TPyBvNmd31jV65g5OHmZRuAro/U4McJ/+ZacXkF2L5o/ncBo+FZLAxQk4j8IwyX4tns+RTxqXNVtW7nLD2bzeEQqSVgUcOLmDlmO6yAJj+25Er/AI/RVti/MwSKLQ91FEq5y8sGbCtV+Sn6uFfxnBBf559jT3EnSzhBOS/oTVA6fNk4WPj3T8M20aRG6u4aP86cnBJFx4E/rbh3fIP8vb8jz0wwifCsKA3CPG9XlALBE3sZb+5WeYyMgN7z3fL+SkwsDp+Kku4cLziYr+haIpDCBNpuqoa/RYdCPoe7MAp01wO+OGAWd8w7OWRFGCngtJVBDvUbhASfSCs9CzwDXfWlkh+t6MdM0xspSntRrqGtO2eUEHXYcmQqr7s/wGa/njH1QFxOpgfXofrx6+Xn64hpNo/NdPM/7hMJUoyB1N8dtCD8MomYezMID+xTq1Iud1nqswXFLJ/ERJ8kLbGq6SsKwo6NlL/qbFye8f5Pdbw6KH754L5969sAOsqS9/Fw+yYhY7XBdLj1i5jcKLw1U0oQ/9cPvwYbw4DT5/fvgUXH26+GOZ/DOi8kpgNENJTT43y0carlYVIuTDxHssd0MiidKi16GHq5yrkD0uK5BjgPIlsorSUmu9OI0i+FLItiQZ4s33MZgGrhUVGOWOpqGE49oVxczqsFbTvFVaaW6ddAqd2Ylh+1hOZ8uSQtv/rkiHe7bArePh1/oUn9WWz/j/qXJoWfooIbpLzpmFc/jlTka0OyDnaI+QXxP/mtF/0zvfVRM8llDsaLNT+KG9anacxl0Cpy2rafOIPCIbWVlt9M0V26lJfHSfFNqkeu0RyW+Yi5QQ0mwUFjbXW2I1Hj30lOX6i/waeuOdGCTv7S2GHDyurSbJm/9kuR9DrPVMnaJydg93u8+ijOXHrHToZJDyMP6c0mEt1fR8kMvqeRbiXPd+Ol6TUbUyWhrVQfUD8h8RuWq5Y+9goHTcMT9QWuO3LgDAArbjAtey+GFzLBg1db2DUVPY9zhc35Mp3d4I1UED2la5+WwGtoXmAqLmMpyaIWmv5nJbNteTt/BhSoGp8tEzugjJxEo9mXv+9Aq+hCvyTHGCIZMdnc3DyPuFLwtZW+PTEdNwwy7luCElKT9EiPQV10wkeiXpC3wuZbyCcZJDr+/DZezd5Y+R9Q1nYZKEiyY82ULiVTDQ8leoKHNd9IpYRiOGfMeTMBjM8ENseUdbpGR2+X7Qx/IMYILOCFTGnKp1AApjTvvokOFT1SC96U0SecHshFQPpJMDmmcKE5jlgBlGVXSWEAI3a6FTmeL0hCZVel2xFse4e8CVuUrzvDPXKd9pO5rlDnvuTacoSME8wdXN1I08AyU9XFHrDP+Hn+ec8LKFK36Oj/X1Mf6PZI/wfIiMR9BLlRFhXX5CcSJU09o3vVl3X8r60KSopimpb2I3K3FkRci+V5iabpqAtpPwAssqnURRkf6RTplGOid2wIsdCEScTqavw9hLvJBcP8ryVkTfl3QdwdAjkq4rS7i8xYMHL2FPUIYs1ilkhXErTVH0pi4LjGMsb3LpRxh5mbyK3cw5hdasXhtuq7qabpXRbaeMjqyuxrY4mR7S2PKW2Vd+nBTMKxtsLdNTYmnFh3d+SFCIJF2mE4M9jSqAmXybrComhezuzCpthTe5jr5B8PQDfr9AD+Cb98+3228jQ7d7ld5JB6Yyo8lWVpD7xCd92KQk+doZyk6SFza1zmYwHVvUtjWEmbZeotwRsM2iHnEFgKntV8A0D2A4A/ygeB2FPzHlX3lxwim5mpXtNivjtWcMuAHowHYLABTstuUL0F7im+cyQvnKol1gtqDdOmoV2RfLObAOJE3ou1z6L4R8l1mn8vFdlvkj7iNmKNpUVMFut8rIlKFJGR1bkjbaQNHuCLRdQxwa7RpmL9KTyp9uW/5kI3fP/Dlm/gGMIAyr4vBRKaCbur5nCcuuL+A647r8koiVX+v9ip7ie4R4K4nC1d1w1bW5dTcRsObOTSVgNaQBK7/SpoC16S3ZB1iF8pUGrPzCYB/AOpmgZWoGDsLEu8f6QKTFYStZ3xdeQ0GsNAUVQKxYQaVBbD8YNDCIHR8rxPY6BdFPdjHZ6oMy2QokvwGZwSCQWQdVAm4ywa4d2ncuYZrjAzAw78ZwOl14gQLgjgBY1znVEfGvyD1bHv+aogVsxb/1b8he/Ct0v5clXWNY/Buhf1e4yVtabEnZKZoQ9WtZWOFxt/orwmOh/srCY6vf7SPDwGNGvY143Pmq9n6dD29aIeu/dTvCxGQBFFk0mNY0bu+Xrencq6uL/GVtaWTB86Qii6ZXZa+lYJF4ZZGFJfJq3cQDaljuVviipdc2vvCdGT4A/yr/fsOybfc1LO9kuXCYf+F615NmFTWhuYTjGrUFXNeqLbC34WKD42S/NtSdrHCDcpwUabLYCsd2cPWsy5h4yoo2dutXlasF9PrsVdc6/QBr0EwIRVwOZ8r+Js9fMu8AGwfSPEJH9+s/ohVKRcn1b8jRULItmgN1a3/zSR+xMYci724Vqi1529LIWzk9/jNiFHKs5M183I4evI8/uE+/4C1S5A3gPQxVBtXQPSxWxsYNSJUCOrA6VczaZi0Mu9/RzIuT9jZnRdPb0nTuuNsfTDN3ZgXTzezjtJf4QGDaEe0t6xamI9pLKJ4+kE71z9PK/xLLra3/5TAghMdjCxwZT9eKodDBfcAXVcgiC1mY3jQPabKIxRUtoypiqX89joZY3DbRgXYnFgUj3apLWxgxZcHIbxa+R2zpaIkiQ9sKors9C08zCuLT32qa2VaEm+xau9vM8I2uUeThpiUQsqdGAF4jBh3Vx6liRtMeaWBr+xXoOqpP3YtZGMu+vNCwPrFC1I4Q1bYrM5XDxvQRd20KUQWirX1HhhjRp65v7W9/iMJZWap1yPg8whqzTYy/N84K6GXApjVdA1VTmVNiizYl+jau/by9/BQYv+yrj18/ux9/rK4+v5+wiPpqp3aHiixs6GF4iOpWdaXasRoUuVpCd7v1+qxt1tJS9ZLgShi9XJMPjSm07gatdd2qmn+dtvZBWWjNPNcVW7cAINBa4oc3/24wSEila8XL3apL7+Zf0LcJcRDA3Ntm546A2aJeEEcEzBuCG/FjkULmfVVZnHE8HoYym1VLtGXWu3dyJQynW//O2oYthSqaXjyiQEWX7zBa0YaOrWxRsvgBshMHT7Hg1W6p9gDUSUwBkXyl8bL83VKQdhMkntA90YT8w2viUuQjbTEeD/4bXCyg57/hP9im6Pwwyik0ZwuUU56nqPLOwFB4XOZszvHTNl5JyIN+twHuxOZ97bxqrcgbBqVhqDIwKmhua/VOz9UCrGeUq5i8OfsGqxQek5SPiDQ3ZtaplcZGVzA2jqW5iCg7dmv0MTqxY4vEK4vLDbl2bJJjtcRYnUb5XMUoUl906kXPRIgt0jNLGmKPFWKP2Nt+JIjNm7PthlhMx2MA7zW8wSswgItUeeAG8GpgMbshvgFX4iAGcNawJcwOpl9QHCuXke5IW9cciwusy+RdjIkNDmoFN9Q3q9pTUBcxw4TylUbb8r9ZFa/7iiyw/sRbeiht/IJde8P3qLY0iStI71Y9RSH5ReopzQ5uHlEEMmZ5fJtj0I8iIzUzUedwf1yRFnhU1zXT7ZzuzT7oXu91svka6F6gy+KM2lC/3aVrdCFys1N49eNd2xfR3QNos2jp3PZTrCrpuP3vKkxyYM4Gam35nA72BA2y9FE6sJJzZuEcGbtHdEQm5+icIb8m/jWj/6Z3xqNwUE27YwkXUy+h20fZOfzkd9X8OE14mUiQcVlNm0fk2bNXcV1NfXONd2qrjE3yxqpem/DSxo/VD772TejJSWMTgW58THm1XhuVxY3fewXJxHYWbFXBdoovr8pT5KMt27SpypVBWMz4lYlAgebv07EsM2xkL4tu0ONLuPB80gt/QP4jIlctD8ZdmAh0gxtTKCE1b9kGsuaQ7Ltvx8DoDay9K8TvzjXguKILYwWsAPdYqwduHtG3LzFUk32ve45fAdSLlH/YUG9VHWPcph3L1RKHAHTWrscD6NcRevTQk2L0wdf+mBl9BwR+1fQ41sBbFwBgAdtxAYuu3mP0H9xbcj3XlxBPA7imj+dwSX6uFv5lBBdkZH2aewm6WcJ0yHmK4LLcguWBF5efpjLJlvgWZFxbLxidwcnDLC1QWSIoLyWckIjz5O+kafEL57xP/6ri/gtFUxjAilZo9Fh0I24RtQPVAC73TU9XEApKE32O1+7ie7wbtEEUMajvcYwbkTyWQDU17zi8as4N49kwO3oyTJG1tjsYoyzbO3Y09Kq3GqNeUc/uuOPq62u0jOTGZk7dryxrvQbBGYh/XR4mskVAyWFMcSwXVHQJ2I1LavUlJO3LtXhPYTp/IF/+vt3ADco7aacuxrT1ipBNdpGicwBbrz/QDl2Ld03jJK6ck6rvy17eSSIJy4tpI3I+qx/by85HuM9lYWPTXbhpfMiy59H6N1c6W3+gF2g7beQqcOr7f8BZ/KZ8q4qWKlelfZVV5KskUlZpvkqGZiviwZJr66khgXj27G14v4av6Cm+R2iqaKJTmnCA3YYmxraAJgxpNMGiyyiaaNNBd/GBFKGEpdGELVoW2ZImvoaJd4+lSNp4F6SYwOAMnU4maJmgKSkfFC7IcQXzij4LQx+lix6VCCPphVpfRgXEPqC6i3hEqO7yeESF+CNvfftPegzDAqPrrnskJhibN9CfThdeoHCp461hdnVrmNj6IuIleYt1tgrE0H4AsbuIxCCUsDxe2jcUA+5v/wwghZ0/Y4xJOxBTVp6U3jJiw9qC07awYqCOVVhokxGosLTPguiO+i4IaYW2jnZDYSCHxezLHZ3r3eyq+Q2tPixE1WO0kl9WJFl+AnoVzhQuSV+rYupTWg53TAEtyVurcgxFS62Hmu0/7i6KWyWSsDRacvb9vBmhJQoq+LVoxUcKWDrWIlFUKpEWSVtEyu/2mwPL0bnNmOPSiKNr462AZdv8AwUcfsb4Hc28GDOKYhzJjJMbevpkHOWPs8Xo1IU/zoEZZ19/HDid1jOOirspW4n6R5yxQpxCqO+jQRwOQUzzFSDLmEcWFkRcIYtkZDHM3Ne8aCE2BPsUpEUT18eKWdoPN+NOfIhFApb3nZ8OfIhZj1C/iCRev1oHhlHE048KilahRCooLdS4PlaeOIW4y0dDPHouuDzecmM8wmqA5m0LDBOSBJ7RBYfDL/BBGXgk+PyUJc32xhe7MVuwmC7vwyuacpDeYpzqxEFaJGBpwaC1Dhykv7P4zqm/z2WY2nq81OrTnpnglIWMLnYzTQylwKljhRSBk0ghpYGTofEdzGDBaXjxn7Wjc32u4hCLY3Dc/JQLYlCBTBoCcqU7XW+rMU1E8UuOPB7XUVZ56wAnsiuz3mnduFGajfmDiDGbmWcKVa+10vRQQcxCA64dFvs59PGIBaOP7xol3yLIndSqirfi9yRVXBPSYAmcfU0DmJESN0mEYfJ1RyvStWq4VkGwIvFeFuaBvg9o/ry9/BQYv+yrj18/ux9/rK4+v5+MfrMVSWEbHJuPOMd+bAP30cBinRhKLlRLYrQIoxdlY+vaxgaEGlSe8boCE0wHNjah9A3BREFZ2GpflP3sayLhSpJtBw7i667gygse3pzURBL+T5Eo1AKjPLUSWskEamVubyXDh1FI6HE9wERwOc9GAXDxfw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}">
+            </div>
             <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
         </section>
         <section>
@@ -511,23 +597,31 @@
                     Overview
                 </h4>
                 <p>
-                    In diagrama overview putem observa la nivel inalt modul de functionare a aplicatiei. Aceasta va fi construita pe baza paradigmei model-view-controller.
+                    In diagrama overview putem observa la nivel inalt modul de functionare a aplicatiei. Aceasta va fi
+                    construita pe baza paradigmei model-view-controller.
                 </p>
                 <p>
-                    Fiecare pagina a aplicatiei va avea un controller al ei (ProjectListController, SettingsController etc.) si fiecare controller va pastra in memorie 
-                    model-ul si view-ul folosit de acesta. Totodata, fiecare controller va avea si o functie index, functie ce va ocupa cu incarcarea in mod default a paginei.
+                    Fiecare pagina a aplicatiei va avea un controller al ei (ProjectListController, SettingsController
+                    etc.) si fiecare controller va pastra in memorie
+                    model-ul si view-ul folosit de acesta. Totodata, fiecare controller va avea si o functie index,
+                    functie ce va ocupa cu incarcarea in mod default a paginei.
                 </p>
                 <p>
-                    Un controller se ocupa cu functionalitatea logica a aplicatiei. Daca controller-ul doreste sa obtina sau sa modifice datele salvate in aplicatie, acest lucru se 
-                    va face prin intermediul model-ului aferent. Modelul va avea accesul la baza de date a aplicatiei si in cadrul acestuia se vor face apelurile de tipul: 
+                    Un controller se ocupa cu functionalitatea logica a aplicatiei. Daca controller-ul doreste sa obtina
+                    sau sa modifice datele salvate in aplicatie, acest lucru se
+                    va face prin intermediul model-ului aferent. Modelul va avea accesul la baza de date a aplicatiei si
+                    in cadrul acestuia se vor face apelurile de tipul:
                     select, update, delete si insert.
                 </p>
                 <p>
-                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent ( descrierea unui proiect, lista de proiecte etc), le salveaza in memoria 
-                    sa si dupa le afiseaza conform layout-ului propriu ( Exemplu de layout: preview_project_students.php ) prin intermediul functiei render.
+                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent ( descrierea unui
+                    proiect, lista de proiecte etc), le salveaza in memoria
+                    sa si dupa le afiseaza conform layout-ului propriu ( Exemplu de layout: preview_project_students.php
+                    ) prin intermediul functiei render.
                 </p>
                 <p>
-                    Dispatcher-ul se va ocupa de rutarea cererilor catre controller-ul corect si catre metoda corecta a acestuia, daca este cazul. 
+                    Dispatcher-ul se va ocupa de rutarea cererilor catre controller-ul corect si catre metoda corecta a
+                    acestuia, daca este cazul.
                     Un url va fi interpretat de dispatcher sub forma:
                 </p>
                 <img src="./imgs/Dipatcher.png" alt="Dispatcher.png">
@@ -540,15 +634,20 @@
                     Classes
                 </h4>
                 <p>
-                    In diagrama Classes sunt prezentate clase ajutatoare ce vor mai aparea in cadrul aplicatiei noastre. Clasa Dispatcher este aceasi ca cea prezentata la punctul anterior.
-                    Clasa Session se va ocupa de administrarea detaliilor legate de sesiunea curenta, de initializarea si oprirea ei si de adaugarea si obtinerea de informatii legate de aceasta.
+                    In diagrama Classes sunt prezentate clase ajutatoare ce vor mai aparea in cadrul aplicatiei noastre.
+                    Clasa Dispatcher este aceasi ca cea prezentata la punctul anterior.
+                    Clasa Session se va ocupa de administrarea detaliilor legate de sesiunea curenta, de initializarea
+                    si oprirea ei si de adaugarea si obtinerea de informatii legate de aceasta.
                 </p>
                 <p>
-                    Apelurile la baza de date MySql a aplicatiei se vor face prin intermediul clasei Database. Aceasta este de tip Singleton pentru a evita instantierea a mai multe conexiuni cu o
-                    aceasi baza de date si se folosete de PDO pentru initializarea apelurilor la baza de date pentru a ne feri de atacuri precum SQL injection.
+                    Apelurile la baza de date MySql a aplicatiei se vor face prin intermediul clasei Database. Aceasta
+                    este de tip Singleton pentru a evita instantierea a mai multe conexiuni cu o
+                    aceasi baza de date si se folosete de PDO pentru initializarea apelurilor la baza de date pentru a
+                    ne feri de atacuri precum SQL injection.
                 </p>
                 <p>
-                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel logic ( controllere ). Acestea vor fi create la nivelul Model cu ajutorul
+                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel
+                    logic ( controllere ). Acestea vor fi create la nivelul Model cu ajutorul
                     inregistrarilor luate din tablele pe care acestea le reprezinta si oferite nivelului Controller.
                 </p>
             </section>
@@ -560,16 +659,20 @@
                     Model-View-Controller
                 </h4>
                 <p>
-                    In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor claselor de tip Controller, de tip Model si de tip View si relatiile care vor 
-                    exista intre acestea. Fiecare pagina va avea cate un controller aferent ( HomeController, ProjectListController, SendMessageController etc.) si cate un model ( ProjectList_Model,
+                    In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor
+                    claselor de tip Controller, de tip Model si de tip View si relatiile care vor
+                    exista intre acestea. Fiecare pagina va avea cate un controller aferent ( HomeController,
+                    ProjectListController, SendMessageController etc.) si cate un model ( ProjectList_Model,
                     NotificationMaker_Model etc).
                 </p>
                 <p>
-                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si PreviewProject, vom folosi un model comun ( pentru exemplul ales, Project_Model )
+                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si
+                    PreviewProject, vom folosi un model comun ( pentru exemplul ales, Project_Model )
                     pentru a evita repetarea de cod in mai multe clase diferite.
                 </p>
                 <p>
-                    Deoarece singurul lucru care diferentiaza view-ul unei pagini de al alteia este layout-ul ce trebuie incarcat, vom avea o singura clasa View al carei
+                    Deoarece singurul lucru care diferentiaza view-ul unei pagini de al alteia este layout-ul ce trebuie
+                    incarcat, vom avea o singura clasa View al carei
                     comportament va fi modificat de layout-ul pe care aceasta il primeste la initializare.
                 </p>
             </section>
@@ -606,8 +709,9 @@
         </h2>
         <section>
             <p>https://docs.phpmyadmin.net/en/latest/ - Documentatie phpMyAdmin</p>
-		    <p>https://phpdelusions.net/pdo/pdo_wrapper - Informatii despre wrapper PDO</p>
-			<p>https://medium.com/@noufel.gouirhate/create-your-own-mvc-framework-in-php-af7bd1f0ca19 - Informatii despre MVC in PHP</p>
+            <p>https://phpdelusions.net/pdo/pdo_wrapper - Informatii despre wrapper PDO</p>
+            <p>https://medium.com/@noufel.gouirhate/create-your-own-mvc-framework-in-php-af7bd1f0ca19 - Informatii
+                despre MVC in PHP</p>
         </section>
     </section>
     <section role="doc-conclusion">
