@@ -30,7 +30,7 @@
                         Damian Andrei, A1
                     </li>
                     <li typeof="schema:author">
-                        Salceanu Paul Sergiu, A1
+                        Salceanu Sergiu-Paul, A1
                     </li>
                     <li typeof="schema:author">
                         Iacob Daniel, A3
@@ -76,7 +76,7 @@
         <section>
             <h3>
                 <span>
-                    1.2
+                    1.2.
                 </span>
                 Argument
             </h3>
@@ -207,7 +207,7 @@
             <span>
                 4.
             </span>
-            Distributia pe Module functionale
+            Distributia pe module functionale
         </h2>
         <section>
             <h3>
@@ -223,8 +223,8 @@
                     </span>
                 </h4>
                 <p>
-                    Crearea de conturi de utilizator noi. Preluarea si validarea formularului de inregistrare si
-                    salvarea informatiilor in baza de date urmand ca inregistrarea sa fie validata de un admin.
+                    Un utilizator neautentificat poate crea cont nou. Formularul de inregistrare este preluat, validat, si
+                    informatiile sunt salvate in baza de date urmand ca inregistrarea sa fie validata de un admin. 
                 </p>
 
             </section>
@@ -235,8 +235,7 @@
                     </span>
                 </h4>
                 <p>
-                    Preluarea si validarea formularului de login si crearea unei noi sesiuni pentru utilizatorul
-                    respectiv.
+					In cazul autentificarii, formularul de login este verificat si este creata o sesiune pentru utilizator.
                 </p>
             </section>
         </section>
@@ -254,7 +253,7 @@
                     </span>
                 </h4>
                 <p>
-                    Verificarea de catre un admin a formularelor de inregistrare noi aparute in baza de date.
+                    Administratorii pot verifica formularele de inregistrare noi aparute in baza de date.
                 </p>
             </section>
             <section>
@@ -292,8 +291,8 @@
                     </span>
                 </h4>
                 <p>
-                    Afisarea unei liste de proiecte in aplicatie. Fiecare proiect va avea afisat numele profesorului,
-                    titlul, o mica descriere, numele studentului inscris (daca exista), nota, anul.
+                    Studentilor, profesorilor si utilizatorilor neautentificati li se poate afisa o lista de proiecte in aplicatie. Fiecare proiect va avea afisat numele profesorului,
+                    titlul, o mica descriere, numele studentului inscris (daca exista), nota si anul.
                 </p>
             </section>
             <section>
@@ -305,6 +304,16 @@
                 <p>
                     Lista va fi afisata initial de la cel mai nou la cel mai vechi proiect, dar se pot aplica filtre
                     (titlu, taguri, profesor...).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.3.3.
+                    </span>
+                </h4>
+                <p>
+                    Studentii care nu sunt inscrisi la un proiect au functionalitatea aditionala de a aplica la proiecte.
                 </p>
             </section>
         </section>
@@ -322,7 +331,7 @@
                     </span>
                 </h4>
                 <p>
-                    Afisarea detaliilor proiectului la care studentul este inscris.
+                    Studentii si profesorii pot vedea detaliile unui proiect la care studentul este inscris.
                 </p>
             </section>
             <section>
@@ -332,7 +341,7 @@
                     </span>
                 </h4>
                 <p>
-                    Afisarea alertelor si mesajelor legate de proiect atat intr-o lista cat si pe un Google Calendar.
+					Se vor afisa alertele si mesajele legate de proiect atat intr-o litsta cat si pe un Google Calendar.
                 </p>
             </section>
             <section>
@@ -342,7 +351,7 @@
                     </span>
                 </h4>
                 <p>
-                    Optiunea de a renunta la proiect sau la student.
+                    Studentul poate renunta la proiect, si profesorul poate renunta la student.
                 </p>
             </section>
         </section>
@@ -360,7 +369,7 @@
                     </span>
                 </h4>
                 <p>
-                    Afisare mesaje, evenimente, alerte automate si cereri de inscriere in ordine cronologica.
+					Studentului si profesorului li se afiseaza mesaje, evenimente, alerte automate si cereri de inscriere in ordine cronologica.
                 </p>
             </section>
             <section>
@@ -388,7 +397,7 @@
                     </span>
                 </h4>
                 <p>
-                    Editare informatii pentru un proiect nou sau unul deja existent (titlu, descriere, resurse, taguri,
+                    Se pot edita informatii pentru un proiect nou sau unul deja existent (titlu, descriere, resurse, taguri,
                     student) si adaugarea sau actualizarea acestora in baza de date.
                 </p>
             </section>
@@ -399,7 +408,7 @@
                     </span>
                 </h4>
                 <p>
-                    Optiunea de a sterge proiectul.
+                    Se poate sterge proiectul.
                 </p>
             </section>
         </section>
@@ -417,7 +426,7 @@
                     </span>
                 </h4>
                 <p>
-                    Trimiterea unei cerere de inscriere catre profesorul care a propus un anumit proiect. Aceasta va
+					Se poate trimite o cerere de inscriere catre profesorul care a propus anumit proiect. Aceasta va
                     trebui acceptata manual.
                 </p>
             </section>
@@ -428,7 +437,7 @@
                     </span>
                 </h4>
                 <p>
-                    Renuntarea la proiectul ales. Aceasta nu va trebui acceptata manual, dar profesorul va fi notificat.
+                    Se poate renunta la proiectul ales. Renuntarea nu va trebui acceptata manual, dar profesorul va fi notificat.
                 </p>
             </section>
         </section>
@@ -446,7 +455,7 @@
                     </span>
                 </h4>
                 <p>
-                    Trimiterea unui mesaj de catre profesor la unul sau mai multi dintre studentii inscrisi la
+                    Se poate trimite un mesaj de catre profesor la unul sau mai multi dintre studentii inscrisi la
                     proiectele sale.
                 </p>
             </section>
@@ -457,7 +466,7 @@
                     </span>
                 </h4>
                 <p>
-                    Trimiterea unui mesaj de catre student la profesorul care a propus proiectul la care este inscris
+                    Se poate trimite un mesaj de catre student la profesorul care a propus proiectul la care este inscris
                     sau doreste sa se inscrie.
                 </p>
             </section>
@@ -487,7 +496,7 @@
                     </span>
                 </h4>
                 <p>
-                    Adaugarea in calendar sau eliminarea din acesta a unui eveniment caracterizat de: tip, importanta,
+                    Se poate adauga sau elimina din calendar un eveniment caracterizat de: tip, importanta,
                     nume, descriere, data, ora, frecventa si numar de repetitii.
                 </p>
             </section>
@@ -506,8 +515,8 @@
                     </span>
                 </h4>
                 <p>
-                    Preluarea si validarea unui formular al carui date vor reprezenta setarile utilizatorului curent si
-                    salvarea acestora in baza de date.
+					Se preia si valideaza un formular al carui date reprezinta setarile utilizatorului curent si
+                    sunt salvate apoi in baza de date.
                 </p>
             </section>
             <section>
@@ -519,7 +528,7 @@
                 <p>
                     Setarile sunt separate in trei categorii: de cont (credentialele si e-mailul), de interfata (numarul
                     de elemente afisate pe pagini, culorile utilizate in aplicatie) si de notificari (nivelul de
-                    importanta si daca vor fi trimise prin e-mail).
+                    importanta si daca vor fi trimise prin e-mail). Setarile de interfata influenteaza modul in care sunt afisate paginile in aplicatie.
                 </p>
             </section>
         </section>
@@ -537,7 +546,7 @@
                     </span>
                 </h4>
                 <p>
-                    Trimiterea unei notificari profesorului la aparitia unui nou commit in repository.
+                    Este trimisa o notificatie profesorului la aparitia unui nou commit in repository.
                 </p>
             </section>
             <section>
@@ -547,7 +556,7 @@
                     </span>
                 </h4>
                 <p>
-                    Afisarea repository-ului proiectului.
+                    Se poate afisa repository-ul proiectului.
                 </p>
             </section>
         </section>
@@ -592,7 +601,7 @@
             <section>
                 <h4>
                     <span>
-                        6.2.1
+                        6.2.1.
                     </span>
                     Overview
                 </h4>
@@ -614,10 +623,8 @@
                     select, update, delete si insert.
                 </p>
                 <p>
-                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent ( descrierea unui
-                    proiect, lista de proiecte etc), le salveaza in memoria
-                    sa si dupa le afiseaza conform layout-ului propriu ( Exemplu de layout: preview_project_students.php
-                    ) prin intermediul functiei render.
+                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent (descrierea unui proiect, lista de proiecte etc), le salveaza in memoria 
+                    sa si dupa le afiseaza conform layout-ului propriu (Exemplu de layout: preview_project_students.php) prin intermediul functiei render.
                 </p>
                 <p>
                     Dispatcher-ul se va ocupa de rutarea cererilor catre controller-ul corect si catre metoda corecta a
@@ -629,9 +636,9 @@
             <section>
                 <h4>
                     <span>
-                        6.2.2
+                        6.2.2.
                     </span>
-                    Classes
+                    Clase
                 </h4>
                 <p>
                     In diagrama Classes sunt prezentate clase ajutatoare ce vor mai aparea in cadrul aplicatiei noastre.
@@ -646,28 +653,24 @@
                     ne feri de atacuri precum SQL injection.
                 </p>
                 <p>
-                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel
-                    logic ( controllere ). Acestea vor fi create la nivelul Model cu ajutorul
-                    inregistrarilor luate din tablele pe care acestea le reprezinta si oferite nivelului Controller.
+                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel logic (controllere). Acestea vor fi create la nivelul Model cu ajutorul
+                    inregistrarilor luate din tabelele pe care acestea le reprezinta si oferite nivelului Controller.
                 </p>
             </section>
             <section>
                 <h4>
                     <span>
-                        6.2.3
+                        6.2.3.
                     </span>
                     Model-View-Controller
                 </h4>
                 <p>
-                    In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor
-                    claselor de tip Controller, de tip Model si de tip View si relatiile care vor
-                    exista intre acestea. Fiecare pagina va avea cate un controller aferent ( HomeController,
-                    ProjectListController, SendMessageController etc.) si cate un model ( ProjectList_Model,
-                    NotificationMaker_Model etc).
+                    In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor claselor de tip Controller, de tip Model si de tip View si relatiile care vor 
+                    exista intre acestea. Fiecare pagina va avea cate un controller aferent (HomeController, ProjectListController, SendMessageController etc.) si cate un model (ProjectList_Model,
+                    NotificationMaker_Model etc.).
                 </p>
                 <p>
-                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si
-                    PreviewProject, vom folosi un model comun ( pentru exemplul ales, Project_Model )
+                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si PreviewProject, vom folosi un model comun (pentru exemplul ales, Project_Model)
                     pentru a evita repetarea de cod in mai multe clase diferite.
                 </p>
                 <p>
@@ -683,11 +686,264 @@
             <span>
                 7.
             </span>
-            Schema bazei de date
+            Baza de date
         </h2>
-        <p>
-            --SERGIU
-        </p>
+        <section>
+            <h3>
+                <span>
+                    6.1.
+                </span>
+                Schema bazei de date
+            </h3>
+            <svg viewBox="145 305 894 885" width="749px" height="580px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="580" y1="500" x2="570" y2="500" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="570" y1="500" x2="432" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="572.5" y1="500" x2="576.03553390593" y2="503.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="572.5" y1="500" x2="576.03553390593" y2="496.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="580" y1="520" x2="570" y2="520" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="570" y1="520" x2="432" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="572.5" y1="520" x2="576.03553390593" y2="523.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="572.5" y1="520" x2="576.03553390593" y2="516.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="246" y1="490" x2="256" y2="490" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="330" y1="390" x2="340" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="256" y1="490" x2="330" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="253.5" y1="490" x2="249.96446609407" y2="493.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="253.5" y1="490" x2="249.96446609407" y2="486.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="580" y1="700" x2="570" y2="700" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="700" x2="432" y2="390" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="572.5" y1="700" x2="576.03553390593" y2="703.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="572.5" y1="700" x2="576.03553390593" y2="696.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="580" y1="680" x2="570" y2="680" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="570" y1="680" x2="432" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="572.5" y1="680" x2="576.03553390593" y2="683.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="572.5" y1="680" x2="576.03553390593" y2="676.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="580" y1="600" x2="570" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="540" x2="580" y2="540" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="600" x2="570" y2="540" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="572.5" y1="600" x2="576.03553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="572.5" y1="600" x2="576.03553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="575" y1="540" x2="571.46446609407" y2="543.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="575" y1="540" x2="571.46446609407" y2="536.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="790" y1="600" x2="780" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="691" y1="600" x2="681" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="780" y1="600" x2="691" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="782.5" y1="600" x2="786.03553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="782.5" y1="600" x2="786.03553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="686" y1="600" x2="689.53553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="686" y1="600" x2="689.53553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="879" y1="620" x2="889" y2="620" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="889" y1="670" x2="879" y2="670" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="889" y1="620" x2="889" y2="670" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="886.5" y1="620" x2="882.96446609407" y2="623.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="886.5" y1="620" x2="882.96446609407" y2="616.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="884" y1="670" x2="887.53553390593" y2="673.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="884" y1="670" x2="887.53553390593" y2="666.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="250" y1="370" x2="260" y2="370" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="330" y1="390" x2="340" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="260" y1="370" x2="330" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="257.5" y1="370" x2="253.96446609407" y2="373.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="257.5" y1="370" x2="253.96446609407" y2="366.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="393.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="386.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="340" y1="510" x2="330" y2="510" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="330" y1="580" x2="340" y2="580" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="330" y1="510" x2="330" y2="580" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="332.5" y1="510" x2="336.03553390593" y2="513.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="332.5" y1="510" x2="336.03553390593" y2="506.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="335" y1="580" x2="331.46446609407" y2="583.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="335" y1="580" x2="331.46446609407" y2="576.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <rect width="96" height="20" x="580" y="330" style="fill:#007;stroke:black;"/>
+   <text width="96" height="20" x="585" y="344" style="fill:#fff;" font-family="Arial" font-size="16px"> notifications</text>
+   <rect width="96" height="20" x="580" y="350" style="fill:#aea;stroke:black;"/>
+   <text width="96" height="20" x="585" y="364" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="96" height="20" x="580" y="370" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="384" style="fill:black;" font-family="Arial" font-size="16px">id_reply</text>
+   <rect width="96" height="20" x="580" y="390" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="404" style="fill:black;" font-family="Arial" font-size="16px">title</text>
+   <rect width="96" height="20" x="580" y="410" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="424" style="fill:black;" font-family="Arial" font-size="16px">description</text>
+   <rect width="96" height="20" x="580" y="430" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="444" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="96" height="20" x="580" y="450" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="464" style="fill:black;" font-family="Arial" font-size="16px">importance</text>
+   <rect width="96" height="20" x="580" y="470" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="484" style="fill:black;" font-family="Arial" font-size="16px">type</text>
+   <rect width="96" height="20" x="580" y="490" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="504" style="fill:black;" font-family="Arial" font-size="16px">id_sender</text>
+   <rect width="96" height="20" x="580" y="510" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="524" style="fill:black;" font-family="Arial" font-size="16px">id_receiver</text>
+   <rect width="96" height="20" x="580" y="530" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="544" style="fill:black;" font-family="Arial" font-size="16px">id_project</text>
+   <rect width="86" height="20" x="160" y="440" style="fill:#007;stroke:black;"/>
+   <text width="86" height="20" x="165" y="454" style="fill:#fff;" font-family="Arial" font-size="16px"> professors</text>
+   <rect width="86" height="20" x="160" y="460" style="fill:#aea;stroke:black;"/>
+   <text width="86" height="20" x="165" y="474" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="86" height="20" x="160" y="480" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="165" y="494" style="fill:black;" font-family="Arial" font-size="16px">id_user</text>
+   <rect width="86" height="20" x="160" y="500" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="165" y="514" style="fill:black;" font-family="Arial" font-size="16px">grade</text>
+   <rect width="101" height="20" x="580" y="570" style="fill:#007;stroke:black;"/>
+   <text width="101" height="20" x="585" y="584" style="fill:#fff;" font-family="Arial" font-size="16px"> projects</text>
+   <rect width="101" height="20" x="580" y="590" style="fill:#aea;stroke:black;"/>
+   <text width="101" height="20" x="585" y="604" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="101" height="20" x="580" y="610" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="624" style="fill:black;" font-family="Arial" font-size="16px">title</text>
+   <rect width="101" height="20" x="580" y="630" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="644" style="fill:black;" font-family="Arial" font-size="16px">description</text>
+   <rect width="101" height="20" x="580" y="650" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="664" style="fill:black;" font-family="Arial" font-size="16px">year</text>
+   <rect width="101" height="20" x="580" y="670" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="684" style="fill:black;" font-family="Arial" font-size="16px">id_prof</text>
+   <rect width="101" height="20" x="580" y="690" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="704" style="fill:black;" font-family="Arial" font-size="16px">id_student</text>
+   <rect width="101" height="20" x="580" y="710" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="724" style="fill:black;" font-family="Arial" font-size="16px">resources</text>
+   <rect width="101" height="20" x="580" y="730" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="744" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="101" height="20" x="580" y="750" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="764" style="fill:black;" font-family="Arial" font-size="16px">date_started</text>
+   <rect width="101" height="20" x="580" y="770" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="784" style="fill:black;" font-family="Arial" font-size="16px">date_finished</text>
+   <rect width="101" height="20" x="580" y="790" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="804" style="fill:black;" font-family="Arial" font-size="16px">mark</text>
+   <rect width="89" height="20" x="790" y="550" style="fill:#007;stroke:black;"/>
+   <text width="89" height="20" x="795" y="564" style="fill:#fff;" font-family="Arial" font-size="16px"> project_tags</text>
+   <rect width="89" height="20" x="790" y="570" style="fill:#aea;stroke:black;"/>
+   <text width="89" height="20" x="795" y="584" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="89" height="20" x="790" y="590" style="fill:none;stroke:black;"/>
+   <text width="89" height="20" x="795" y="604" style="fill:black;" font-family="Arial" font-size="16px">id_project</text>
+   <rect width="89" height="20" x="790" y="610" style="fill:none;stroke:black;"/>
+   <text width="89" height="20" x="795" y="624" style="fill:black;" font-family="Arial" font-size="16px">id_tag</text>
+   <rect width="119" height="20" x="340" y="550" style="fill:#007;stroke:black;"/>
+   <text width="119" height="20" x="345" y="564" style="fill:#fff;" font-family="Arial" font-size="16px"> settings</text>
+   <rect width="119" height="20" x="340" y="570" style="fill:#aea;stroke:black;"/>
+   <text width="119" height="20" x="345" y="584" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="119" height="20" x="340" y="590" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="604" style="fill:black;" font-family="Arial" font-size="16px">elem_news</text>
+   <rect width="119" height="20" x="340" y="610" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="624" style="fill:black;" font-family="Arial" font-size="16px">elem_projects</text>
+   <rect width="119" height="20" x="340" y="630" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="644" style="fill:black;" font-family="Arial" font-size="16px">col_background</text>
+   <rect width="119" height="20" x="340" y="650" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="664" style="fill:black;" font-family="Arial" font-size="16px">col_border</text>
+   <rect width="119" height="20" x="340" y="670" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="684" style="fill:black;" font-family="Arial" font-size="16px">col_text</text>
+   <rect width="119" height="20" x="340" y="690" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="704" style="fill:black;" font-family="Arial" font-size="16px">col_select</text>
+   <rect width="119" height="20" x="340" y="710" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="724" style="fill:black;" font-family="Arial" font-size="16px">imp_deadline</text>
+   <rect width="119" height="20" x="340" y="730" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="744" style="fill:black;" font-family="Arial" font-size="16px">imp_meeting</text>
+   <rect width="119" height="20" x="340" y="750" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="764" style="fill:black;" font-family="Arial" font-size="16px">imp_consult</text>
+   <rect width="119" height="20" x="340" y="770" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="784" style="fill:black;" font-family="Arial" font-size="16px">imp_others</text>
+   <rect width="119" height="20" x="340" y="790" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="804" style="fill:black;" font-family="Arial" font-size="16px">imp_changes</text>
+   <rect width="119" height="20" x="340" y="810" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="824" style="fill:black;" font-family="Arial" font-size="16px">imp_message</text>
+   <rect width="119" height="20" x="340" y="830" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="844" style="fill:black;" font-family="Arial" font-size="16px">imp_automatic</text>
+   <rect width="119" height="20" x="340" y="850" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="864" style="fill:black;" font-family="Arial" font-size="16px">imp_elim</text>
+   <rect width="80" height="20" x="170" y="320" style="fill:#007;stroke:black;"/>
+   <text width="80" height="20" x="175" y="334" style="fill:#fff;" font-family="Arial" font-size="16px"> students</text>
+   <rect width="80" height="20" x="170" y="340" style="fill:#aea;stroke:black;"/>
+   <text width="80" height="20" x="175" y="354" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="80" height="20" x="170" y="360" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="374" style="fill:black;" font-family="Arial" font-size="16px">id_user</text>
+   <rect width="80" height="20" x="170" y="380" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="394" style="fill:black;" font-family="Arial" font-size="16px">year</text>
+   <rect width="80" height="20" x="170" y="400" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="414" style="fill:black;" font-family="Arial" font-size="16px">repository</text>
+   <rect width="80" height="20" x="170" y="420" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="434" style="fill:black;" font-family="Arial" font-size="16px">calendar</text>
+   <rect width="39" height="20" x="840" y="640" style="fill:#007;stroke:black;"/>
+   <text width="39" height="20" x="845" y="654" style="fill:#fff;" font-family="Arial" font-size="16px"> tags</text>
+   <rect width="39" height="20" x="840" y="660" style="fill:#aea;stroke:black;"/>
+   <text width="39" height="20" x="845" y="674" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="39" height="20" x="840" y="680" style="fill:none;stroke:black;"/>
+   <text width="39" height="20" x="845" y="694" style="fill:black;" font-family="Arial" font-size="16px">tag</text>
+   <rect width="82" height="20" x="340" y="360" style="fill:#007;stroke:black;"/>
+   <text width="82" height="20" x="345" y="374" style="fill:#fff;" font-family="Arial" font-size="16px"> users</text>
+   <rect width="82" height="20" x="340" y="380" style="fill:#aea;stroke:black;"/>
+   <text width="82" height="20" x="345" y="394" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="82" height="20" x="340" y="400" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="414" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="82" height="20" x="340" y="420" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="434" style="fill:black;" font-family="Arial" font-size="16px">confirmed</text>
+   <rect width="82" height="20" x="340" y="440" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="454" style="fill:black;" font-family="Arial" font-size="16px">name</text>
+   <rect width="82" height="20" x="340" y="460" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="474" style="fill:black;" font-family="Arial" font-size="16px">surname</text>
+   <rect width="82" height="20" x="340" y="480" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="494" style="fill:black;" font-family="Arial" font-size="16px">email</text>
+   <rect width="82" height="20" x="340" y="500" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="514" style="fill:black;" font-family="Arial" font-size="16px">id_settings</text>
+   <rect width="82" height="20" x="340" y="520" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="534" style="fill:black;" font-family="Arial" font-size="16px">pass</text>
+</svg>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    6.2.
+                </span>
+                Explicatii pentru schema bazei de date
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        6.2.1.
+                    </span>
+                    Utilizatori
+                </h4>
+                <p>
+                    Tabela <i>users</i> pastreaza datele utilizatorilor comune atat pentru profesor cat si pentru student, precum credentialele si un e-mail. Exista o relatie cu id-ul tabelei <i>users</i> la doua tabele ce contin informatii particulare pentru fiecare tip de cont: <i>students</i> si <i>professors</i>.
+                </p>
+                <p>
+                    Exista o relatie one-to-one intre tabela <i>users</i> si tabela <i>settings</i>, care contine setarile utilizatorului pentru aplicatie (numarul de elemente din liste, culorile folosite in pagina, importanta notificarilor.
+                </p>
+                <p>
+                    Atributul <i>confirmed</i> este implicit fals, si e modificat in true atunci cand contul este confirmat de un administrator. Unui utilizator i se creeaza o inregistrare in tabela <i>settings</i> doar dupa ce este confirmat.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.2.
+                    </span>
+                    Notificari
+                </h4>
+                <p>
+                    Tabela <i>notificari</i> contine informatii despre toate notificarile. Acestea sunt id-ul notificarii la care este raspuns (daca notificarea este un raspuns), titlul, descrierea, data creatiei, importanta, tipul, id-ul expeditorului, id-ul destinatarului, si id-ul proiectului (in cazul in care notificarea reprezinta o aplicare sau retragere de la un proiect, este nevoie de un id al proiectului).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.3.
+                    </span>
+                    Proiecte
+                </h4>
+                <p>
+                    Tabela <i>proiecte</i> contine informatii despre toate proiectele. Exista o relatie many-to-many intre aceasta si tabela <i>tags</i>, realizata prin intermediul tabelei de legatura <i>project_tags</i>. Proiectele sunt caracterizate de titlu, descriere, an (pentru a distinge proiectele de licenta de cele de master), id-ul profesorului, id-ul studentului (daca un student a fost acceptat), resurse (o lista creata de catre profesor), data creatiei, data inceput, data terminare si nota (daca proiectul a fost finalizat) si prezentat.
+            </section>
+        </section>
     </section>
     <section>
         <h2>
@@ -696,9 +952,67 @@
             </span>
             Distribuirea sarcinilor
         </h2>
-        <p>
-            --SERGIU
-        </p>
+        <section>
+			<h3>
+				Lipan Radu-Matei
+			</h3>
+		    <ul>
+                 <li>
+                     Dispatcher
+                 </li>
+                 <li>
+                     Structura generala a backendului
+                 </li>
+                 <li>
+                     Controller si functionalitati (apply in project list, accept in newsfeed) pentru fiecare lista
+                 </li>
+			</ul>
+			<h3>
+				Damian Andrei
+			</h3>
+		    <ul>
+                 <li>
+                     Pagina si notificari repository
+                 </li>
+                 <li>
+                     Integrare Google Calendar
+                 </li>
+                 <li>
+                     Functionalitati edit project (new project, delete project, markdown, update project, tag-uri, calendar), preview project
+                 </li>
+			</ul>
+			<h3>
+				Salceanu Sergiu-Paul
+			</h3>
+		    <ul>
+                 <li>
+                     Management baza de date
+                 </li>
+                 <li>
+                     Home
+                 </li>
+				 <li>
+                     Send Message
+                 </li>
+				 <li>
+                     Add Event
+                 </li>
+			</ul>
+			<h3>
+				Iacob Daniel
+			</h3>
+		    <ul>
+                 <li>
+                     Autentificare (login, logout, management session)
+                 </li>
+                 <li>
+                     Settings
+                 </li>
+				 <li>
+                     Trimitere e-mailuri
+                 </li>
+			</ul>
+        </section>
     </section>
     <section role="doc-bibliography">
         <h2>
@@ -708,10 +1022,9 @@
             Bibliografie
         </h2>
         <section>
-            <p>https://docs.phpmyadmin.net/en/latest/ - Documentatie phpMyAdmin</p>
-            <p>https://phpdelusions.net/pdo/pdo_wrapper - Informatii despre wrapper PDO</p>
-            <p>https://medium.com/@noufel.gouirhate/create-your-own-mvc-framework-in-php-af7bd1f0ca19 - Informatii
-                despre MVC in PHP</p>
+            <p><a href="https://docs.phpmyadmin.net/en/latest/">Documentatie phpMyAdmin</a></p>
+			<p><a href="https://phpdelusions.net/pdo/pdo_wrapper">Informatii despre wrapper PDO</a></p>
+			<p><a href="https://medium.com/@noufel.gouirhate/create-your-own-mvc-framework-in-php-af7bd1f0ca19">Informatii despre MVC in PHP</a></p>
         </section>
     </section>
     <section role="doc-conclusion">
