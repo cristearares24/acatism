@@ -532,8 +532,8 @@
                     select, update, delete si insert.
                 </p>
                 <p>
-                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent ( descrierea unui proiect, lista de proiecte etc), le salveaza in memoria 
-                    sa si dupa le afiseaza conform layout-ului propriu ( Exemplu de layout: preview_project_students.php ) prin intermediul functiei render.
+                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent (descrierea unui proiect, lista de proiecte etc), le salveaza in memoria 
+                    sa si dupa le afiseaza conform layout-ului propriu (Exemplu de layout: preview_project_students.php) prin intermediul functiei render.
                 </p>
                 <p>
                     Dispatcher-ul se va ocupa de rutarea cererilor catre controller-ul corect si catre metoda corecta a acestuia, daca este cazul. 
@@ -546,7 +546,7 @@
                     <span>
                         6.2.2.
                     </span>
-                    Classes
+                    Clase
                 </h4>
                 <p>
                     In diagrama Classes sunt prezentate clase ajutatoare ce vor mai aparea in cadrul aplicatiei noastre. Clasa Dispatcher este aceasi ca cea prezentata la punctul anterior.
@@ -557,8 +557,8 @@
                     aceasi baza de date si se folosete de PDO pentru initializarea apelurilor la baza de date pentru a ne feri de atacuri precum SQL injection.
                 </p>
                 <p>
-                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel logic ( controllere ). Acestea vor fi create la nivelul Model cu ajutorul
-                    inregistrarilor luate din tablele pe care acestea le reprezinta si oferite nivelului Controller.
+                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel logic (controllere). Acestea vor fi create la nivelul Model cu ajutorul
+                    inregistrarilor luate din tabelele pe care acestea le reprezinta si oferite nivelului Controller.
                 </p>
             </section>
             <section>
@@ -570,11 +570,11 @@
                 </h4>
                 <p>
                     In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor claselor de tip Controller, de tip Model si de tip View si relatiile care vor 
-                    exista intre acestea. Fiecare pagina va avea cate un controller aferent ( HomeController, ProjectListController, SendMessageController etc.) si cate un model ( ProjectList_Model,
-                    NotificationMaker_Model etc).
+                    exista intre acestea. Fiecare pagina va avea cate un controller aferent (HomeController, ProjectListController, SendMessageController etc.) si cate un model (ProjectList_Model,
+                    NotificationMaker_Model etc.).
                 </p>
                 <p>
-                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si PreviewProject, vom folosi un model comun ( pentru exemplul ales, Project_Model )
+                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si PreviewProject, vom folosi un model comun (pentru exemplul ales, Project_Model)
                     pentru a evita repetarea de cod in mai multe clase diferite.
                 </p>
                 <p>
