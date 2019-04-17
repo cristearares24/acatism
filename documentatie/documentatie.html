@@ -94,7 +94,6 @@
                 studentul sa se familiarizeze cu software ce urmareste schimbarile in codul sursa.
             </p>
         </section>
-
     </section>
     <section>
         <h2>
@@ -110,14 +109,14 @@
                </span>
                Utilizatorul neautentificat - are dreptul de a vedea doar datele publice ale aplicatiei.
             </h3>
-            <p>
+            <div>
                 Poate vizualiza:
                 <ul>
                     <li> Pagina de start;</li>
                     <li> Lista tuturor proiectelor propuse;</li>
                     <li> Se poate inregistra sau loga daca cunoaste credentialele unui cont student sau profesor confirmat.</li>
                 </ul>
-            </p>
+            </div>
         </section>
         <section>
             <h3>
@@ -127,8 +126,8 @@
                Utilizatorul Student - are dreptul de a vedea datele publice ale aplicatiei si prin completarea unui
                 register, de a se inscrie la un proiect.
             </h3>
-            <p>
-                Actiunile pe care le poate intreprinde studentul:
+            <div>
+                Actiunile pe care le poate interprinde studentul:
                 <ul>
                     <li> Poate vizualiza pagina de start;</li>
                     <li> Are dreptul de a se inscrie la un proiect, trimitand un mesaj de tip inscriere acelui profesor;</li>
@@ -143,7 +142,7 @@
                     <li> Din meniu la sectiunea "Newsfeed" poate vizualiza notificarile si alertele ce le insotesc. Poate sa le filtreze si sa raspunda la acestea;</li>    
                     <li> Apasand "Logout" va parasi sesiunea creata la autentificare.</li>         
                 </ul>
-            </p>
+            </div>
         </section>
         <section>
                 <h3>
@@ -154,7 +153,7 @@
                    register (nume, prenume, grad didactic, e-mail, parola),
                    are drepturi depline de a adauga si modifica proiecte proprii.
                 </h3>
-                <p>
+                <div>
                         Actiunile pe care le poate interprinde profesorul:
                     <ul>
                         <li> Poate vizualiza pagina de start;</li>
@@ -170,7 +169,7 @@
                              indruma;</li> 
                         <li> Apasand "Logout" va parasi sesiunea creata la autentificare.</li>     
                     </ul>
-                </p>
+                </div>
             </section>
             <section>
                     <h3>
@@ -179,7 +178,7 @@
                        </span>
                        Utilizatorul Admin - are rolul de a confirma cererile de inregistrarare aparute prin completarea inregistrarilor de catre alti utilizatori (studenti sau profesori).
                     </h3>
-                    <p>
+                    <div>
                             Actiunile pe care le poate interprinde admin-ul: 
                         <ul>
                             <li> Accepta o cerere de la un utilizator;</li>
@@ -189,7 +188,7 @@
                             <li> Filtreaza cererile dupa nume, prenume, e-mail, an studiu pentru 
                                 studenti.</li>
                         </ul>
-                    </p>
+                    </div>
                 </section>
     </section>
     <section>
@@ -653,10 +652,191 @@
             </span>
             Scenarii Use-Case
         </h2>
-        <p>
-            --DANIEL
-        </p>
+        <section>
+                <h3>
+                   <span>
+                       5.1
+                  </span>
+                  Persoana fara cont acceseaza aplicatia
+                </h3>
+                <div>
+                      Persoana fara cont acceseaza pagina de start a aplicatiei:
+                    <ul>
+                        <li> Vizualizeaza pagina de start (Home);</li>
+                        <li> Poate opta pentru a se inregistra sau a se loga daca deja este inregistrata;</li>
+                        <li> Pentru a se inregistra completeaza campurile unui formular tipizat;</li>
+                        <li> Pentru a se loga va completa numele de utilizator si parola.</li>
+                    </ul>
+                </div>
+            </section>
+        <section>
+            <h3>
+               <span>
+                   5.2
+              </span>
+              Studentul aplica pentru un proiect
+            </h3>
+            <div>
+                Studentul acceseaza pagina de start a aplicatiei:
+                <ul>
+                    <li> Avand cont apasa butonul (Lista proiecte);</li>
+                    <li> Vizualizeaza lista proiectelor;</li>
+                    <li> Apasa butonul (Aplica) de unde este directionat catre mesaje de unde trimite un mesaj 
+                        profesorului ales.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+                <h3>
+                   <span>
+                       5.3
+                  </span>
+                  Profesorul adauga un eveniment
+                </h3>
+                <div>
+                    Profesorul  acceseaza pagina de start a aplicatiei fiind logat:
+                    <ul>
+                        <li> Selecteaza din meniu butonul Add event;</li>
+                        <li> Comleteaza datele necesare evenimentului (Tip alerta ,importanta ,nume,descriere,ora de 
+                            inceput,ora de terminare,data de inceput/terminare) , poate opta pentru numarul de repetitii
+                            si frecventa (zilnic,saptamanal,lunar);</li>
+                        <li> Apasa butonul (Aplica) de unde este directionat catre mesaje de unde trimite un mesaj 
+                            profesorului ales.</li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                    <h3>
+                       <span>
+                           5.4
+                      </span>
+                      Adminul accepta cereri de inregistrare :
+                    </h3>
+                    <div>
+                        Adminul vizualizeaza cererile primite
+                        <ul>
+                            <li> filtreaza dupa nume ,prenume ,e-mail ,pentru studenti(an de studiu),
+                                pentru profesori(grad didactic);</li>
+                            <li> Vizualizeaza lista proiectelor;</li>
+                            <li> Apasa butonul (Aplica) de unde este directionat catre mesaje de unde trimite un mesaj 
+                                profesorului ales.</li>
+                            <li>   Accepta sau respinge cererile apasand butonul (Accepta) sau (Respinge)</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                        <h3>
+                           <span>
+                               5.5
+                          </span>
+                          
+                        </h3>
+                        <div>
+                            O persoana logata acceseaza Newsfeed
+                            <ul>
+                                <li> Aplica pe butonul newsfeed din meniu;</li>
+                                <li> Vizualizeaza ultimele noutati</li>
+                                <li> Optional poate raspunde mesajelor</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                            <h3>
+                               <span>
+                                   5.6
+                              </span>
+                              O persoana doreste setari noi 
+                            </h3>
+                            <div>
+                                Persoana acceseaza butonul setari din meniu
+                                <ul>
+                                    <li> Vizualizeaza optiunile disponibile;</li>
+                                    <li> Poate sa isi schimbe parola,e-mailul;</li>
+                                    <li> Poate impune modul in care poate fi alertat(mica,medie mare)</li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section>
+                                <h3>
+                                   <span>
+                                       5.7
+                                  </span>
+                                  O persoana logata doreste sa trimita mesaj
+                                </h3>
+                                <div>
+                                        O persoana logata acceseaza butonul send message din meniu
+                                    <ul>
+                                        <li> Completeaza destinatarul,subiectul si continutul;</li>
+                                        <li> Apasa butonul Trimite Mesaj pentru a trimite mesajul;</li>
+                                        
+                                    </ul>
+                                </div>
+                            </section>
+                        <section>
+                                <h3>
+                                   <span>
+                                       5.8
+                                  </span>
+                                  O persoana logata doreste sa paraseasca aplicatia
+                                </h3>
+                                <div>
+                                    Persoana aplica pe butonul logout din meniu
+                                    <ul>
+                                        <li> Paraseste aplicatia pana cand va dori sa se reconecteze accesand(Login) si 
+                                            sa completeze numele de utilizator si parola;</li>
+                                        
+                                    </ul>
+                                </div>
+                            </section>
+  <section>
+     <h2>
+        <span>
+             5'
+        </span>
+         Diagrame use case :
+   </h2>
+   <section>
+       <h3>
+           <span>
+               5'.1
+           </span>
+           Admin verifica cereri
+       </h3>
+   
+   <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-17T16:46:44.008Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;3ms3khjjSc-ULupaah7Q\&quot; version=\&quot;10.6.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;74e2e168-ea6b-b213-b513-2b3c1d86103e\&quot;&gt;3VhJc9sgFP41PjojgSXLRy9Jmk47k0mmaXJUJCwzQUJFKF5+fcECbcipW9uJm1wiHvBA3/Iw6sFpvLpmfrr4TkNEesAKVz046wEArYEl/snIuojYwHOKSMRwqGJV4B5vkAqqiVGOQ5Q1BnJKCcdpMxjQJEEBb8R8xuiyOWxOSXPV1I+QEbgPfGJGf+KQL1TUtqyq4wvC0UIt7Tmq49kPXiJG80St1wNwvv0rumNf51Ljs4Uf0mUtBC97cMoo5cVTvJoiIsHVsBXzrnb0lvtmKOH7TPgxgF/vvNXLZLzMHm+m7sPjzV3ftkZFnlef5AqRccApU3vma42T2H4qH/OYFAPg5BUxjgWS3/xnRG5phjmmiRjyTDmnsRhAZMekxGlKiZw3q5CqcowJjuRcTlMRXfCYiIYtHmnOCU7QtKTfEkHz3RUcMh1a1UIKi2tEY8TZWgxRvX1gaWaUdPsDqALLSgg6tKhJwFUxX0kvKpNX8IsHxcDfsKFNUWcjjHFisCFekjdxyjijL0hDnNBEjJzMMSGtkK+ADgR0iHUwEOMwlMtMlgvM0X3qB3LNpbC/iG15ROFpaRiZNAw6aACno8E2aDAYQEk4luWnQrZGhsCDrR8VStvGk2xcOLo5W9U7Z+s/Acp9FiH+5p7VFlHYqHcm8DVUnQ5UdYwh4nP82qySXVCrFW4pFnuueLVHXptXu0VYRnMWIDWxXrnMXNYuq+pcBUBGri3/5csfIglgSOIBb3Lhpg3yN748oBBDDAt5CAIZjoV3TM0QIo61Xd6q6ecYxrK90R7Gsrs04J3OWfBQZ60w3xrrYuRA1S68NYSealfmko11rXErGBJvIute5b5j+rSQ9D5C2sPR7pk5emi48N8d7XrDZi7YPlVP7ujB8aQIm1IENvxkUnTOS4rAclpSBAdI0d1VJ99Nio4hxStMODvXk8UdthBzBh0nC3Te9WRxDQzHQYBSLhGkGsUPR07fjkutWR+P3PDQQliWrqpaPdX7dpSusoA2iqfzZuk8oNzp+8J/+FvakI1xB92/3A3b5c6Q1snLnfnNoQdcIi+0c7rdbKU891dOdUc/2349GosBtpeuqk7xFMn/6q4sHYnn4k5b1k6dXuy3WKEYb8j881yrbQ+2aHaBWWmA01FpTnev1plrxN+hLMVJhM6qSA9bv01B18UJHOfiJJrVN8DCYtWXVnj5Gw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+   <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+  </section>
+  <section>
+        <h3>
+            <span>
+                5'.2
+            </span>
+              Profesorul adauga un eveniment
+        </h3>
+     <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-17T16:44:56.940Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;rvbodemeIofVA7pwFOGi\&quot; version=\&quot;10.6.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;74e2e168-ea6b-b213-b513-2b3c1d86103e\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+
     </section>
+    <section>
+            <h3>
+                <span>
+                    5'.3
+                </span>
+                  Studentul aplica la un proiect
+            </h3>
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-17T16:45:55.897Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;JK4sLeTHyL4KOFEBIZjh\&quot; version=\&quot;10.6.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;74e2e168-ea6b-b213-b513-2b3c1d86103e\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+</section>
+<section>
+        <h3>
+            <span>
+                5'.4
+            </span>
+             Persoana nelogata exploreaza aplicatia
+        </h3>
+<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-17T17:04:27.906Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;MCtoDpuRgtDuxJA9AbBo\&quot; version=\&quot;10.6.3\&quot; type=\&quot;google\&quot;&gt;&lt;diagram name=\&quot;Page-1\&quot; id=\&quot;74e2e168-ea6b-b213-b513-2b3c1d86103e\&quot;&gt;1Vnbcts2EP0aPcbDqyg/2rKbZupOPdU0iZ8yMAmTqEGAAUFL8td3QYJXSBatSJaqFxELYEme3XO4ACbuPF19FihL/uQRphPHilYT92biOPalZ8Gfsqwri2PPvMoSCxLpUa1hQV6xNuqJcUEinPcGSs6pJFnfGHLGcCh7NiQEX/aHPXHav2uGYmwYFiGipvUbiWSirbZltR2/YxIn+tYzX3c8ovA5Frxg+n4Tx30qf1V3impfenyeoIgvOyb3duLOBeeyukpXc0wVuDVs1bzftvQ2zy0wk2MmzG7/irPs29f5H8GPLz8f/kl+PP/8pL28IFpoPO6xyDliCKwMUx4jifTzy3WNGbxKpi6LlF6FkouJe/2ChSSA6h16xPSe50QSzmDII5eSpzCAqo7rBrM5p2reTYta6+OKkljNlTwDayJTCg0bLnkhKWF43qSCBUYTh/qlwB1edUwal8+Yp1iKNQzRva5z4VdzdBZ/st06P5dtUrjalHTSYaptSKdh3DhvQwEXOhrviIxjRMYIA2bRlWIAtBhnuI8VoCHW3xVGF5bn1IaH0uAGfm24WWkYq9a624JUIPAyWOxCWiIRY/nGy7jVOBz1uGjGowO2vwHs2iYwRZK89Bm8KQL6DvecwBM34Q7McDuXgzjmvBAh1hO7rBr4smdv5E7trMLHcFbmRfP2+6eKa6TKV/JaIApai15RpWGkZHQmCAtJhqjJabgPSK5KomVCJF5kKFQ9S5D9fmIdgG+OFZig+SbhbGdDEsyOxTjvVxm3IlIRzr6wnLrd4xu0W7qpxrrTGJKt5W+fu7uYuzU8VUbvTqOdZPbPisxunQ9tJll7ctlzDFfOxzLZ38lkwQl8+jAkJNRcJM84I49EtU5IZ8+dGmT2T0zm6eE+n5e226fgzNnr81nrg9XThreVYX82B//LT7PJ5qbqei+bN7jyPpbNgZGDC0XbjCOp/gkTOCa5FIrYKEM5gqUErCsKyVlRrrL6o4Rq5qjouEBhiHM1/e9yDKSaUgWmlh+YkeK0qmCoaVMsd1VhtiGZhsXYwVRhZiICeb/QTS5kwmPOEL1trdflcgVHmpDtmDuuliclWv9iKdd6aYsgfJvrgpbrD52eU/E+GMn70YT+pcBcHqr2Go1wR+D9nrwfrb4aG5l69XAmkjz1hjy2h1XRWEmeuoarYQFwZEmuse0k2g0KlYLifCDK6rnzrl6rzZBGcwdSfcfjUnbPRXz97UE7WUlmm5tNI0geoTwp1dfezfijV1PnQkmztNl3zRMYlHQ+ePfCft9OV0hRnpNwW7V+oMXybpE+r7o5cI0dLduq91jenRPeCGdbsgLChNadYZkakB8lb8xtry8QXB4VIS5L5aiSbYaVXovTLpE3QHry/S5704bXFKXq7Snc/JqwkBZqEaKNsWzA6MAICMg+XvD15M+43uHXOv5EKB2YkN7nDwFX3D1EqA8AUhJFdFuA+nW54BLpI4cDHQpMp1vXj90zAd+M2LA8GhExaLYnQRVD2vM29/Y/&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+</section>
     <section>
         <h2>
             <span>
