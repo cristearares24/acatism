@@ -592,9 +592,78 @@
             </span>
             Schema bazei de date
         </h2>
-        <p>
-            --SERGIU
-        </p>
+        <section>
+            <h3>
+                <span>
+                    7.1.
+                </span>
+                Schema bazei de date
+            </h3>
+            <img src="BDiagram.svg" alt="Diagrama bazei de date"/>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    7.2.
+                </span>
+                Explicatii pentru schema bazei de date
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        7.2.1.
+                    </span>
+                    Utilizatori
+                </h4>
+                <p>
+                    Tabela <i>users</i> pastreaza datele utilizatorilor comune atat pentru profesor cat si
+                    pentru student, precum credentialele si un e-mail. Exista o relatie cu id-ul tabelei
+                    <i>users</i> la doua tabele ce contin informatii particulare pentru fiecare tip de cont:
+                    <i>students</i> si <i>professors</i>.
+                </p>
+                <p>
+                    Exista o relatie one-to-one intre tabela <i>users</i> si tabela <i>settings</i>, care
+                    contine setarile utilizatorului pentru aplicatie (numarul de elemente din liste, culorile
+                    folosite in pagina, importanta notificarilor.
+                </p>
+                <p>
+                    Atributul <i>confirmed</i> este implicit fals, si e modificat in true atunci cand contul
+                    este confirmat de un administrator. Unui utilizator i se creeaza o inregistrare in tabela
+                    <i>settings</i> doar dupa ce este confirmat.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        7.2.2.
+                    </span>
+                    Notificari
+                </h4>
+                <p>
+                    Tabela <i>notificari</i> contine informatii despre toate notificarile. Acestea sunt id-ul
+                    notificarii la care este raspuns (daca notificarea este un raspuns), titlul, descrierea,
+                    data creatiei, importanta, tipul, id-ul expeditorului, id-ul destinatarului, si id-ul
+                    proiectului (in cazul in care notificarea reprezinta o aplicare sau retragere de la un
+                    proiect, este nevoie de un id al proiectului).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        7.2.3.
+                    </span>
+                    Proiecte
+                </h4>
+                <p>
+                    Tabela <i>proiecte</i> contine informatii despre toate proiectele. Exista o relatie
+                    many-to-many intre aceasta si tabela <i>tags</i>, realizata prin intermediul tabelei de
+                    legatura <i>project_tags</i>. Proiectele sunt caracterizate de titlu, descriere, an (pentru
+                    a distinge proiectele de licenta de cele de master), id-ul profesorului, id-ul studentului
+                    (daca un student a fost acceptat), resurse (o lista creata de catre profesor), data
+                    creatiei, data inceput, data terminare si nota (daca proiectul a fost finalizat) si
+                    prezentat.
+            </section>
+        </section>
     </section>
     <section>
         <h2>
