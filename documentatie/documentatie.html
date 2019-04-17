@@ -203,15 +203,15 @@
             </span>
             Tehnologii utilizate
         </h2>
-        <p>
-            <h2>
+        <section>
+            <h3>
                 <span>
                     3.1.
                 </span>
                 Mediul de dezvoltare
-            </h2>
-        </p>
-        <p>
+            </h3>
+        </section>
+        <div>
             Pentru dezvoltarea acestui proiect am folosit pachetul XAMPP, care contine, printre altele:
             <ul>
                 <li> serverul web Apache; </li>
@@ -219,22 +219,22 @@
                 <li> baza de date MariaDB, care este de fapt un fork foarte popular de MySQL. </li>
             </ul>
             Am luat decizia de a folosi aceasta versiune de PHP si de MySQL pentru proiectul nostru.
-        </p>
+        </div>
 
-        <p>
-            <h2>
+        <section>
+            <h3>
                 <span>
                     3.2.
                 </span>
                 Librarii si API-uri externe
-            </h2>
-            <p>
-                <h3>
+            </h3>
+            <section>
+                <h4>
                     <span>
                         3.2.1.
                     </span>
                     Git si Github
-                </h3>
+                </h4>
                 <p> Pe pagina in care pot fi vizualizate informatii despre proiect si in newfeed se vor putea vedea, de
                     asemenea, datele si titlurile commiturilor de pe git. De asemenea, cand un student face o schimbare
                     pe git, profesorul la care este acel student va primi un mail cu informatii despre schimbare. </p>
@@ -253,43 +253,43 @@
                 <p> Pagina in care se poate vizualiza repository-ul este un simplu filesystem viewer cu un folder local
                     in care este repository-ul, clonat si updatat la ultima versiune de fiecare data cand se primeste un
                     event de la Github. </p>
-            </p>
-            <p>
-                <h3>
+            </section>
+            <section>
+                <h4>
                     <span>
                         3.2.2.
                     </span>
                     Google Calendar
-                </h3>
+                </h4>
                 <p> Pentru a usura viata profesorilor si a studentilor, profesorii vor putea seta, pentru fiecare
                     student (sau pentru toti studentii lui), deadline-uri pentru anumite task-uri, intalniri
                     saptamanale/lunare, etc. </p>
                 <p> Pentru aceasta, folosim Google Calendar. Folosim o librarie oferita de Google pentru a adauga
                     calendare si date importante in acestea. Aceasta librarie face request la API-ul de la Google, care
                     face schimbarile dorite. In final, utilizatorii pot vedea calendarul pe pagina proiectului. </p>
-            </p>
-            <p>
-                <h3>
+            </section>
+            <section>
+                <h4>
                     <span>
                         3.2.3.
                     </span>
                     Markdown
-                </h3>
+                </h4>
                 <p> Pentru mesajele trimise intre studenti si profesori, acestia vor avea optiunea sa formateze textul
                     folosind limbajul markdown. Markdown este un limbaj de formatare simplut, dar destul de puternic
                     pentru cazul nostru de utilizare. In baza de date vom pastra textul in format Markdown, dar inainte
                     de afisare, il vom converti in html. </p>
-            </p>
-            <p>
-                <h3>
+            </section>
+            <section>
+                <h4>
                     <span>
                         3.2.4.
                     </span>
                     Sendgrid
-                </h3>
+                </h4>
                 <p> Pentru trimis de mailuri, am ales sa folosim serviciul extern Sendgrid. Acesta are avantajul unei integrari mult mai bune cu PHP, si de faptul ca e mult mai de incredere decat un server SMTP pe care l-am hosta noi. Am putea folosi un server SMTP extern, dar unul de incredere or ar fi limitat la putine email-uri, ori ar trebui platit. De aceea, am decis ca Sendgrid este cea mai buna solutie. </p>
-            </p>
-        </p>
+            </section>
+        </section>
     </section>
     <section>
         <h2>
