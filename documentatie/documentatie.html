@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="documentatie.css">
+    <title>Documentatie Acatism</title>
+</head>
+
+<body prefix="schema: http://schema.org">
+    <header>
+        <h1 class="align-self-center">
+            Documentatie Acatism
+        </h1>
+        <div role="contentinfo">
+            <section typeof="sa:AuthorsList">
+                <h2>
+                    <span>
+                        0.
+                    </span>
+                    Echipa:
+                </h2>
+                <ul id="lista_echipa">
+                    <li typeof="schema:author">
+                        Lipan Radu Matei, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Damian Andrei, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Salceanu Sergiu-Paul, A1
+                    </li>
+                    <li typeof="schema:author">
+                        Iacob Daniel, A3
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </header>
+    <section role="doc-introduction">
+        <h2>
+            <span>
+                1.
+            </span>
+            Introducere
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    1.1.
+                </span>
+                Descriere
+            </h3>
+            <p>
+                Acatism este o aplicatie web dedicata gestionarii tezelor de licenta si de master pentru studentii unei
+                facultati.
+                Aceasta ofera functionalitati atat pentru profesori cat si pentru studenti. Studentul poate sa se
+                inscrie la un
+                proiect propus pentru licenta, si, in urma confirmarii inscrierii, poate sa trimita si sa primeasca
+                mesaje de la
+                profesorul coordonator cu privire la proiect. Acestea pot fi conversatii, intrebari, deadline-uri sau
+                notificari
+                cu privire la orele de consultatii ale profesorului. Studentul va configura un repository de github al
+                carui actualizari
+                vor aparea in notificarile aplicatiei. Profesorul isi poate crea o lista de proiecte propuse, incluzand
+                o descriere, resurse
+                necesare si tag-uri pentru fiecare. Are abilitatea de a accepta sau refuza inscrierile studentilor la
+                proiectele sale.
+                Prin intermediul aplicatiei, poate programa evenimente de care studentii vor fi notificati. Atat
+                conturile de student cat si
+                cele de profesor trebuie confirmate de un administrator.
+            </p>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    1.2.
+                </span>
+                Argument
+            </h3>
+            <p>
+                Teza de licenta este un subiect de interes ridicat, mai ales pentru noi, apropiindu-ne de momentul in
+                care va trebui
+                sa o facem si noi. Acesta este unul dintre motivele pentru care am ales acest proiect. Aplicatia este
+                utila deoarece,
+                filtrand proiectele dupa interese (prin tag-uri) studentului ii va fi mai usor sa decida ce teza de
+                licenta sa realizeze.
+                De asemenea, este pus accentul pe comunicarea dintre student si profesor prin sistemul de news feed care
+                ii notifica pe ambii
+                in situatii importante si ofera functionalitatea de a pune intrebari si de a crea deadline-uri.
+                Integrarea cu github incurajeaza
+                studentul sa se familiarizeze cu software ce urmareste schimbarile in codul sursa.
+            </p>
+        </section>
+
+    </section>
+    <section>
+        <h2>
+            <span>
+                2.
+            </span>
+            Tipuri de utilizatori
+        </h2>
+        <section>
+            <h3>
+               <span>
+                   2.1
+               </span>
+               Utilizatorul neautentificat - are dreptul de a vedea doar datele publice ale aplicatiei.
+            </h3>
+            <p>
+                Poate vizualiza :
+                <ul>
+                    <li> pagina de start ;</li>
+                    <li> lista tuturor proiectelor propuse;</li>
+                    <li> se poate inregistra sau daca este deja inregistrat se poate loga.</li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h3>
+               <span>
+                   2.2
+               </span>
+               Utilizatorul Student - are dreptul de a vedea datele publice ale aplicatiei si prin completarea unui
+                register ,de a se inscrie la un proiect .
+            </h3>
+            <p>
+                Actiunile pe care le poate interprinde studentul :
+                <ul>
+                    <li> Poate vizualiza pagina de start;</li>
+                    <li> Are dreptul de a se inscrie , completand datele unui registru;</li>
+                    <li> Poate accesa setarile din meniu pentru a modifica : date de cont , interfata(de ex. numarul de
+                         elemente de pe o pagina), modul in care doreste sa fie notificat(ex. nu ma notifica);</li>
+                    <li> Poate accesa si vizualiza lista proiectelor , iar daca nu este inscris , poate aplica pentru un 
+                        proiect apasand butonul (Aplica),trimitandu-se astfel un mesaj catre acel profesor;</li>  
+                    <li> Aplicand pe (Proiectul meu) din meniu , poate vedea notificari in legatura cu proiectul sau ,de 
+                        aici poate opta pentru renuntarea la proiect actionand butonul (Renunta);</li>  
+                    <li> Aflandu-se in (Proiectiul meu) poate vizualiza un calendar ce ii prezinta date despre ce 
+                        activitati are in prezent;</li>   
+                    <li> Din meniu la sectiunea (Newsfeed) poate vizualiza notificarile si alertele ce le insotesc,poate 
+                        vizualiza si raspunde;</li>    
+                    <li> apasand (Logout) va parasi sesiunea . Va putea reveni in contul sau  completand datele din 
+                        login(nume utilizator si parola).</li>         
+                </ul>
+            </p>
+        </section>
+        <section>
+                <h3>
+                   <span>
+                       2.3
+                   </span>
+                   Utilizatorul Profesor - are dreptul de a vedea datele publice ale aplicatiei si prin completarea unui
+                   register(nume , prenume, grad didactic, E-mail , parola, confirmare parola) ,
+                   are drepturi depline de a adauga proiecte .
+                </h3>
+                <p>
+                        Actiunile pe care le poate interprinde profesorul :
+                    <ul>
+                        <li> Poate vizualiza pagina de start (Home);</li>
+                        <li> Are dreptul de a se inscrie , completand datele unui registru;</li>
+                        <li> Fara a avea un cont poate vizualiza lista proiectelor propuse de alti profesori;</li>
+                        <li> Avand cont poate adauga propriile proiecte si poate accepta sau respinge studentii ,  
+                            vizualizand aceste cereri la sectiunea (Newsfeed);</li>
+                        <li> Accesad Neusfeed din meniu poate citi mesajele primite de la studentii(retragere proiect sau
+                             inscriere proiect profesor);</li>    
+                        <li> La sectiunea Add event poate adauga un eveniment (Deadline ,Intalnire ,Consultatii ,
+                            Altele );</li>
+                        <li> Utilizand Send message din meniu , poate trimite mesaje catre studentii pe care ii
+                             indruma ;</li> 
+                        <li> Optand pentru Login ii este permis sa paraseasca sesiunea actuala .  Va putea reveni in
+                             contul sau completand datele din login(nume utilizator si parola).</li>    
+                    </ul>
+                </p>
+            </section>
+            <section>
+                    <h3>
+                       <span>
+                           2.4
+                       </span>
+                       Utilizatorul Admin -are rolul de a confirma cererile de inregistrarare aparute prin completarea
+                       unui register de catre un utilizator(student sau profesor).
+                    </h3>
+                    <p>
+                            Actiunile pe care le poate interprinde admin-ul : 
+                        <ul>
+                            <li> accepta o cerere de la un utilizator ;</li>
+                            <li> respinge o cerere de la un utilizator ;</li>
+                            <li> ii este permis sa filtreze cererile dupa (nume,prenume, e-mail,grad didactic) pentru 
+                                profesori;</li>       
+                            <li> ii este permis sa filtreze cererile dupa (nume,prenume, e-mail,an studiu) pentru 
+                                studenti.</li>
+                        </ul>
+                    </p>
+                </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                3.
+            </span>
+            Tehnologii utilizate
+        </h2>
+        <p>
+            <h2>
+                <span>
+                    3.1.
+                </span>
+                Mediul de dezvoltare
+            </h2>
+        </p>
+        <p>
+            Pentru dezvoltarea acestui proiect am folosit pachetul XAMPP, care contine, printre altele:
+            <ul>
+                <li> serverul web Apache; </li>
+                <li> interpretorul PHP versiunea 7.3.3; </li>
+                <li> baza de date MariaDB, care este de fapt un fork foarte popular de MySQL. </li>
+            </ul>
+            Am luat decizia de a folosi aceasta versiune de PHP si de MySQL pentru proiectul nostru.
+        </p>
+
+        <p>
+            <h2>
+                <span>
+                    3.2.
+                </span>
+                Librarii si API-uri externe
+            </h2>
+            <p>
+                <h3>
+                    <span>
+                        3.2.1.
+                    </span>
+                    Git si Github
+                </h3>
+                <p> Pe pagina in care pot fi vizualizate informatii despre proiect si in newfeed se vor putea vedea, de
+                    asemenea, datele si titlurile commiturilor de pe git. De asemenea, cand un student face o schimbare
+                    pe git, profesorul la care este acel student va primi un mail cu informatii despre schimbare. </p>
+                <p> Pentru a face acest lucru posibil, folosim webhook-urile oferite de github pentru a fi notificati
+                    cand un student face o schimbare in repository-ul lui. Un exemplu tipical ar fi: studentul face un
+                    commit pe repository, Github ne trimite un request POST pe o adresa oferita de noi cu multe
+                    informatii despre eveniment. De acolo, putem da <i> pull </i> pe repository-ul local, putem trimite
+                    un mail
+                    profesorului ca ceva s-a schimbat, si bagam in baza de date o inregistrare care sa ateste acest
+                    lucru. </p>
+                <p> Alternativa "naiva" pentru webhook-uri ar fi fost verificare la fiecare x minute daca s-a schimbat
+                    ceva. Dezavantajul imens a acestei abordari este faptul ca foarte mult din resursele serverelui s-ar
+                    pierde, deoarece, mai ales cu un numar mare de repository-uri verificate, operatia ar deveni din ce
+                    in ce mai greoaie. De asemenea, precizia ar fi mai proasta, deoarece nu s-ar primi notificatia exact
+                    cand se intampla, ci s-ar verifica dupa o perioada posibil mare de timp. </p>
+                <p> Pagina in care se poate vizualiza repository-ul este un simplu filesystem viewer cu un folder local
+                    in care este repository-ul, clonat si updatat la ultima versiune de fiecare data cand se primeste un
+                    event de la Github. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.2.
+                    </span>
+                    Google Calendar
+                </h3>
+                <p> Pentru a usura viata profesorilor si a studentilor, profesorii vor putea seta, pentru fiecare
+                    student (sau pentru toti studentii lui), deadline-uri pentru anumite task-uri, intalniri
+                    saptamanale/lunare, etc. </p>
+                <p> Pentru aceasta, folosim Google Calendar. Folosim o librarie oferita de Google pentru a adauga
+                    calendare si date importante in acestea. Aceasta librarie face request la API-ul de la Google, care
+                    face schimbarile dorite. In final, utilizatorii pot vedea calendarul pe pagina proiectului. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.3.
+                    </span>
+                    Markdown
+                </h3>
+                <p> Pentru mesajele trimise intre studenti si profesori, acestia vor avea optiunea sa formateze textul
+                    folosind limbajul markdown. Markdown este un limbaj de formatare simplut, dar destul de puternic
+                    pentru cazul nostru de utilizare. In baza de date vom pastra textul in format Markdown, dar inainte
+                    de afisare, il vom converti in html. </p>
+            </p>
+            <p>
+                <h3>
+                    <span>
+                        3.2.4.
+                    </span>
+                    Sendgrid
+                </h3>
+                <p> Pentru trimis de mailuri, am ales sa folosim serviciul extern Sendgrid. Acesta are avantajul unei integrari mult mai bune cu PHP, si de faptul ca e mult mai de incredere decat un server SMTP pe care l-am hosta noi. Am putea folosi un server SMTP extern, dar unul de incredere or ar fi limitat la putine email-uri, ori ar trebui platit. De aceea, am decis ca Sendgrid este cea mai buna solutie. </p>
+            </p>
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                4.
+            </span>
+            Distributia pe module functionale
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    4.1.
+                </span>
+                Register / Login
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.1.1.
+                    </span>
+                </h4>
+                <p>
+                    Un utilizator neautentificat poate crea cont nou. Formularul de inregistrare este preluat, validat, si
+                    informatiile sunt salvate in baza de date urmand ca inregistrarea sa fie validata de un admin. 
+                </p>
+
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.1.2.
+                    </span>
+                </h4>
+                <p>
+					In cazul autentificarii, formularul de login este verificat si este creata o sesiune pentru utilizator.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.2.
+                </span>
+                Confirmare utilizatori
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.2.1.
+                    </span>
+                </h4>
+                <p>
+                    Administratorii pot verifica formularele de inregistrare noi aparute in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.2.2.
+                    </span>
+                </h4>
+                <p>
+                    Un utilizator neconfirmat nu poate sa se autentifice (sa foloseasca Login).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.2.3.
+                    </span>
+                </h4>
+                <p>
+                    Un formular refuzat este sters din baza de date.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.3.
+                </span>
+                Afisare proiecte
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.3.1.
+                    </span>
+                </h4>
+                <p>
+                    Studentilor, profesorilor si utilizatorilor neautentificati li se poate afisa o lista de proiecte in aplicatie. Fiecare proiect va avea afisat numele profesorului,
+                    titlul, o mica descriere, numele studentului inscris (daca exista), nota si anul.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.3.2.
+                    </span>
+                </h4>
+                <p>
+                    Lista va fi afisata initial de la cel mai nou la cel mai vechi proiect, dar se pot aplica filtre
+                    (titlu, taguri, profesor...).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.3.3.
+                    </span>
+                </h4>
+                <p>
+                    Studentii care nu sunt inscrisi la un proiect au functionalitatea aditionala de a aplica la proiecte.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.4.
+                </span>
+                Afisare proiect
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.4.1.
+                    </span>
+                </h4>
+                <p>
+                    Studentii si profesorii pot vedea detaliile unui proiect la care studentul este inscris.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.4.2.
+                    </span>
+                </h4>
+                <p>
+					Se vor afisa alertele si mesajele legate de proiect atat intr-o litsta cat si pe un Google Calendar.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.4.3.
+                    </span>
+                </h4>
+                <p>
+                    Studentul poate renunta la proiect, si profesorul poate renunta la student.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.5.
+                </span>
+                Afisare newsfeed
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.5.1.
+                    </span>
+                </h4>
+                <p>
+					Studentului si profesorului li se afiseaza mesaje, evenimente, alerte automate si cereri de inscriere in ordine cronologica.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.5.2.
+                    </span>
+                </h4>
+                <p>
+                    Se pot aplica filtre precum: titlu, importanta, expeditor, tip de notificare.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.6.
+                </span>
+                Adaugare / Editare / Eliminare proiect
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.6.1.
+                    </span>
+                </h4>
+                <p>
+                    Se pot edita informatii pentru un proiect nou sau unul deja existent (titlu, descriere, resurse, taguri,
+                    student) si adaugarea sau actualizarea acestora in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.6.2.
+                    </span>
+                </h4>
+                <p>
+                    Se poate sterge proiectul.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.7.
+                </span>
+                Aplicare la Proiect / Retragere de la proiect
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.7.1.
+                    </span>
+                </h4>
+                <p>
+					Se poate trimite o cerere de inscriere catre profesorul care a propus anumit proiect. Aceasta va
+                    trebui acceptata manual.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.7.2.
+                    </span>
+                </h4>
+                <p>
+                    Se poate renunta la proiectul ales. Renuntarea nu va trebui acceptata manual, dar profesorul va fi notificat.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.8.
+                </span>
+                Trimitere mesaje
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.8.1.
+                    </span>
+                </h4>
+                <p>
+                    Se poate trimite un mesaj de catre profesor la unul sau mai multi dintre studentii inscrisi la
+                    proiectele sale.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.8.2.
+                    </span>
+                </h4>
+                <p>
+                    Se poate trimite un mesaj de catre student la profesorul care a propus proiectul la care este inscris
+                    sau doreste sa se inscrie.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.8.3.
+                    </span>
+                </h4>
+                <p>
+                    Mesajelor le poate fi atribuit un nivel de importanta. Acestea apar in aplicatie, dar pot aparea si
+                    pe e-mailul destinatarului in functie de importanta si setarile utilizatorului.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.9.
+                </span>
+                Adaugare / Eliminare eveniment
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.9.1.
+                    </span>
+                </h4>
+                <p>
+                    Se poate adauga sau elimina din calendar un eveniment caracterizat de: tip, importanta,
+                    nume, descriere, data, ora, frecventa si numar de repetitii.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.10.
+                </span>
+                Modificare setari cont
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.10.1.
+                    </span>
+                </h4>
+                <p>
+					Se preia si valideaza un formular al carui date reprezinta setarile utilizatorului curent si
+                    sunt salvate apoi in baza de date.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.10.2.
+                    </span>
+                </h4>
+                <p>
+                    Setarile sunt separate in trei categorii: de cont (credentialele si e-mailul), de interfata (numarul
+                    de elemente afisate pe pagini, culorile utilizate in aplicatie) si de notificari (nivelul de
+                    importanta si daca vor fi trimise prin e-mail). Setarile de interfata influenteaza modul in care sunt afisate paginile in aplicatie.
+                </p>
+            </section>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    4.11.
+                </span>
+                Urmarirea progresului proiectului
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        4.11.1.
+                    </span>
+                </h4>
+                <p>
+                    Este trimisa o notificatie profesorului la aparitia unui nou commit in repository.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        4.11.2.
+                    </span>
+                </h4>
+                <p>
+                    Se poate afisa repository-ul proiectului.
+                </p>
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                5.
+            </span>
+            Scenarii Use-Case
+        </h2>
+        <p>
+            --DANIEL
+        </p>
+    </section>
+    <section>
+        <h2>
+            <span>
+                6.
+            </span>
+            Arhitectura proiectului
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    6.1.
+                </span>
+                Diagrame UML
+            </h3>
+            <div class="mxgraph" style="max-width:100%;border:1px solid transparent;"
+                data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;page&quot;:1,&quot;toolbar&quot;:&quot;pages zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2019-04-15T19:33:43.875Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\&quot; etag=\&quot;vT5avzo_wYnse4NFZ6oo\&quot; version=\&quot;10.6.2\&quot; type=\&quot;device\&quot;&gt;&lt;diagram id=\&quot;zy95by1VItXjAMpHBgAX\&quot; name=\&quot;Overview\&quot;&gt;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&lt;/diagram&gt;&lt;diagram id=\&quot;9U_p7xbsn7NVxuyRtTou\&quot; name=\&quot;Classes\&quot;&gt;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&lt;/diagram&gt;&lt;diagram name=\&quot;MVC\&quot; id=\&quot;c4acf3e9-155e-7222-9cf6-157b1a14988f\&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}">
+            </div>
+            <script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    6.2.
+                </span>
+                Explicatii pentru diagramele UML
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        6.2.1.
+                    </span>
+                    Overview
+                </h4>
+                <p>
+                    In diagrama overview putem observa la nivel inalt modul de functionare a aplicatiei. Aceasta va fi
+                    construita pe baza paradigmei model-view-controller.
+                </p>
+                <p>
+                    Fiecare pagina a aplicatiei va avea un controller al ei (ProjectListController, SettingsController
+                    etc.) si fiecare controller va pastra in memorie
+                    model-ul si view-ul folosit de acesta. Totodata, fiecare controller va avea si o functie index,
+                    functie ce va ocupa cu incarcarea in mod default a paginei.
+                </p>
+                <p>
+                    Un controller se ocupa cu functionalitatea logica a aplicatiei. Daca controller-ul doreste sa obtina
+                    sau sa modifice datele salvate in aplicatie, acest lucru se
+                    va face prin intermediul model-ului aferent. Modelul va avea accesul la baza de date a aplicatiei si
+                    in cadrul acestuia se vor face apelurile de tipul:
+                    select, update, delete si insert.
+                </p>
+                <p>
+                    Un view primeste datele ce urmeaza a fi afisate de la controller-ul aferent (descrierea unui proiect, lista de proiecte etc), le salveaza in memoria 
+                    sa si dupa le afiseaza conform layout-ului propriu (Exemplu de layout: preview_project_students.php) prin intermediul functiei render.
+                </p>
+                <p>
+                    Dispatcher-ul se va ocupa de rutarea cererilor catre controller-ul corect si catre metoda corecta a
+                    acestuia, daca este cazul.
+                    Un url va fi interpretat de dispatcher sub forma:
+                </p>
+                <img src="./imgs/Dipatcher.png" alt="Dispatcher.png">
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.2.
+                    </span>
+                    Clase
+                </h4>
+                <p>
+                    In diagrama Classes sunt prezentate clase ajutatoare ce vor mai aparea in cadrul aplicatiei noastre.
+                    Clasa Dispatcher este aceasi ca cea prezentata la punctul anterior.
+                    Clasa Session se va ocupa de administrarea detaliilor legate de sesiunea curenta, de initializarea
+                    si oprirea ei si de adaugarea si obtinerea de informatii legate de aceasta.
+                </p>
+                <p>
+                    Apelurile la baza de date MySql a aplicatiei se vor face prin intermediul clasei Database. Aceasta
+                    este de tip Singleton pentru a evita instantierea a mai multe conexiuni cu o
+                    aceasi baza de date si se folosete de PDO pentru initializarea apelurilor la baza de date pentru a
+                    ne feri de atacuri precum SQL injection.
+                </p>
+                <p>
+                    Clasele Notification si User vor fi folosite pentru facilitarea operarii cu aceste entitati la nivel logic (controllere). Acestea vor fi create la nivelul Model cu ajutorul
+                    inregistrarilor luate din tabelele pe care acestea le reprezinta si oferite nivelului Controller.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.3.
+                    </span>
+                    Model-View-Controller
+                </h4>
+                <p>
+                    In diagrama Model-View-Controller este reprezentat in mod amanuntit modul de organizare al tuturor claselor de tip Controller, de tip Model si de tip View si relatiile care vor 
+                    exista intre acestea. Fiecare pagina va avea cate un controller aferent (HomeController, ProjectListController, SendMessageController etc.) si cate un model (ProjectList_Model,
+                    NotificationMaker_Model etc.).
+                </p>
+                <p>
+                    Pentru doua sau mai multe pagini ce acceseaza informatii asemanatoare, cum ar fi EditProject si PreviewProject, vom folosi un model comun (pentru exemplul ales, Project_Model)
+                    pentru a evita repetarea de cod in mai multe clase diferite.
+                </p>
+                <p>
+                    Deoarece singurul lucru care diferentiaza view-ul unei pagini de al alteia este layout-ul ce trebuie
+                    incarcat, vom avea o singura clasa View al carei
+                    comportament va fi modificat de layout-ul pe care aceasta il primeste la initializare.
+                </p>
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                7.
+            </span>
+            Baza de date
+        </h2>
+        <section>
+            <h3>
+                <span>
+                    6.1.
+                </span>
+                Schema bazei de date
+            </h3>
+            <svg viewBox="145 305 894 885" width="749px" height="580px" xmlns="http://www.w3.org/2000/svg" version="1.1">
+   <line x1="580" y1="500" x2="570" y2="500" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="570" y1="500" x2="432" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="572.5" y1="500" x2="576.03553390593" y2="503.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="572.5" y1="500" x2="576.03553390593" y2="496.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="580" y1="520" x2="570" y2="520" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="570" y1="520" x2="432" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="572.5" y1="520" x2="576.03553390593" y2="523.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="572.5" y1="520" x2="576.03553390593" y2="516.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="246" y1="490" x2="256" y2="490" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="330" y1="390" x2="340" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="256" y1="490" x2="330" y2="390" style="stroke:#0bf;stroke-width:1;"/>
+   <line x1="253.5" y1="490" x2="249.96446609407" y2="493.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="253.5" y1="490" x2="249.96446609407" y2="486.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="393.53553390593" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="386.46446609407" style="stroke:#0bf;stroke-width:2;"/>
+   <line x1="580" y1="700" x2="570" y2="700" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="700" x2="432" y2="390" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="572.5" y1="700" x2="576.03553390593" y2="703.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="572.5" y1="700" x2="576.03553390593" y2="696.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="580" y1="680" x2="570" y2="680" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="432" y1="390" x2="422" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="570" y1="680" x2="432" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="572.5" y1="680" x2="576.03553390593" y2="683.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="572.5" y1="680" x2="576.03553390593" y2="676.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="393.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="427" y1="390" x2="430.53553390593" y2="386.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="580" y1="600" x2="570" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="540" x2="580" y2="540" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="570" y1="600" x2="570" y2="540" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="572.5" y1="600" x2="576.03553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="572.5" y1="600" x2="576.03553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="575" y1="540" x2="571.46446609407" y2="543.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="575" y1="540" x2="571.46446609407" y2="536.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="790" y1="600" x2="780" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="691" y1="600" x2="681" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="780" y1="600" x2="691" y2="600" style="stroke:#bbb;stroke-width:1;"/>
+   <line x1="782.5" y1="600" x2="786.03553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="782.5" y1="600" x2="786.03553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="686" y1="600" x2="689.53553390593" y2="603.53553390593" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="686" y1="600" x2="689.53553390593" y2="596.46446609407" style="stroke:#bbb;stroke-width:2;"/>
+   <line x1="879" y1="620" x2="889" y2="620" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="889" y1="670" x2="879" y2="670" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="889" y1="620" x2="889" y2="670" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="886.5" y1="620" x2="882.96446609407" y2="623.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="886.5" y1="620" x2="882.96446609407" y2="616.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="884" y1="670" x2="887.53553390593" y2="673.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="884" y1="670" x2="887.53553390593" y2="666.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="250" y1="370" x2="260" y2="370" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="330" y1="390" x2="340" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="260" y1="370" x2="330" y2="390" style="stroke:#cb0;stroke-width:1;"/>
+   <line x1="257.5" y1="370" x2="253.96446609407" y2="373.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="257.5" y1="370" x2="253.96446609407" y2="366.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="393.53553390593" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="335" y1="390" x2="331.46446609407" y2="386.46446609407" style="stroke:#cb0;stroke-width:2;"/>
+   <line x1="340" y1="510" x2="330" y2="510" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="330" y1="580" x2="340" y2="580" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="330" y1="510" x2="330" y2="580" style="stroke:#b0b;stroke-width:1;"/>
+   <line x1="332.5" y1="510" x2="336.03553390593" y2="513.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="332.5" y1="510" x2="336.03553390593" y2="506.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="335" y1="580" x2="331.46446609407" y2="583.53553390593" style="stroke:#b0b;stroke-width:2;"/>
+   <line x1="335" y1="580" x2="331.46446609407" y2="576.46446609407" style="stroke:#b0b;stroke-width:2;"/>
+   <rect width="96" height="20" x="580" y="330" style="fill:#007;stroke:black;"/>
+   <text width="96" height="20" x="585" y="344" style="fill:#fff;" font-family="Arial" font-size="16px"> notifications</text>
+   <rect width="96" height="20" x="580" y="350" style="fill:#aea;stroke:black;"/>
+   <text width="96" height="20" x="585" y="364" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="96" height="20" x="580" y="370" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="384" style="fill:black;" font-family="Arial" font-size="16px">id_reply</text>
+   <rect width="96" height="20" x="580" y="390" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="404" style="fill:black;" font-family="Arial" font-size="16px">title</text>
+   <rect width="96" height="20" x="580" y="410" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="424" style="fill:black;" font-family="Arial" font-size="16px">description</text>
+   <rect width="96" height="20" x="580" y="430" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="444" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="96" height="20" x="580" y="450" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="464" style="fill:black;" font-family="Arial" font-size="16px">importance</text>
+   <rect width="96" height="20" x="580" y="470" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="484" style="fill:black;" font-family="Arial" font-size="16px">type</text>
+   <rect width="96" height="20" x="580" y="490" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="504" style="fill:black;" font-family="Arial" font-size="16px">id_sender</text>
+   <rect width="96" height="20" x="580" y="510" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="524" style="fill:black;" font-family="Arial" font-size="16px">id_receiver</text>
+   <rect width="96" height="20" x="580" y="530" style="fill:none;stroke:black;"/>
+   <text width="96" height="20" x="585" y="544" style="fill:black;" font-family="Arial" font-size="16px">id_project</text>
+   <rect width="86" height="20" x="160" y="440" style="fill:#007;stroke:black;"/>
+   <text width="86" height="20" x="165" y="454" style="fill:#fff;" font-family="Arial" font-size="16px"> professors</text>
+   <rect width="86" height="20" x="160" y="460" style="fill:#aea;stroke:black;"/>
+   <text width="86" height="20" x="165" y="474" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="86" height="20" x="160" y="480" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="165" y="494" style="fill:black;" font-family="Arial" font-size="16px">id_user</text>
+   <rect width="86" height="20" x="160" y="500" style="fill:none;stroke:black;"/>
+   <text width="86" height="20" x="165" y="514" style="fill:black;" font-family="Arial" font-size="16px">grade</text>
+   <rect width="101" height="20" x="580" y="570" style="fill:#007;stroke:black;"/>
+   <text width="101" height="20" x="585" y="584" style="fill:#fff;" font-family="Arial" font-size="16px"> projects</text>
+   <rect width="101" height="20" x="580" y="590" style="fill:#aea;stroke:black;"/>
+   <text width="101" height="20" x="585" y="604" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="101" height="20" x="580" y="610" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="624" style="fill:black;" font-family="Arial" font-size="16px">title</text>
+   <rect width="101" height="20" x="580" y="630" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="644" style="fill:black;" font-family="Arial" font-size="16px">description</text>
+   <rect width="101" height="20" x="580" y="650" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="664" style="fill:black;" font-family="Arial" font-size="16px">year</text>
+   <rect width="101" height="20" x="580" y="670" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="684" style="fill:black;" font-family="Arial" font-size="16px">id_prof</text>
+   <rect width="101" height="20" x="580" y="690" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="704" style="fill:black;" font-family="Arial" font-size="16px">id_student</text>
+   <rect width="101" height="20" x="580" y="710" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="724" style="fill:black;" font-family="Arial" font-size="16px">resources</text>
+   <rect width="101" height="20" x="580" y="730" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="744" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="101" height="20" x="580" y="750" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="764" style="fill:black;" font-family="Arial" font-size="16px">date_started</text>
+   <rect width="101" height="20" x="580" y="770" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="784" style="fill:black;" font-family="Arial" font-size="16px">date_finished</text>
+   <rect width="101" height="20" x="580" y="790" style="fill:none;stroke:black;"/>
+   <text width="101" height="20" x="585" y="804" style="fill:black;" font-family="Arial" font-size="16px">mark</text>
+   <rect width="89" height="20" x="790" y="550" style="fill:#007;stroke:black;"/>
+   <text width="89" height="20" x="795" y="564" style="fill:#fff;" font-family="Arial" font-size="16px"> project_tags</text>
+   <rect width="89" height="20" x="790" y="570" style="fill:#aea;stroke:black;"/>
+   <text width="89" height="20" x="795" y="584" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="89" height="20" x="790" y="590" style="fill:none;stroke:black;"/>
+   <text width="89" height="20" x="795" y="604" style="fill:black;" font-family="Arial" font-size="16px">id_project</text>
+   <rect width="89" height="20" x="790" y="610" style="fill:none;stroke:black;"/>
+   <text width="89" height="20" x="795" y="624" style="fill:black;" font-family="Arial" font-size="16px">id_tag</text>
+   <rect width="119" height="20" x="340" y="550" style="fill:#007;stroke:black;"/>
+   <text width="119" height="20" x="345" y="564" style="fill:#fff;" font-family="Arial" font-size="16px"> settings</text>
+   <rect width="119" height="20" x="340" y="570" style="fill:#aea;stroke:black;"/>
+   <text width="119" height="20" x="345" y="584" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="119" height="20" x="340" y="590" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="604" style="fill:black;" font-family="Arial" font-size="16px">elem_news</text>
+   <rect width="119" height="20" x="340" y="610" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="624" style="fill:black;" font-family="Arial" font-size="16px">elem_projects</text>
+   <rect width="119" height="20" x="340" y="630" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="644" style="fill:black;" font-family="Arial" font-size="16px">col_background</text>
+   <rect width="119" height="20" x="340" y="650" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="664" style="fill:black;" font-family="Arial" font-size="16px">col_border</text>
+   <rect width="119" height="20" x="340" y="670" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="684" style="fill:black;" font-family="Arial" font-size="16px">col_text</text>
+   <rect width="119" height="20" x="340" y="690" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="704" style="fill:black;" font-family="Arial" font-size="16px">col_select</text>
+   <rect width="119" height="20" x="340" y="710" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="724" style="fill:black;" font-family="Arial" font-size="16px">imp_deadline</text>
+   <rect width="119" height="20" x="340" y="730" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="744" style="fill:black;" font-family="Arial" font-size="16px">imp_meeting</text>
+   <rect width="119" height="20" x="340" y="750" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="764" style="fill:black;" font-family="Arial" font-size="16px">imp_consult</text>
+   <rect width="119" height="20" x="340" y="770" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="784" style="fill:black;" font-family="Arial" font-size="16px">imp_others</text>
+   <rect width="119" height="20" x="340" y="790" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="804" style="fill:black;" font-family="Arial" font-size="16px">imp_changes</text>
+   <rect width="119" height="20" x="340" y="810" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="824" style="fill:black;" font-family="Arial" font-size="16px">imp_message</text>
+   <rect width="119" height="20" x="340" y="830" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="844" style="fill:black;" font-family="Arial" font-size="16px">imp_automatic</text>
+   <rect width="119" height="20" x="340" y="850" style="fill:none;stroke:black;"/>
+   <text width="119" height="20" x="345" y="864" style="fill:black;" font-family="Arial" font-size="16px">imp_elim</text>
+   <rect width="80" height="20" x="170" y="320" style="fill:#007;stroke:black;"/>
+   <text width="80" height="20" x="175" y="334" style="fill:#fff;" font-family="Arial" font-size="16px"> students</text>
+   <rect width="80" height="20" x="170" y="340" style="fill:#aea;stroke:black;"/>
+   <text width="80" height="20" x="175" y="354" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="80" height="20" x="170" y="360" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="374" style="fill:black;" font-family="Arial" font-size="16px">id_user</text>
+   <rect width="80" height="20" x="170" y="380" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="394" style="fill:black;" font-family="Arial" font-size="16px">year</text>
+   <rect width="80" height="20" x="170" y="400" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="414" style="fill:black;" font-family="Arial" font-size="16px">repository</text>
+   <rect width="80" height="20" x="170" y="420" style="fill:none;stroke:black;"/>
+   <text width="80" height="20" x="175" y="434" style="fill:black;" font-family="Arial" font-size="16px">calendar</text>
+   <rect width="39" height="20" x="840" y="640" style="fill:#007;stroke:black;"/>
+   <text width="39" height="20" x="845" y="654" style="fill:#fff;" font-family="Arial" font-size="16px"> tags</text>
+   <rect width="39" height="20" x="840" y="660" style="fill:#aea;stroke:black;"/>
+   <text width="39" height="20" x="845" y="674" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="39" height="20" x="840" y="680" style="fill:none;stroke:black;"/>
+   <text width="39" height="20" x="845" y="694" style="fill:black;" font-family="Arial" font-size="16px">tag</text>
+   <rect width="82" height="20" x="340" y="360" style="fill:#007;stroke:black;"/>
+   <text width="82" height="20" x="345" y="374" style="fill:#fff;" font-family="Arial" font-size="16px"> users</text>
+   <rect width="82" height="20" x="340" y="380" style="fill:#aea;stroke:black;"/>
+   <text width="82" height="20" x="345" y="394" style="fill:black;" font-family="Arial" font-size="16px">id</text>
+   <rect width="82" height="20" x="340" y="400" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="414" style="fill:black;" font-family="Arial" font-size="16px">created_at</text>
+   <rect width="82" height="20" x="340" y="420" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="434" style="fill:black;" font-family="Arial" font-size="16px">confirmed</text>
+   <rect width="82" height="20" x="340" y="440" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="454" style="fill:black;" font-family="Arial" font-size="16px">name</text>
+   <rect width="82" height="20" x="340" y="460" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="474" style="fill:black;" font-family="Arial" font-size="16px">surname</text>
+   <rect width="82" height="20" x="340" y="480" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="494" style="fill:black;" font-family="Arial" font-size="16px">email</text>
+   <rect width="82" height="20" x="340" y="500" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="514" style="fill:black;" font-family="Arial" font-size="16px">id_settings</text>
+   <rect width="82" height="20" x="340" y="520" style="fill:none;stroke:black;"/>
+   <text width="82" height="20" x="345" y="534" style="fill:black;" font-family="Arial" font-size="16px">pass</text>
+</svg>
+        </section>
+        <section>
+            <h3>
+                <span>
+                    6.2.
+                </span>
+                Explicatii pentru schema bazei de date
+            </h3>
+            <section>
+                <h4>
+                    <span>
+                        6.2.1.
+                    </span>
+                    Utilizatori
+                </h4>
+                <p>
+                    Tabela <i>users</i> pastreaza datele utilizatorilor comune atat pentru profesor cat si pentru student, precum credentialele si un e-mail. Exista o relatie cu id-ul tabelei <i>users</i> la doua tabele ce contin informatii particulare pentru fiecare tip de cont: <i>students</i> si <i>professors</i>.
+                </p>
+                <p>
+                    Exista o relatie one-to-one intre tabela <i>users</i> si tabela <i>settings</i>, care contine setarile utilizatorului pentru aplicatie (numarul de elemente din liste, culorile folosite in pagina, importanta notificarilor.
+                </p>
+                <p>
+                    Atributul <i>confirmed</i> este implicit fals, si e modificat in true atunci cand contul este confirmat de un administrator. Unui utilizator i se creeaza o inregistrare in tabela <i>settings</i> doar dupa ce este confirmat.
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.2.
+                    </span>
+                    Notificari
+                </h4>
+                <p>
+                    Tabela <i>notificari</i> contine informatii despre toate notificarile. Acestea sunt id-ul notificarii la care este raspuns (daca notificarea este un raspuns), titlul, descrierea, data creatiei, importanta, tipul, id-ul expeditorului, id-ul destinatarului, si id-ul proiectului (in cazul in care notificarea reprezinta o aplicare sau retragere de la un proiect, este nevoie de un id al proiectului).
+                </p>
+            </section>
+            <section>
+                <h4>
+                    <span>
+                        6.2.3.
+                    </span>
+                    Proiecte
+                </h4>
+                <p>
+                    Tabela <i>proiecte</i> contine informatii despre toate proiectele. Exista o relatie many-to-many intre aceasta si tabela <i>tags</i>, realizata prin intermediul tabelei de legatura <i>project_tags</i>. Proiectele sunt caracterizate de titlu, descriere, an (pentru a distinge proiectele de licenta de cele de master), id-ul profesorului, id-ul studentului (daca un student a fost acceptat), resurse (o lista creata de catre profesor), data creatiei, data inceput, data terminare si nota (daca proiectul a fost finalizat) si prezentat.
+            </section>
+        </section>
+    </section>
+    <section>
+        <h2>
+            <span>
+                8.
+            </span>
+            Distribuirea sarcinilor
+        </h2>
+        <section>
+			<h3>
+				Lipan Radu-Matei
+			</h3>
+		    <ul>
+                 <li>
+                     Dispatcher
+                 </li>
+                 <li>
+                     Structura generala a backendului
+                 </li>
+                 <li>
+                     Controller si functionalitati (apply in project list, accept in newsfeed) pentru fiecare lista
+                 </li>
+			</ul>
+			<h3>
+				Damian Andrei
+			</h3>
+		    <ul>
+                 <li>
+                     Pagina si notificari repository
+                 </li>
+                 <li>
+                     Integrare Google Calendar
+                 </li>
+                 <li>
+                     Functionalitati edit project (new project, delete project, markdown, update project, tag-uri, calendar), preview project
+                 </li>
+			</ul>
+			<h3>
+				Salceanu Sergiu-Paul
+			</h3>
+		    <ul>
+                 <li>
+                     Management baza de date
+                 </li>
+                 <li>
+                     Home
+                 </li>
+				 <li>
+                     Send Message
+                 </li>
+				 <li>
+                     Add Event
+                 </li>
+			</ul>
+			<h3>
+				Iacob Daniel
+			</h3>
+		    <ul>
+                 <li>
+                     Autentificare (login, logout, management session)
+                 </li>
+                 <li>
+                     Settings
+                 </li>
+				 <li>
+                     Trimitere e-mailuri
+                 </li>
+			</ul>
+        </section>
+    </section>
+    <section role="doc-bibliography">
+        <h2>
+            <span>
+                9.
+            </span>
+            Bibliografie
+        </h2>
+        <section>
+            <p><a href="https://docs.phpmyadmin.net/en/latest/">Documentatie phpMyAdmin</a></p>
+			<p><a href="https://phpdelusions.net/pdo/pdo_wrapper">Informatii despre wrapper PDO</a></p>
+			<p><a href="https://medium.com/@noufel.gouirhate/create-your-own-mvc-framework-in-php-af7bd1f0ca19">Informatii despre MVC in PHP</a></p>
+        </section>
+    </section>
+    <section role="doc-conclusion">
+        <h2>
+            <span>
+                10.
+            </span>
+            Concluzie
+        </h2>
+        <p>
+            Aplicatia Acatism face mai usoara alegerea unui proiect de licenta sau master pentru studenti. Sistemul de notificari este o metoda versatila de a gestiona mai multe aspecte ale comunicarii dintre student si profesor, precum deadline-uri si programarea intalnirilor sau consultatiilor.
+        </p>
+    </section>
+</body>
+
+</html>
