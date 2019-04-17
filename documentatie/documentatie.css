@@ -17,6 +17,8 @@ section > section {
     margin-left: 5vw;
 }
 
+svg { width: 100%; height: auto; }
+
 #lista_echipa {
     display: flex;
     flex-direction: row;
