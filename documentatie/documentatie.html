@@ -846,13 +846,13 @@
 			</h3>
 		    <ul>
                  <li>
-                     Dispatcher
+                     Arhitectura generala a backendului (crearea singleton baza de date, crearea tuturor claselor din diagrama MVC (fara implementarea functionalitatilor)
                  </li>
                  <li>
-                     Structura generala a backendului
+                     Functionalitate dispatcher (interpretare url-uri si rutarea cererilor catre controllere corespunzatoare)
                  </li>
                  <li>
-                     Controller si functionalitati (apply in project list, accept in newsfeed) pentru fiecare lista
+                     Functionalitate controllere pentru fiecare lista (project list, newsfeed) - include abilitatea de apply in project list, accept in newsfeed
                  </li>
 			</ul>
 			<h3>
@@ -860,30 +860,33 @@
 			</h3>
 		    <ul>
                  <li>
-                     Pagina si notificari repository
+                     Integrare GitHub (pagina repository, notificari repository)
                  </li>
                  <li>
-                     Integrare Google Calendar
+                     Integrare Google Calendar (un calendar separat pentru fiecare student, legatura dintre evenimente in aplicatie si echivalentul lor in calendar la crearea/eliminarea unuia)
                  </li>
                  <li>
-                     Functionalitati edit project (new project, delete project, markdown, update project, tag-uri, calendar), preview project
+                     Functionalitate edit project (new project, delete project, update project, tag-uri, calendar), preview project
                  </li>
+				 <li>
+				     Functionalitate markdown (un limbaj simplu de marcare pentru a formata textul din descrierile proiectelor)
+				 </li>
 			</ul>
 			<h3>
 				Salceanu Sergiu-Paul
 			</h3>
 		    <ul>
                  <li>
-                     Management baza de date
+                     Management baza de date (realizare interogari in functie de parametri dati de controller)
                  </li>
                  <li>
-                     Home
+                     Functionalitate homepage
                  </li>
 				 <li>
-                     Send Message
+                     Functionalitate send message (preluarea formularului si crearea notificarii ce corespunde mesajului)
                  </li>
 				 <li>
-                     Add Event
+                     Functionalitate add event (preluarea formularului si crearea notificarii/notificarilor ce corespund evenimentului)
                  </li>
 			</ul>
 			<h3>
@@ -891,13 +894,13 @@
 			</h3>
 		    <ul>
                  <li>
-                     Autentificare (login, logout, management session)
+                     Autentificare, inregistrare (login, logout, management session)
                  </li>
                  <li>
-                     Settings
+                     Functionalitate setari (preluarea formularului cu setari si trimiterea unei cereri pentru schimbarea acestora in baza de date)
                  </li>
 				 <li>
-                     Trimitere e-mailuri
+                     Functionalitate send e-mail (in functie de setarile utilizatorului, send message va trimite si un e-mail acestuia)
                  </li>
 			</ul>
         </section>
